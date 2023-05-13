@@ -5,6 +5,8 @@ import Loading from "../Loading/Loading"
 
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 
+// compontents
+import NewComment from "../../components/NewComment/NewComment"
 //todo create styles to import
 //import styles from '/.SightingDetails.module.css'
 
@@ -34,6 +36,10 @@ const SightingDetails = (props) => {
         </span>
         <p>{sighting.details}</p>
       </article>
+      <section>
+        <h1>Comments</h1>
+          <NewComment handleAddComment={handleAddComment} />
+      </section>
     </main>
   )
 }
