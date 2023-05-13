@@ -38,7 +38,6 @@ function App() {
     setUser(null)
     navigate('/')
   }
-
   const handleAuthEvt = () => {
     setUser(authService.getUser())
   }
