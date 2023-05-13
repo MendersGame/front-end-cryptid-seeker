@@ -9,6 +9,16 @@ import AuthorInfo from "../AuthorInfo/AuthorInfo";
 
 const SightingCard = ({ sighting }) => {
   return (
-    <Link />
+    <Link to ={`/sightings/${sighting._id}`}/>
+    <article className={Styles.container}>
+      <header>
+        <span>
+          <AuthorInfo />
+          <h1>{ sighting.title }</h1>
+        </span>
+      </header>
+      <p>{}</p>
+
+    </article>
   )
 }
