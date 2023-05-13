@@ -5,6 +5,8 @@ import Loading from "../Loading/Loading"
 
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 
+// compontents
+import NewComment from "../../components/NewComment/NewComment"
 //todo create styles to import
 //import styles from '/.SightingDetails.module.css'
 
