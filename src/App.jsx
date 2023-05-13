@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // pages
@@ -15,20 +15,29 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
 import * as authService from './services/authService'
+import * as sightingService from './services/sightingService'
 
 // styles
 import './App.css'
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
+  const [sightings, setSightings] = useState([])
   const navigate = useNavigate()
+
+  useEffect(() =>  {
+    const fetchAllSightings = async () => {
+      const data = await sightingService.index()
+      setSightings(data)
+    }
+    if (user) fetchAllSightings()
+  }, [user])
 
   const handleLogout = () => {
     authService.logout()
     setUser(null)
     navigate('/')
   }
-
   const handleAuthEvt = () => {
     setUser(authService.getUser())
   }
