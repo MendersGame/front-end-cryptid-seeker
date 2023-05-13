@@ -36,6 +36,10 @@ const SightingDetails = (props) => {
         </span>
         <p>{sighting.details}</p>
       </article>
+      <section>
+        <h1>Comments</h1>
+          <NewComment handleAddComment={handleAddComment} />
+      </section>
     </main>
   )
 }
