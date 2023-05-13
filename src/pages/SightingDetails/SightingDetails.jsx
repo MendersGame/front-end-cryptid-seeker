@@ -32,7 +32,7 @@ const SightingDetails = (props) => {
         <span>
           <AuthorInfo content={sighting} />
         </span>
-        <p>{sighting.description}</p>
+        <p>{sighting.details}</p>
       </article>
     </main>
   )
