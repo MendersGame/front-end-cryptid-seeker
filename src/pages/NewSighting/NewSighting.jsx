@@ -38,8 +38,8 @@ const NewSighting = (props) => {
           required
           type="text"
           name="details"
-          id="text-input"
-          value={formData.text}
+          id="details-input"
+          value={formData.details}
           placeholder="Details"
           onChange={handleChange}
         />
