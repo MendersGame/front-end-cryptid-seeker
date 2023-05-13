@@ -34,7 +34,7 @@ const EditSighting = (props) => {
           placeholder="Title"
           onChange={handleChange}
         />
-        <label htmlFor="text-input">Text</label>
+        <label htmlFor="text-input">Details</label>
         <textarea
           required
           type="text"
