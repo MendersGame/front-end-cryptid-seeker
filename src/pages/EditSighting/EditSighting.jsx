@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useLocation } from "react-router-dom"
 
 // css
-import styles from './EditBlog.module.css'
+import styles from './EditSighting.module.css'
 
 const EditSighting = (props) => {
   const location = useLocation()
@@ -17,13 +17,13 @@ const EditSighting = (props) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    props.handleUpdateBlog(formData)
+    props.handleUpdateSighting(formData)
   }
 
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
-        <h1>Edit Blog</h1>
+        <h1>Edit Sighting</h1>
         <label htmlFor="title-input">Title</label>
         <input
           required
