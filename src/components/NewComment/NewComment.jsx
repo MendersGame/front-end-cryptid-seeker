@@ -11,6 +11,13 @@ const NewComment = (props) => {
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+    props.handleAddComment(formData)
+    // last 
+    setFormData({ text: ''})
+  }
   return (
     
   )
