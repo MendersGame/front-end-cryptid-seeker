@@ -34,30 +34,27 @@ const EditSighting = (props) => {
           placeholder="Title"
           onChange={handleChange}
         />
-        <label htmlFor="text-input">Text</label>
+        <label htmlFor="details-input">Details</label>
         <textarea
           required
           type="text"
-          name="text"
-          id="text-input"
-          value={formData.text}
-          placeholder="Text"
+          name="details"
+          id="details-input"
+          value={formData.details}
+          placeholder="Details"
           onChange={handleChange}
         />
-        <label htmlFor="category-input">Category</label>
+        <label htmlFor="cryptid-input">Cryptid</label>
         <select
           required
-          name="category"
-          id="category-input"
-          value={formData.category}
+          name="cryptid"
+          id="cryptid-input"
+          value={formData.cryptid}
           onChange={handleChange}
         >
-          <option value="News">News</option>
-          <option value="Games">Games</option>
-          <option value="Music">Music</option>
-          <option value="Movies">Movies</option>
-          <option value="Sports">Sports</option>
-          <option value="Television">Television</option>
+          {/*  CHANGE TO MAKE DROPDOWN THAT POPULATES OUR CRYPTIDS  */}
+
+          <option value="News">.map Cryptid.name</option>
         </select>
         <button type="submit">SUBMIT</button>
       </form>
