@@ -4,7 +4,8 @@ import { useState } from "react"
 // css
 import styles from './NewComment.module.css'
 
-// components
+// compontents
+import NewComment from "../../components/NewComment/NewComment"
 import Icon from "../Icon/Icon"
 
 const NewComment = (props) => {
