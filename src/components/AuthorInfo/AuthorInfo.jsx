@@ -2,7 +2,7 @@
 import DateCard from '../DateCard/DateCard'
 
 // assets
-// import profileIcon from '../../assets/icons/profile.png'
+import profileIcon from '../../assets/icons/profile.png'
 
 // css
 import styles from './AuthorInfo.module.css'
@@ -10,7 +10,7 @@ import styles from './AuthorInfo.module.css'
 const AuthorInfo = (props) => {
   const { content } = props
 
-  // const photo = content.author.photo ? content.author.photo : profileIcon
+  const photo = content.author.photo ? content.author.photo : profileIcon
 
   return (
     <div className={styles.container}>

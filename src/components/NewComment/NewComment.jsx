@@ -5,7 +5,7 @@ import { useState } from "react"
 import styles from './NewComment.module.css'
 
 // components
-import Icon from "../Icon/Icon"
+// import Icon from "../Icon/Icon"
 
 const NewComment = (props) => {
   const [formData, setFormData] = useState({ text: '' })
@@ -31,7 +31,7 @@ const NewComment = (props) => {
         placeholder="Add a Comment"
         onChange={handleChange}
       />
-      <button type="submit"><Icon category="Create" /></button>
+      <button type="submit">Submit</button>
     </form>
   )
 }
