@@ -1,6 +1,7 @@
 // components
 import AuthorInfo from "../AuthorInfo/AuthorInfo"
 
+
 const CommentCard = ({ comment }) => {
   return (
     <article>

@@ -1,4 +1,5 @@
 .container {
+  margin: 6em;
   height: 100%;
   display: flex;
   overflow: scroll;

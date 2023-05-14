@@ -6,6 +6,9 @@ import Loading from "../Loading/Loading"
 import * as sightingService from '../../services/sightingService'
 
 
+import styles from './SightingDetails.module.css' 
+
+
 
 
 // compontents
@@ -13,8 +16,6 @@ import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import NewComment from "../../components/NewComment/NewComment"
 
 //todo create styles to import
-// import styles from ''
-
 const SightingDetails = (props) => {
   const {sightingId} = useParams()
   const [sighting, setSighting] = useState(null)
@@ -35,8 +36,8 @@ const SightingDetails = (props) => {
   if (!sighting) return <Loading />
 
   return (
-    <main>
-      <article>
+    <main className={styles.container}>
+      <article >
         <header>
           <h1>{sighting.title}</h1>
         </header>
