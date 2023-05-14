@@ -10,6 +10,8 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import SightingList from './pages/SightingList/SightingList'
 import SightingDetails from './pages/SightingDetails/SightingDetails'
+import NewSighting from './pages/NewSighting/NewSighting'
+import EditSighting from './pages/EditSighting/EditSighting'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -49,6 +51,12 @@ function App() {
     navigate('/sightings')
   }
 
+  const handleUpdateSighting = async (sightingFormData) => {
+    const updatedSighting = await sightingService.update(sightingFormData)
+    setSightings(sightings.map(s => sightingFormData._id === s._id ? updatedSighting : s))
+    navigate('/sightings')
+  }
+
 
   const handleDeleteSighting = async (SightingId) => {
     const deletedSighting = await sightingService.delete(SightingId)
@@ -74,6 +82,22 @@ function App() {
               <SightingDetails user={user} handleDeleteSighting={handleDeleteSighting}/>
             </ProtectedRoute>
           }
+        />
+        <Route
+          path="/sightings/new" 
+          element={
+            <ProtectedRoute user={user}>
+              <newSighting handleAddSighting={handleAddSighting} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/sightings/:sightingId/edit" 
+          element={
+            <ProtectedRoute user={user}>
+              <EditSighting handleUpdateSighting={handleUpdateSighting} />
+            </ProtectedRoute>
+          } 
         />
         <Route
           path="/profiles"
