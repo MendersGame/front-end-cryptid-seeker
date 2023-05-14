@@ -43,11 +43,17 @@ function App() {
   const handleAuthEvt = () => {
     setUser(authService.getUser())
   }
+  const handleAddSighting = async (sightingFormData) => {
+    const newSighting = await sightingService.create(sightingFormData)
+    setSightings([newSighting, ...sightings])
+    navigate('/sightings')
+  }
+
 
   const handleDeleteSighting = async (SightingId) => {
     const deletedSighting = await sightingService.delete(SightingId)
-    setSightings(sightings.filter(b => b._id !== deletedSighting._id))
-    navigate('/blogs')
+    setSightings(sightings.filter(s => s._id !== deletedSighting._id))
+    navigate('/sightings')
   }
 
   return (
@@ -62,7 +68,7 @@ function App() {
           }
         />
         <Route 
-          path="/blogs/:blogId"
+          path="/sightings/:sightingId"
           element={
             <ProtectedRoute user={user}>
               <SightingDetails user={user} handleDeleteSighting={handleDeleteSighting}/>
