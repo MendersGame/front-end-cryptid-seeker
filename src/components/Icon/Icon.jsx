@@ -5,7 +5,7 @@ import trash from '../../assets/icons/trash_cs.svg'
 import create from '../../assets/icons/create_cs.svg'
 import comments from '../../assets/icons/comments_cs.svg'
 import calendar from '../../assets/icons/calendar_cs.svg'
-import profile from '../../assets/icons/profile_cs'
+import profile from '../../assets/icons/profile_cs.svg'
 
 const Icon = ({ category }) => {
   const icons = {
@@ -23,3 +23,5 @@ const Icon = ({ category }) => {
     <img className="icon" src={icons[category]} alt={`A ${category} icon.`} />
   )
 }
+
+export default Icon
