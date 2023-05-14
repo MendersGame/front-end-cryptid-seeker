@@ -1,4 +1,5 @@
 .container {
+  margin: 5em;
   gap: 14px;
   width: 100%;
   display: grid;
