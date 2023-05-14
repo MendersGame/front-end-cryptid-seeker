@@ -9,6 +9,9 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import SightingList from './pages/SightingList/SightingList'
+import SightingDetails from './pages/SightingDetails/SightingDetails'
+import NewSighting from './pages/NewSighting/NewSighting'
+import EditSighting from './pages/EditSighting/EditSighting'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -42,6 +45,24 @@ function App() {
   const handleAuthEvt = () => {
     setUser(authService.getUser())
   }
+  const handleAddSighting = async (sightingFormData) => {
+    const newSighting = await sightingService.create(sightingFormData)
+    setSightings([newSighting, ...sightings])
+    navigate('/sightings')
+  }
+
+  const handleUpdateSighting = async (sightingFormData) => {
+    const updatedSighting = await sightingService.update(sightingFormData)
+    setSightings(sightings.map(s => sightingFormData._id === s._id ? updatedSighting : s))
+    navigate('/sightings')
+  }
+
+
+  const handleDeleteSighting = async (SightingId) => {
+    const deletedSighting = await sightingService.delete(SightingId)
+    setSightings(sightings.filter(s => s._id !== deletedSighting._id))
+    navigate('/sightings')
+  }
 
   return (
     <>
@@ -52,7 +73,32 @@ function App() {
           <ProtectedRoute user={user}>
             <SightingList sightings={sightings} />
           </ProtectedRoute>
-        }/>
+          }
+        />
+        <Route 
+          path="/sightings/:sightingId"
+          element={
+            <ProtectedRoute user={user}>
+              <SightingDetails user={user} handleDeleteSighting={handleDeleteSighting}/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/sightings/new" 
+          element={
+            <ProtectedRoute user={user}>
+              <NewSighting handleAddSighting={handleAddSighting} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/sightings/:sightingId/edit" 
+          element={
+            <ProtectedRoute user={user}>
+              <EditSighting handleUpdateSighting={handleUpdateSighting} />
+            </ProtectedRoute>
+          } 
+        />
         <Route
           path="/profiles"
           element={
