@@ -28,7 +28,7 @@ async function show(cryptidId) {
   }
 }
 
-async function create(sightingFormData) {
+async function create(cryptidFormData) {
   try {
     // BASE_URL IS POST http://localhost:3001/api/cryptids
     const res = await fetch(BASE_URL, {
@@ -37,7 +37,7 @@ async function create(sightingFormData) {
         'Authorization': `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(sightingFormData)
+      body: JSON.stringify(cryptidFormData)
     })
     return res.json()
   } catch (error) {
@@ -45,15 +45,15 @@ async function create(sightingFormData) {
   }
 }
 
-async function update(sightingFormData) {
+async function update(cryptidFormData) {
   try {
-    const res = await fetch(`${BASE_URL}/${sightingFormData._id}`, {
+    const res = await fetch(`${BASE_URL}/${cryptidFormData._id}`, {
       method: 'PUT',
       headers: { 
         'Authorization': `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(sightingFormData)
+      body: JSON.stringify(cryptidFormData)
     })
     return res.json()
   } catch (error) {
@@ -73,16 +73,16 @@ async function deleteCryptid(cryptidId) {
   }
 }
 
-async function createComment(cryptidId, commentFormData) {
+async function createReview(cryptidId, reviewFormData) {
   try {
-    // POST http://localhost:3001/api/cryptids/:cryptidId/comments
-    const res = await fetch(`${BASE_URL}/${cryptidId}/comments`, {
+    // POST http://localhost:3001/api/cryptids/:cryptidId/reviews
+    const res = await fetch(`${BASE_URL}/${cryptidId}/reviews`, {
       method: 'POST',
       headers: { 
         'Authorization': `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(commentFormData)
+      body: JSON.stringify(reviewFormData)
     })
     return res.json()
   } catch (error) {
@@ -96,5 +96,5 @@ export {
   create, 
   update,
   deleteCryptid as delete,
-  createComment
+  createReview
 }
