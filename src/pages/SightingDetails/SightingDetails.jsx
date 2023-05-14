@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 
 import Loading from "../Loading/Loading"
 
+import * as sightingService from '../../services/sightingService'
+
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 
 // compontents
@@ -21,6 +23,11 @@ const SightingDetails = (props) => {
     }
     fetchSighting()
   }, [sightingId])
+
+  const handleAddComment = async (commentFormData) => {
+    const newComment = await sightingService.createComment(sightingId, commentFormData)
+    setSighting({ ...sighting, comments: [...sighting.comments, newComment],})
+  }
 
   console.log('Sighting State: ', sighting);
   if (!sighting) return <Loading />
