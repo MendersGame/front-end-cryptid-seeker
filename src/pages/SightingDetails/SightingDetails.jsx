@@ -29,7 +29,6 @@ const SightingDetails = (props) => {
     setSighting({ ...sighting, comments: [...sighting.comments, newComment],})
   }
 
-  console.log('Sighting State: ', sighting);
   if (!sighting) return <Loading />
 
   return (

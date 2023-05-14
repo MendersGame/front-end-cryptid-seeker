@@ -9,8 +9,6 @@ const EditSighting = (props) => {
   const location = useLocation()
   const [formData, setFormData] = useState(location.state)
 
-  console.log(location);
-
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
