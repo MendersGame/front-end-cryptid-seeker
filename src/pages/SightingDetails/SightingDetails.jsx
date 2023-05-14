@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 
 import Loading from "../Loading/Loading"
 
+import * as sightingService from '../../services/sightingService'
+
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 
 // compontents
@@ -13,6 +15,8 @@ import NewComment from "../../components/NewComment/NewComment"
 const SightingDetails = (props) => {
   const {sightingId} = useParams()
   const [sighting, setSighting] = useState(null)
+
+  
 
   useEffect(() => {
     const fetchSighting = async () => {
