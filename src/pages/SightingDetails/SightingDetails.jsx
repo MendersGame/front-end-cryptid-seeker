@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
-
+// pages
 import Loading from "../Loading/Loading"
 
-import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
-
 // compontents
+import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import NewComment from "../../components/NewComment/NewComment"
+
 //todo create styles to import
 //import styles from '/.SightingDetails.module.css'
 
