@@ -6,8 +6,8 @@ import styles from './SightingList.module.css'
 const SightingList = (props) => {
   return (
     <main className={`${styles.container} ${styles.main}`}>
-    {props.sightings.map(blog => (
-      <SightingCard key={signting._id} sighting={sighting} />
+    {props.sightings.map(sighting => (
+      <SightingCard key={sighting._id} sighting={sighting} />
     ))}
   </main>
   )
