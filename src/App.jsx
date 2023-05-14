@@ -12,6 +12,7 @@ import SightingList from './pages/SightingList/SightingList'
 import SightingDetails from './pages/SightingDetails/SightingDetails'
 import NewSighting from './pages/NewSighting/NewSighting'
 import EditSighting from './pages/EditSighting/EditSighting'
+import CryptidList from './pages/CryptidList/CryptidList'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -20,6 +21,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 // services
 import * as authService from './services/authService'
 import * as sightingService from './services/sightingService'
+import * as cryptidService from './services/cryptidService'
 
 // styles
 import './App.css'
@@ -27,6 +29,7 @@ import './App.css'
 function App() {
   const [user, setUser] = useState(authService.getUser())
   const [sightings, setSightings] = useState([])
+  const [cryptids, setCryptids] = useState([])
   const navigate = useNavigate()
 
   useEffect(() =>  {
@@ -35,6 +38,14 @@ function App() {
       setSightings(data)
     }
     if (user) fetchAllSightings()
+  }, [user])
+
+  useEffect(() =>  {
+    const fetchAllCryptids = async () => {
+      const data = await cryptidService.index()
+      setCryptids(data)
+    }
+    if (user) fetchAllCryptids()
   }, [user])
 
   const handleLogout = () => {
@@ -68,6 +79,12 @@ function App() {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
+      { <Route path="/cryptids" element={
+          <ProtectedRoute user={user}>
+            <CryptidList cryptids={cryptids} />
+          </ProtectedRoute>
+          }
+        /> }
         <Route path="/" element={<Landing user={user} />} />
         <Route path="/sightings" element={
           <ProtectedRoute user={user}>
