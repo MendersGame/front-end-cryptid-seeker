@@ -5,10 +5,11 @@ import { useState } from "react"
 import styles from './NewSighting.module.css'
 
 const NewSighting = (props) => {
+  console.log('props:', props)
   const [formData, setFormData ] = useState({
     title: '',
     details: '',
-    cryptid: 'cryptidId.name'
+    cryptid: ''
   })
 
   const handleChange = (evt) => {
@@ -51,8 +52,9 @@ const NewSighting = (props) => {
           value={formData.cryptid}
           onChange={handleChange}
         >
-          {/* change to make dropdown that populates with cryptid data */}
-          <option value="Champ">Champ</option>
+          {props.cryptids.map((cryptid) => (
+            <option key={cryptid._id} value={cryptid.name}>{cryptid.name}</option>
+          ))}
 
         </select>
         <button type="submit">SUBMIT</button>
