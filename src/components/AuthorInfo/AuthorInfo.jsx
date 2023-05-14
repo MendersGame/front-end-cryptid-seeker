@@ -1,5 +1,6 @@
 // components
 import DateCard from '../DateCard/DateCard'
+import Icon from '../../components/Icon/Icon'
 
 // assets
 import profileIcon from '../../assets/icons/profile_cs.svg'

@@ -104,7 +104,7 @@ function App() {
           path="/sightings/new" 
           element={
             <ProtectedRoute user={user}>
-              <NewSighting handleAddSighting={handleAddSighting} />
+              <NewSighting handleAddSighting={handleAddSighting} cryptids={cryptids} />
             </ProtectedRoute>
           }
         />
