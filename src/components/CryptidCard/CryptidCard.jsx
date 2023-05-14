@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 // components
 
-import AuthorInfo from "../AuthorInfo/AuthorInfo";
-
 //css 
 import styles from './CryptidCard.module.css'
 
@@ -17,7 +15,6 @@ const CryptidCard = ({ cryptid }) => {
             <h1>{ cryptid.name }</h1>
             {/* TODO add Icon */}
           </span>
-        <AuthorInfo content={cryptid} />
         </header>
       <p>{cryptid.description}</p>
       </article>
