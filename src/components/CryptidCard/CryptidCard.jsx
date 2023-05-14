@@ -14,7 +14,7 @@ const CryptidCard = ({ cryptid }) => {
       <article className={styles.container}>
         <header>
           <span>
-            <h1>{ cryptid.title }</h1>
+            <h1>{ cryptid.name }</h1>
             {/* TODO add Icon */}
           </span>
         <AuthorInfo content={cryptid} />
