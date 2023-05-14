@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 // components
-
+// imort thing so we can access cryptid photos
 import AuthorInfo from "../AuthorInfo/AuthorInfo";
 
 //css 
@@ -15,7 +15,7 @@ const SightingCard = ({ sighting }) => {
         <header>
           <span>
             <h1>{ sighting.title }</h1>
-            {/* TODO add Icon */}
+            {/* TODO add corresponding cryptid photo */}
           </span>
         <AuthorInfo content={sighting} />
         </header>
