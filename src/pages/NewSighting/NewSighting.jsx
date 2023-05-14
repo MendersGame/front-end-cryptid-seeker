@@ -52,7 +52,7 @@ const NewSighting = (props) => {
           onChange={handleChange}
         >
           {/* change to make dropdown that populates with cryptid data */}
-          <option value="MothMan">Moth Man</option>
+          <option value="Champ">Champ</option>
 
         </select>
         <button type="submit">SUBMIT</button>
