@@ -19,7 +19,7 @@ const SightingCard = ({ sighting }) => {
           </span>
         <AuthorInfo content={sighting} />
         </header>
-      <p>{sighting.description}</p>
+      <p>{sighting.details}</p>
       </article>
     </Link>
   )
