@@ -81,7 +81,7 @@ const Signup = ({ handleAuthEvt }) => {
   return (
     <main className={styles.container}>
       <section>
-        <img src={signupIcon} alt="An owl sitting on a sign" />
+        <img src={signupIcon} alt="Cryptid Seeker Logo & message about signing up" />
       </section>
       <section>
         <form autoComplete="off" onSubmit={handleSubmit}>
