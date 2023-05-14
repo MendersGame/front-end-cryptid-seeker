@@ -13,7 +13,7 @@ import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import NewComment from "../../components/NewComment/NewComment"
 
 //todo create styles to import
-//import styles from '/.SightingDetails.module.css'
+// import styles from ''
 
 const SightingDetails = (props) => {
   const {sightingId} = useParams()
