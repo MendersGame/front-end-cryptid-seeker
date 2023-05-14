@@ -16,8 +16,6 @@ const SightingDetails = (props) => {
   const {sightingId} = useParams()
   const [sighting, setSighting] = useState(null)
 
-  
-
   useEffect(() => {
     const fetchSighting = async () => {
       const data = await sightingService.show(sightingId)
@@ -25,6 +23,11 @@ const SightingDetails = (props) => {
     }
     fetchSighting()
   }, [sightingId])
+
+  const handleAddComment = async (commentFormData) => {
+    const newComment = await sightingService.createComment(sightingId, commentFormData)
+    setSighting({ ...sighting, comments: [...sighting.comments, newComment],})
+  }
 
   console.log('Sighting State: ', sighting);
   if (!sighting) return <Loading />
