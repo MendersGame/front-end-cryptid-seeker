@@ -87,7 +87,7 @@ function App() {
           path="/sightings/new" 
           element={
             <ProtectedRoute user={user}>
-              <newSighting handleAddSighting={handleAddSighting} />
+              <NewSighting handleAddSighting={handleAddSighting} />
             </ProtectedRoute>
           }
         />
