@@ -2,7 +2,7 @@
 import DateCard from '../DateCard/DateCard'
 
 // assets
-import profileIcon from '../../assets/icons/profile.png'
+import profileIcon from '../../assets/icons/profile_cs.png'
 
 // css
 import styles from './AuthorInfo.module.css'

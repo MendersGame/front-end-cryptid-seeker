@@ -5,6 +5,9 @@ import { Link, useNavigate } from 'react-router-dom'
 // services
 import * as authService from '../../services/authService'
 
+// assets
+import loginIcon from '../../assets/branding/login_cs.svg'
+
 // css
 import styles from './Login.module.css'
 
@@ -45,10 +48,14 @@ const LoginPage = ({ handleAuthEvt }) => {
 
   return (
     <main className={styles.container}>
-      <h1>Log In</h1>
-      <p className={styles.message}>{message}</p>
-      <form autoComplete="off" onSubmit={handleSubmit} className={styles.form}>
-        <label className={styles.label}>
+    <section>
+      <img src={loginIcon} alt="Cryptid Seeker Logo & Login message" />
+    </section>
+    <section>
+      <form autoComplete="off" onSubmit={handleSubmit}>
+        <h1>Log In</h1>
+        <p>{message}</p>
+        <label>
           Email
           <input
             type="text"
@@ -57,7 +64,7 @@ const LoginPage = ({ handleAuthEvt }) => {
             onChange={handleChange}
           />
         </label>
-        <label className={styles.label}>
+        <label>
           Password
           <input
             type="password"
@@ -67,13 +74,12 @@ const LoginPage = ({ handleAuthEvt }) => {
           />
         </label>
         <div>
-          <Link to="/">Cancel</Link>
-          <button className={styles.button} disabled={isFormInvalid()}>
-            Log In
-          </button>
+          <button disabled={isFormInvalid()}>LOG IN</button>
+          <Link to="/">CANCEL</Link>
         </div>
       </form>
-    </main>
+    </section>
+  </main>
   )
 }
 

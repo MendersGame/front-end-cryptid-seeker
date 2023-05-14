@@ -2,6 +2,7 @@
 import { NavLink } from 'react-router-dom'
 
 //assets
+import logo from '../../assets/branding/logo.svg'
 
 
 
@@ -24,8 +25,10 @@ const NavBar = ({ user, handleLogout }) => {
     </ul>
   )
   return (
-    <nav>
-      <NavLink to="/" >Link</NavLink>{user ? protectedLinks : publicLinks}
+    
+    <nav className={styles.container}>
+      <NavLink to="/"><img src={logo} alt="Cryptid Seeker Logo" /></NavLink>
+      {user ? protectedLinks : publicLinks}
     </nav>
   )
 }
