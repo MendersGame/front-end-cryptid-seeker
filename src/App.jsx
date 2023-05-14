@@ -9,6 +9,7 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import SightingList from './pages/SightingList/SightingList'
+import SightingDetails from './pages/SightingDetails/SightingDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -43,6 +44,12 @@ function App() {
     setUser(authService.getUser())
   }
 
+  const handleDeleteSighting = async (SightingId) => {
+    const deletedSighting = await sightingService.delete(SightingId)
+    setSightings(sightings.filter(b => b._id !== deletedSighting._id))
+    navigate('/blogs')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -52,7 +59,16 @@ function App() {
           <ProtectedRoute user={user}>
             <SightingList sightings={sightings} />
           </ProtectedRoute>
-        }/>
+          }
+        />
+        <Route 
+          path="/blogs/:blogId"
+          element={
+            <ProtectedRoute user={user}>
+              <SightingDetails user={user} handleDeleteSighting={handleDeleteSighting}/>
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/profiles"
           element={
