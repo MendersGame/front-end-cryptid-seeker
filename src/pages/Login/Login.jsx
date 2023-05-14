@@ -34,9 +34,9 @@ const LoginPage = ({ handleAuthEvt }) => {
       await authService.login(formData)
       handleAuthEvt()
       navigate('/')
-    } catch (err) {
-      console.log(err)
-      setMessage(err.message)
+    } catch (error) {
+      console.log(error)
+      setMessage(error.message)
     }
   }
 

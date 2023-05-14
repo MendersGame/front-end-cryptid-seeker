@@ -14,7 +14,7 @@ const AuthorInfo = (props) => {
 
   return (
     <div className={styles.container}>
-      {/* <img src={photo} alt="The user's avatar" /> */}
+      { <img src={photo} alt="The user's avatar" /> }
       <section>
         <h4>{content.author.name}</h4>
         <DateCard createdAt={content.createdAt} />
