@@ -17,6 +17,7 @@ import CryptidList from './pages/CryptidList/CryptidList'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import EditComment from './components/EditComment/EditComment'
 
 // services
 import * as authService from './services/authService'
@@ -116,6 +117,12 @@ function App() {
             </ProtectedRoute>
           } 
         />
+        <Route 
+          path="/sightings/:sightingId/comments/:commentId" element={
+            <ProtectedRoute user={user}>
+              <EditComment />
+            </ProtectedRoute>
+          } />
         <Route
           path="/profiles"
           element={

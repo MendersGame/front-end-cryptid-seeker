@@ -16,6 +16,7 @@ import styles from './SightingDetails.module.css'
 // compontents
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import NewComment from "../../components/NewComment/NewComment"
+import Comments from "../../components/Comments/Comments"
 
 //todo create styles to import
 const SightingDetails = (props) => {
@@ -33,6 +34,11 @@ const SightingDetails = (props) => {
   const handleAddComment = async (commentFormData) => {
     const newComment = await sightingService.createComment(sightingId, commentFormData)
     setSighting({ ...sighting, comments: [...sighting.comments, newComment],})
+  }
+
+  const handleDeleteComment = async (sightingId, commentId) => {
+    await sightingService.deleteComment(sightingId, commentId)
+    setSighting({ ...sighting, comments: sighting.comments.filter((c) => c._id !== commentId) })
   }
 
   if (!sighting) return <Loading />
@@ -57,6 +63,7 @@ const SightingDetails = (props) => {
       <section>
         <h1>Comments</h1>
           <NewComment handleAddComment={handleAddComment} />
+          <Comments comments={sighting.comments} user={props.user} sightingId={sightingId} handleDeleteComment={handleDeleteComment}/>
       </section>
     </main>
   )
