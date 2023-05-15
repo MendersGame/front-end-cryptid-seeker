@@ -1,24 +1,43 @@
 //npm modules 
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
 
 // components
 
 //css 
 import styles from './CryptidCard.module.css'
+import CryptidDescription from "../CryptidDescription/CryptidDescription";
+import CryptidInfo from "../CryptidInfo/CryptidInfo";
+// import CryptidInfo from "../CryptidInfo/CryptidInfo";
 
 const CryptidCard = ({ cryptid }) => {
+
+  const [displayCryptidInfo, setDisplayCryptidInfo] = useState(true)
+  function handleCryptidClick() {
+    setDisplayCryptidInfo(!displayCryptidInfo)
+  }
+  console.log(cryptid.name)
+
+
   return (
-    <Link to ={`/cryptids/${cryptid._id}`}>
+    // <Link to ={`/cryptids/${cryptid._id}`}>
+    <>
       <article className={styles.container}>
         <header>
           <span>
-            <h1>{ cryptid.name }</h1>
+            {/* <h1>{ cryptid.name }</h1> */}
             {/* TODO add Icon */}
           </span>
         </header>
-      <p>{cryptid.description}</p>
+      {/* <p>{cryptid.description}</p> */}
+        {displayCryptidInfo ? <CryptidInfo name={cryptid.name}  /> : <CryptidDescription name= {cryptid.name} description={cryptid.description}  />}
+        <button className="cryptidBtn" onClick={handleCryptidClick}>
+    {displayCryptidInfo ? 'Show Details' : 'Hide Details'}
+        </button>
       </article>
-    </Link>
+      </>
+    // </Link>
   )
 }
 export default CryptidCard
