@@ -3,7 +3,7 @@ import Loading from '../Loading/Loading'
 import { useEffect, useState } from "react"
 import * as cryptidService from '../../services/cryptidService'
 
-const CryptidDetails = (props) => {
+const CryptidDetails = () => {
   const {cryptidId} = useParams()
   const [cryptid, setCryptid] = useState(null)
 
@@ -15,10 +15,20 @@ const CryptidDetails = (props) => {
     fetchCryptid()
   }, [cryptidId])
   
-  if( !cryptid) return <Loading />
+  if(!cryptid) return <Loading />
   
   return (
-    <main className={styles.containter}></main>
+    <main className={styles.containter}>
+      <article>
+        <header>
+          <h1>{cryptid.name}</h1>
+        </header>
+        <p>{cryptid.description}</p>
+      </article>
+      <section>
+        <h1>Reviews</h1>
+      </section>
+    </main>
   )
 }
 
