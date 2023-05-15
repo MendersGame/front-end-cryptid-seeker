@@ -17,7 +17,7 @@ import CryptidList from './pages/CryptidList/CryptidList'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
-import EditComment from './pages/EditComment/EditComment'
+import EditComment from './components/EditComment/EditComment'
 
 // services
 import * as authService from './services/authService'
