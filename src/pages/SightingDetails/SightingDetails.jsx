@@ -16,6 +16,7 @@ import styles from './SightingDetails.module.css'
 // compontents
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import NewComment from "../../components/NewComment/NewComment"
+import Comments from "../../components/Comments/Comments"
 
 //todo create styles to import
 const SightingDetails = (props) => {
@@ -57,6 +58,7 @@ const SightingDetails = (props) => {
       <section>
         <h1>Comments</h1>
           <NewComment handleAddComment={handleAddComment} />
+          <Comments comments={sighting.comments} user={props.user}/>
       </section>
     </main>
   )
