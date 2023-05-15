@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 // pages
 import Loading from "../Loading/Loading"
 
@@ -14,6 +14,7 @@ import styles from './SightingDetails.module.css'
 // compontents
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import NewComment from "../../components/NewComment/NewComment"
+//import { buildErrorMessage } from "vite"
 
 //todo create styles to import
 const SightingDetails = (props) => {
@@ -43,6 +44,14 @@ const SightingDetails = (props) => {
         </header>
         <span>
           <AuthorInfo content={sighting} />
+          {sighting.author._id === props.user.profile &&
+          <>
+            <Link to={`/sightings/${sightingId}/edit`} state={sighting}>Edit</Link>
+            <button onClick={() => props.handleDeleteSighting(sightingId)}>
+            Delete
+            </button>
+          </>
+          }
         </span>
         <p>{sighting.details}</p>
       </article>
