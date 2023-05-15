@@ -48,7 +48,7 @@ const SightingDetails = (props) => {
         <span>
           {sighting.author._id === props.user.profile && <>
           <Link to={`/sightings/${sightingId}/edit`} state={sighting}>Edit</Link>
-          <button>Delete</button>
+          <button onClick={() => props.handleDeleteSighting(sightingId)}>Delete</button>
           </>}
         </span>
         <p>{sighting.details}</p>
