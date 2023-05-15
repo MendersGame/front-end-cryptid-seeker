@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
+import { Link } from "react-router-dom"
 // pages
 import Loading from "../Loading/Loading"
 
@@ -43,6 +44,12 @@ const SightingDetails = (props) => {
         </header>
         <span>
           <AuthorInfo content={sighting} />
+        </span>
+        <span>
+          {sighting.author._id === props.user.profile && <>
+          <Link to={`/sightings/${sightingId}/edit`} state={sighting}>Edit</Link>
+          <button>Delete</button>
+          </>}
         </span>
         <p>{sighting.details}</p>
       </article>
