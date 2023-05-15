@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 import { Link } from "react-router-dom"
+import Icon from "../../components/Icon/Icon"
 // pages
 import Loading from "../Loading/Loading"
 
@@ -47,8 +48,8 @@ const SightingDetails = (props) => {
         </span>
         <span>
           {sighting.author._id === props.user.profile && <>
-          <Link to={`/sightings/${sightingId}/edit`} state={sighting}>Edit</Link>
-          <button onClick={() => props.handleDeleteSighting(sightingId)}>Delete</button>
+          <Link to={`/sightings/${sightingId}/edit`} state={sighting}><Icon category="Edit" /></Link>
+          <button onClick={() => props.handleDeleteSighting(sightingId)}><Icon category="Trash" /></button>
           </>}
         </span>
         <p>{sighting.details}</p>
