@@ -26,11 +26,9 @@ const CryptidCard = ({ cryptid }) => {
       <article className={styles.container}>
         <header>
           <span>
-            {/* <h1>{ cryptid.name }</h1> */}
             {/* TODO add Icon */}
           </span>
         </header>
-      {/* <p>{cryptid.description}</p> */}
         {displayCryptidInfo ? <CryptidInfo name={cryptid.name}  /> : <CryptidDescription name= {cryptid.name} description={cryptid.description}  />}
         <button className="cryptidBtn" onClick={handleCryptidClick}>
     {displayCryptidInfo ? 'Show Details' : 'Hide Details'}
