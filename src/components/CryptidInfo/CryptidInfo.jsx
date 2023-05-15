@@ -1,7 +1,9 @@
+// import Icon from "../Icon/Icon"
+
 const CryptidInfo = (props) => {
 return (
   <>
-  <img src="" alt="" />
+  <img src={props.profile} />
   <div>{props.name}</div>
   </>
 )
