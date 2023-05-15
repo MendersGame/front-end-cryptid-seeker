@@ -13,6 +13,8 @@ const Comments = (props) => {
           key={comment._id}
           comment={comment}
           user={props.user}
+          sightingId={props.sightingId}
+          handleDeleteComment={props.handleDeleteComment}
         />
       ))}
     </>

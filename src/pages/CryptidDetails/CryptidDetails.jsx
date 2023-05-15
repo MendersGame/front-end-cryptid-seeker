@@ -2,6 +2,7 @@ import styles from './CryptidDetails.module.css'
 import Loading from '../Loading/Loading'
 import { useEffect, useState } from "react"
 import * as cryptidService from '../../services/cryptidService'
+import Cryptid from '../../assets/cryptids'
 
 const CryptidDetails = () => {
   const {cryptidId} = useParams()
