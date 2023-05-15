@@ -36,6 +36,11 @@ const SightingDetails = (props) => {
     setSighting({ ...sighting, comments: [...sighting.comments, newComment],})
   }
 
+  const handleDeleteComment = async (sightingId, commentId) => {
+    await sightingService.deleteComment(sightingId, commentId)
+    setSighting({ ...sighting, comments: sighting.comments.filter((c) => c._id !== commentId) })
+  }
+
   if (!sighting) return <Loading />
 
   return (
@@ -58,7 +63,7 @@ const SightingDetails = (props) => {
       <section>
         <h1>Comments</h1>
           <NewComment handleAddComment={handleAddComment} />
-          <Comments comments={sighting.comments} user={props.user} sightingId={sightingId}/>
+          <Comments comments={sighting.comments} user={props.user} sightingId={sightingId} handleDeleteComment={handleDeleteComment}/>
       </section>
     </main>
   )

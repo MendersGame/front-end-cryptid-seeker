@@ -106,6 +106,20 @@ const updateComment = async (sightingId, commentId, commentFormData) => {
   }
 }
 
+const deleteComment = async (sightingId, commentId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${sightingId}/comments/${commentId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export { 
   index, 
   show, 
@@ -114,4 +128,5 @@ export {
   deleteSighting as delete,
   createComment,
   updateComment,
+  deleteComment,
 }
