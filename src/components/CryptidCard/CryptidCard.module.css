@@ -1,5 +1,8 @@
 .container {
-  margin: 4em 0 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 3em 0;
   width: 100%;
   height: 320px;
   padding: 14px 21px;
@@ -7,7 +10,17 @@
   border: 1px solid var(--border);
   background-color: #1C141E;
   box-shadow: 7px 6px 8px rgba(0, 0, 0, 0.70);
+  justify-content: center;
+  
 }
+
+
+button {
+  height: 40px;
+  
+  /* flex-grow: inherit; */
+}
+
 
 
 .container header {
