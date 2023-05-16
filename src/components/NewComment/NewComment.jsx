@@ -31,7 +31,7 @@ const NewComment = (props) => {
         placeholder="Add a Comment"
         onChange={handleChange}
       />
-      <button type="submit"><Icon category="Create" /></button>
+      <button className={styles.button} type="submit"><Icon category="Create" /></button>
     </form>
   )
 }
