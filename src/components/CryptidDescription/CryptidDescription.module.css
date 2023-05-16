@@ -1,0 +1,10 @@
+.cryptid {
+  max-width:80px;
+}
+
+img {
+  display: flex;
+  margin-top: 0;
+  padding: 0;
+  height: 4.5em;
+}
