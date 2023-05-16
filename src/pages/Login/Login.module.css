@@ -12,8 +12,9 @@
 
 .container img {
   width: 65%;
+  height: 500px;
   max-width: 500px;
-  
+  min-height: 100px;
 }
 
 .container section {
@@ -89,13 +90,6 @@
   margin: 21px 0px 0px 0px;
   cursor: pointer;
 }
-
-.container button:disabled {
-  color: #FDF1DE;
-  background-color: #513c58;
-  cursor: not-allowed;
-}
-
 
 
 input:focus {

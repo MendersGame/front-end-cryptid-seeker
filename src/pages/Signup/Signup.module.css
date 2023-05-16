@@ -12,8 +12,9 @@
 
 .container img {
   width: 65%;
+  height: 500px;
   max-width: 500px;
-  
+  min-height: 100px;
 }
 
 .container section {
