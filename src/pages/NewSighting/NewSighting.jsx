@@ -22,6 +22,8 @@ const NewSighting = (props) => {
   }
 
   return (
+    <>
+      <p className="sightDiv">New Sighting</p>
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title-input">Title</label>
@@ -60,6 +62,7 @@ const NewSighting = (props) => {
         <button type="submit">SUBMIT</button>
       </form>
     </main>
+    </>
   )
 }
 

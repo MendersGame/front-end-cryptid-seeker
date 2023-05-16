@@ -1,3 +1,11 @@
+main {
+  width: 40%;
+  position: relative;
+  left: 30%;
+  justify-content: space-evenly;
+}
+
+
 .container {
   margin: 5em;
   height: 100%;
@@ -7,6 +15,16 @@
   flex-direction: column;
   border-radius: 10px;
   background-color: #1C141E;
+  box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
+}
+
+p {
+  margin: 70px 0 0 0;
+  position: relative;
+  left: 4%;
+  font-size:xx-large;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 .container input, textarea, select, button { 
@@ -14,21 +32,45 @@
   padding: 14px;
   font-size: 14px;
   resize: vertical;
-  border-radius: 5px;
-  margin: 7px 0px 14px 0px;
-  border: 1px solid var(--border);
+  border-radius: 15px;
+  margin: 0 0px 14px 0px;
+  /* border: 1px solid var(--border); */
+  /* border-color: white; */
   font-family: canada-type-gibson, sans-serif;
+  background-color: #1C141E;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+}
+
+form label {
+  align-items: left;
+  display: flex;
+  justify-content:flex-start;
+  margin: 0;
+}
+
+form select {
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 15px;
 }
 
 .container textarea {
-
   min-height: 50px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 15px;
+  border-width: 1px;
 }
 
 .container label {
   font-weight: 600;
   margin: 7px 0px 14px 0px;
+
 }
+
 
 .container button {
   color: #FDF1DE;
