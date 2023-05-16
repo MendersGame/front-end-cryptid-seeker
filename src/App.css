@@ -12,8 +12,8 @@ body {
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #FDF1DE;
+  background-color: #2D1F32;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,7 +24,8 @@ body {
 
 a,
 a:visited {
-  color: #00d8ff
+  color: #FDF1DE;
+  text-decoration: none;
 }
 
 nav > ul {
