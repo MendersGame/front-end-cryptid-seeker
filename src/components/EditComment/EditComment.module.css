@@ -10,12 +10,14 @@
 .container textarea, button { 
   width: 100%;
   padding: 14px;
-  font-size: 14px;
+  font-size: 16px;
   resize: vertical;
   border-radius: 17px;
   margin: 7px 0px 14px 0px;
   border: 1px solid var(--border);
   font-family: Amarante, sans-serif;
+  position: relative;
+  down: 50px;
 }
 
 .container label {
