@@ -38,6 +38,7 @@ const CryptidDetails = () => {
       <section>
         <h1>Reviews</h1>
           <NewReview handleAddReview={handleAddReview} />
+          
       </section>
     </main>
   )
