@@ -11,7 +11,7 @@ const AuthorInfo = (props) => {
     <div className={styles.container}>
       <section>
       <Icon category="Profile" />
-        { <h4>{props.content.author.name}</h4> }
+        { <h4>{content.author.name}</h4> }
         { <DateCard createdAt={content.createdAt} /> }
       </section>
     </div>
