@@ -1,9 +1,10 @@
-// import Icon from "../Icon/Icon"
+// css
+import styles from './CryptidInfo.module.css'
 
 const CryptidInfo = (props) => {
 return (
   <>
-  <img src={props.profile} />
+  <img className={styles.cryptid} src={props.photo} />
   <div>{props.name}</div>
   </>
 )

@@ -2,11 +2,11 @@
   margin: 5em;
   height: 100%;
   display: flex;
-  overflow-x: hidden;
-  overflow-y: scroll;
   padding: 28px 21px;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
+  background-color: #1C141E;
 }
 
 .container input, textarea, select, button { 
@@ -31,10 +31,10 @@
 }
 
 .container button {
-  color: white;
+  color: #FDF1DE;
   font-weight: 600;
   margin: 21px 0px 0px 0px;
-  background: var(--primary);
+  background: #694C70;
 }
 
 .container a {
