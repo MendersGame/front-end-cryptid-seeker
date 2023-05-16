@@ -126,6 +126,7 @@ const Signup = ({ handleAuthEvt }) => {
           <label>
             Upload Photo
             <input 
+            className={styles.photobutton}
             type="file" 
             name="photo" 
             onChange={handleChangePhoto}
@@ -133,10 +134,10 @@ const Signup = ({ handleAuthEvt }) => {
           />
           </label>
           <div>
-            <button disabled={isFormInvalid() || isSubmitted}>
+            <button disabled={isFormInvalid() || isSubmitted} className={styles.signup}>
               {!isSubmitted ? 'SIGN UP' : 'Sending...'}
             </button>
-            <Link to="/">CANCEL</Link>
+            <button className={styles.cancel}><Link to="/">CANCEL</Link></button>
           </div>
         </form>
       </section>

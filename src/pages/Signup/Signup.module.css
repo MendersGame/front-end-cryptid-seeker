@@ -2,13 +2,19 @@
   height: 100%;
   display: flex;
   align-items: center;
+  background-color: #1C141E;
 }
 
-.container p { margin: 0; padding: 0px 0 10px; }
+.container p { 
+  margin: 0; 
+  padding: 0px 0 10px; 
+}
 
 .container img {
   width: 65%;
+  height: 500px;
   max-width: 500px;
+  min-height: 100px;
 }
 
 .container section {
@@ -16,72 +22,85 @@
   height: 100%;
   display: flex;
   padding: 28px 21px;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
+  background-color: #2d1f32;
+  
+}
+.container form {
+  text-align: left;
+  padding: 28px 21px;
+  border-radius: 15px;
+  background-color: #1C141E;
 }
 
 .container section:first-child {
   height: 100%;
   align-items: center;
   justify-content: center;
-  background-color: #fdfeff;
+  background-color: #1C141E;
 }
 
 .container section:nth-child(2) {
-  overflow: scroll;
+  /* overflow: scroll; */
   justify-content: center;
 }
 
 .container input {
+  color: #FDF1DE;
+  background-color: #1C141E;
   margin: 7px 0px 14px 0px;
 }
 
-.container input, button { 
+
+.container input { 
   width: 100%;
   padding: 14px;
   font-size: 14px;
   border-radius: 5px;
-  border: 1px solid rgb(220, 220, 220);
+  border: 2px solid #FDF1DE;
 }
 
 .container div {
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #1C141E;
 }
 
 .container label {
   font-weight: 600;
   margin: 7px 0px 14px 0px;
+  background-color: #1C141E;
 }
 
-.container button {
-  color: white;
+.container .signup {
+  color: #FDF1DE;
   font-weight: 600;
-  background: #00a0df;
+  background: #694C70;
+  box-shadow: none;
+  margin: 21px 0px 0px 0px;
+  cursor: pointer;
+}
+.container .cancel {
+  color: #FDF1DE;
+  font-weight: 600;
+  background: #EC1A24;
+  box-shadow: none;
   margin: 21px 0px 0px 0px;
   cursor: pointer;
 }
 
 .container button:disabled {
-  color: rgb(200, 200, 200);
-  background-color: #f8f8f8;
+  color: #FDF1DE;
+  background-color: #513c58;
   cursor: not-allowed;
 }
 
-.container a {
-  border: none;
-  font-size: 14px;
-  background: none;
-  font-weight: 500;
-  margin-top: 14px;
-  text-align: center;
-  color: rgb(200, 200, 200);
-}
+
 
 input:focus {
-  outline: none;
-  border: 1px solid #00a0df;
+  border: 4px solid #694C70;
 }
 
 input[type="file"] {
@@ -90,13 +109,17 @@ input[type="file"] {
 }
 
 input::file-selector-button { 
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   border-radius: 5px;
   padding: 14px 28px;
   margin-right: 28px;
   text-align: center;
-  border: 1px solid rgb(220, 220, 220);
+  color: #FDF1DE;
+  border-radius: 15px;
+  border: none;
+  font-family: Amarante;
+  background-color: #694C70;
   cursor: pointer;
 }
 
