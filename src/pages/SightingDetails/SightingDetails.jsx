@@ -1,23 +1,18 @@
+//npm modules
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 import { Link } from "react-router-dom"
-import Icon from "../../components/Icon/Icon"
+//css
+import styles from './SightingDetails.module.css'
 // pages
 import Loading from "../Loading/Loading"
-
+//service
 import * as sightingService from '../../services/sightingService'
-
-
-import styles from './SightingDetails.module.css' 
-
-
-
-
 // compontents
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import NewComment from "../../components/NewComment/NewComment"
 import Comments from "../../components/Comments/Comments"
-
+import Icon from "../../components/Icon/Icon"
 
 //todo create styles to import
 const SightingDetails = (props) => {
