@@ -27,6 +27,11 @@
   justify-content: center;
 }
 
+.splash img {
+  height: 200vh;
+  justify-content: center;
+}
+
 .about {
   height: 430px;
   background-color: #2D1F32;
