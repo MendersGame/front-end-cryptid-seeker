@@ -35,7 +35,9 @@ const CryptidCard = ({ cryptid }) => {
             Id={cryptid._id}
           />
         :<CryptidDescription 
-            name= {cryptid.name} 
+        photo={cryptid.photo}
+        name= {cryptid.name} 
+            region={cryptid.region}
             description={cryptid.description}
           />
         }
