@@ -90,11 +90,29 @@ async function createReview(cryptidId, reviewFormData) {
   }
 }
 
+const updateReview = async (cryptidId, reviewId, reviewFormData) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${cryptidId}/reviews/${reviewId}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(reviewFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export { 
   index, 
   show, 
   create, 
   update,
   deleteCryptid as delete,
-  createReview
+  createReview,
+  updateReview,
+  
 }
