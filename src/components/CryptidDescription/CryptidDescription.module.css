@@ -3,8 +3,11 @@
 }
 
 img {
-  display: flex;
-  margin-top: 0;
-  padding: 0;
-  height: 4.5em;
+  justify-content:center;
+}
+button {
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.70);
+  background-color: #6C5075;
+  color: white;
+  cursor: pointer;
 }

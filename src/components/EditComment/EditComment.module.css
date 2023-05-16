@@ -12,10 +12,10 @@
   padding: 14px;
   font-size: 14px;
   resize: vertical;
-  border-radius: 5px;
+  border-radius: 17px;
   margin: 7px 0px 14px 0px;
   border: 1px solid var(--border);
-  font-family: canada-type-gibson, sans-serif;
+  font-family: Amarante, sans-serif;
 }
 
 .container label {
