@@ -22,7 +22,7 @@ const CryptidDetails = (props) => {
     fetchCryptid()
   }, [cryptidId])
   const handleAddReview = async (reviewFormData) => {
-    const newReview = await cryptidService.createComment(cryptidId, reviewFormData)
+    const newReview = await cryptidService.createReview(cryptidId, reviewFormData)
     setCryptid({...cryptid, reviews: [...cryptid.reviews, newReview],})
   }
 

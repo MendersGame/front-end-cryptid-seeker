@@ -1,5 +1,7 @@
 import CryptidCard from "../CryptidCard/CryptidCard"
 
+//import styles from './Reviews.module.css'
+
 const Reviews = (props) => {
   if(!props.reviews) return <h4>No Reviews</h4>
   return ( 
@@ -10,6 +12,7 @@ const Reviews = (props) => {
         review={review}
         user={props.user}
         cryptidId={props.cryptidId}
+        handleDeleteReview={props.handleDeleteReview}
       />
     })}
     </>
