@@ -95,9 +95,7 @@ function App() {
         />
         <Route path="/"/>
         <Route path="/sightings" element={
-          <ProtectedRoute user={user}>
             <SightingList sightings={sightings} />
-          </ProtectedRoute>
           }
         />
         <Route 
