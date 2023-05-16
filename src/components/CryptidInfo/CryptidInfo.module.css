@@ -2,3 +2,13 @@
   max-width:80px;
 }
 
+div {
+  text-align: center;
+  justify-content: center;
+}
+
+img {
+  margin-top: 25px;
+  height: 6em;
+  width: 6em;
+}
