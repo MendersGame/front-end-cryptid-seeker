@@ -1,7 +1,10 @@
-import styles from './CryptidDetails.module.css'
-import Loading from '../Loading/Loading'
 import { useEffect, useState, } from "react"
 import { useParams } from 'react-router-dom'
+//css
+import styles from './CryptidDetails.module.css'
+//pages
+import Loading from '../Loading/Loading'
+//service
 import * as cryptidService from '../../services/cryptidService'
 
 const CryptidDetails = () => {
