@@ -20,7 +20,11 @@ const CryptidDetails = () => {
     }
     fetchCryptid()
   }, [cryptidId])
-  
+  const handleAddReview = async (reviewFormData) => {
+    const newReview = await cryptidService.createComment(cryptidId, reviewFormData)
+    setCryptid({...cryptid, reviews: [...cryptid.reviews, newReview],})
+  }
+
   if(!cryptid) return <Loading />
   
   return (
