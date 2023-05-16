@@ -1,5 +1,5 @@
 .cryptid {
-  max-width:80px;
+  max-width: 150px;
 }
 
 div {
@@ -10,6 +10,4 @@ div {
 img {
   margin-top: 22px;
   margin-bottom: 10px;
-  height: 6em;
-  width: 6em;
 }

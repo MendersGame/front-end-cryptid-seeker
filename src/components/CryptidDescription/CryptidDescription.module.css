@@ -6,7 +6,7 @@ img {
   justify-content:center;
 }
 button {
-  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.70);
+  box-shadow: 2px 4px 7px  rgba(0, 0, 0, 0.70);
   background-color: #6C5075;
   color: white;
   cursor: pointer;

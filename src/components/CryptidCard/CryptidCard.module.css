@@ -86,3 +86,14 @@ button {
   width: 14px;
 	height: 14px;
 }
+
+
+
+
+@media only screen and (max-width: 1100px) {
+.container {
+  width: 100%;
+  display:flex;
+  font-size: small;
+}
+}
