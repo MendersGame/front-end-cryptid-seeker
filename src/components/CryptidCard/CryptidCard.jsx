@@ -17,7 +17,6 @@ const CryptidCard = ({ cryptid }) => {
   function handleCryptidClick() {
     setDisplayCryptidInfo(!displayCryptidInfo)
   }
-  console.log(cryptid.name)
 
 
   return (
@@ -33,6 +32,7 @@ const CryptidCard = ({ cryptid }) => {
           <CryptidInfo 
             name={cryptid.name} 
             photo={cryptid.photo}
+            Id={cryptid._id}
           />
         :<CryptidDescription 
             name= {cryptid.name} 
