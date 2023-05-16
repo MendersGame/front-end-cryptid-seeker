@@ -9,8 +9,7 @@ import { useState } from "react";
 import styles from './CryptidCard.module.css'
 import CryptidDescription from "../CryptidDescription/CryptidDescription";
 import CryptidInfo from "../CryptidInfo/CryptidInfo";
-import Icon from "../Icon/Icon";
-// import CryptidInfo from "../CryptidInfo/CryptidInfo";
+
 
 const CryptidCard = ({ cryptid }) => {
 
@@ -30,9 +29,18 @@ const CryptidCard = ({ cryptid }) => {
             {/* TODO add Icon */}
           </span>
         </header>
-        {displayCryptidInfo ? <CryptidInfo name={cryptid.name} photo={cryptid.photo}  /> : <CryptidDescription name= {cryptid.name} description={cryptid.description}  />}
+        {displayCryptidInfo ? 
+          <CryptidInfo 
+            name={cryptid.name} 
+            photo={cryptid.photo}
+          />
+        :<CryptidDescription 
+            name= {cryptid.name} 
+            description={cryptid.description}
+          />
+        }
         <button className="cryptidBtn" onClick={handleCryptidClick}>
-    {displayCryptidInfo ? 'Show Details' : 'Hide Details'}
+          {displayCryptidInfo ? 'Show Details' : 'Hide Details'}
         </button>
       </article>
       </>
