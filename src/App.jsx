@@ -82,7 +82,7 @@ function App() {
       <Routes>
       { <Route path="/cryptids"
           element={
-            <CryptidList user={user} cryptids={cryptids} />
+            <CryptidList cryptids={cryptids} />
           }
         /> }
         <Route 
