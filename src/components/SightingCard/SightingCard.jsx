@@ -9,6 +9,7 @@ import AuthorInfo from "../AuthorInfo/AuthorInfo";
 import styles from './SightingCard.module.css'
 
 const SightingCard = ({ sighting }) => {
+
   return (
     <Link to ={`/sightings/${sighting._id}`}>
       <article className={styles.container}>

@@ -1,22 +1,18 @@
+//npm modules
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 import { Link } from "react-router-dom"
-import Icon from "../../components/Icon/Icon"
+//css
+import styles from './SightingDetails.module.css'
 // pages
 import Loading from "../Loading/Loading"
-
+//service
 import * as sightingService from '../../services/sightingService'
-
-
-import styles from './SightingDetails.module.css' 
-
-
-
-
 // compontents
 import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
 import NewComment from "../../components/NewComment/NewComment"
 import Comments from "../../components/Comments/Comments"
+import Icon from "../../components/Icon/Icon"
 
 //todo create styles to import
 const SightingDetails = (props) => {
@@ -51,6 +47,14 @@ const SightingDetails = (props) => {
         </header>
         <span>
           <AuthorInfo content={sighting} />
+          {sighting.author._id === props.user.profile &&
+          <>
+            <Link to={`/sightings/${sightingId}/edit`} state={sighting}>Edit</Link>
+            <button onClick={() => props.handleDeleteSighting(sightingId)}>
+            Delete
+            </button>
+          </>
+          }
         </span>
         <span>
           {sighting.author._id === props.user.profile && <>
@@ -62,8 +66,13 @@ const SightingDetails = (props) => {
       </article>
       <section>
         <h1>Comments</h1>
-          <NewComment handleAddComment={handleAddComment} />
-          <Comments comments={sighting.comments} user={props.user} sightingId={sightingId} handleDeleteComment={handleDeleteComment}/>
+          <NewComment handleAddComment={handleAddComment}/>
+          <Comments 
+            comments={sighting.comments} 
+            user={props.user} 
+            sightingId={sightingId} 
+            handleDeleteComment={handleDeleteComment}
+          />
       </section>
     </main>
   )

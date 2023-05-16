@@ -13,7 +13,7 @@ import SightingDetails from './pages/SightingDetails/SightingDetails'
 import NewSighting from './pages/NewSighting/NewSighting'
 import EditSighting from './pages/EditSighting/EditSighting'
 import CryptidList from './pages/CryptidList/CryptidList'
-
+import CryptidDetails from './pages/CryptidDetails/CryptidDetails'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
@@ -86,6 +86,14 @@ function App() {
           </ProtectedRoute>
           }
         /> }
+        <Route 
+          path="/cryptids/:cryptidId"
+          element={
+            <ProtectedRoute user={user}>
+              <CryptidDetails user={user} />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/" element={<Landing user={user} />} />
         <Route path="/sightings" element={
           <ProtectedRoute user={user}>
