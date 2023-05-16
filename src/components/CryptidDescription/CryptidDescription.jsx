@@ -5,9 +5,11 @@ const CryptidDescription = (cryptid) => {
   return (
     <>
     {/* <img src="" alt="" /> */}
-    <img className={styles.cryptid} src={cryptid.photo} />
-    <div>{cryptid.name}</div>
-    <div>Region: {cryptid.region}</div>
+    <div className='seperateContainer'>
+    <img className={styles.cryptid} src={cryptid.photo}  /> 
+    <div>{cryptid.name}</div> 
+    <div>Region: {cryptid.region}</div> 
+    </div>
     <div>{cryptid.description}</div>
     </>
   )

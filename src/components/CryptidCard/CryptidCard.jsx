@@ -30,7 +30,7 @@ const CryptidCard = ({ cryptid }) => {
         </header>
         {displayCryptidInfo ? 
           <CryptidInfo 
-            name={cryptid.name} 
+            name={cryptid.name}  
             photo={cryptid.photo}
             Id={cryptid._id}
           />
