@@ -30,7 +30,7 @@ const CryptidCard = ({ cryptid }) => {
             {/* TODO add Icon */}
           </span>
         </header>
-        {displayCryptidInfo ? <CryptidInfo name={cryptid.name} profile={<Icon category="Profile"/>}  /> : <CryptidDescription name= {cryptid.name} description={cryptid.description}  />}
+        {displayCryptidInfo ? <CryptidInfo name={cryptid.name} photo={cryptid.photo}  /> : <CryptidDescription name= {cryptid.name} description={cryptid.description}  />}
         <button className="cryptidBtn" onClick={handleCryptidClick}>
     {displayCryptidInfo ? 'Show Details' : 'Hide Details'}
         </button>

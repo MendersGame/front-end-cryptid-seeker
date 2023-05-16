@@ -8,17 +8,20 @@
   align-items: center;
   background: white;
   background-color: #1C141E ;
-  box-shadow: 7px 6px 8px black;
+  box-shadow: 7px 6px 8px rgba(0, 0, 0, 0.70);
 }
-
 
 
 section {
   background-color: #2D1F32;
 }
+.iconlogo {
+  width: 90px;
+}
 
-.container img {
-  width: 50px;
+.typelogo {
+  width: 200px;
+  margin-left: 50px;
 }
 
 .container ul {
@@ -35,6 +38,8 @@ section {
   margin-left: 35px;
   text-align: right;
 }
+
+
 
 @media only screen and (max-width: 414px) {
   .container ul {
