@@ -1,6 +1,7 @@
 import styles from './CryptidDetails.module.css'
 import Loading from '../Loading/Loading'
-import { useEffect, useState } from "react"
+import { useEffect, useState, } from "react"
+import { useParams } from 'react-router-dom'
 import * as cryptidService from '../../services/cryptidService'
 
 const CryptidDetails = () => {
@@ -9,7 +10,7 @@ const CryptidDetails = () => {
 
   useEffect(() => {
     const fetchCryptid = async () => {
-      const data = await cryptidService.show(cryptid)
+      const data = await cryptidService.show(cryptidId)
       setCryptid(data)
     }
     fetchCryptid()
