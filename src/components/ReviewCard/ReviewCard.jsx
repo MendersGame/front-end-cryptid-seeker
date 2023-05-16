@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import AuthorInfo from "../AuthorInfo/AuthorInfo"
 import Icon from "../Icon/Icon"
 
-const ReviewCard = ({ review, sightingId, user, handleDeleteReview }) => {
+const ReviewCard = ({ review, cryptidId, user, handleDeleteReview }) => {
   return (
     <article>
       <header>
@@ -11,10 +11,10 @@ const ReviewCard = ({ review, sightingId, user, handleDeleteReview }) => {
           <AuthorInfo content={review} />
           {review.author._id === user.profile &&
             <>
-              <Link to={`/sightings/${sightingId}/reviews/${review._id}`} state={review}>
+              <Link to={`/cryptids/${cryptidId}/reviews/${review._id}`} state={review}>
                 <Icon category="Edit"/>
               </Link>
-              <button onClick={()=> handleDeleteReview(sightingId, review._id)}>
+              <button onClick={()=> handleDeleteReview(cryptidId, review._id)}>
                 <Icon category="Trash"/>
               </button>
             </>

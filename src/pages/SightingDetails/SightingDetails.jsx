@@ -71,12 +71,13 @@ const SightingDetails = (props) => {
       </article>
       <section>
         <h1>Comments</h1>
-          <NewComment handleAddComment={handleAddComment} />
+          <NewComment handleAddComment={handleAddComment}/>
           <Comments 
             comments={sighting.comments} 
             user={props.user} 
             sightingId={sightingId} 
-            handleDeleteComment={handleDeleteComment}/>
+            handleDeleteComment={handleDeleteComment}
+          />
       </section>
     </main>
   )
