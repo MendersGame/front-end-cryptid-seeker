@@ -80,6 +80,7 @@ function App() {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
+      <Route path="/" element={<Landing />} />
       { <Route path="/cryptids"
           element={
             <CryptidList cryptids={cryptids} />
