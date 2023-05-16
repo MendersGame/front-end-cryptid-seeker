@@ -12,7 +12,7 @@ const NavBar = ({ user, handleLogout }) => {
   const publicLinks = (
     <ul>
       <li><NavLink to="/cryptids">CRYPTIDS</NavLink></li>
-      <li><NavLink to="/sightings">SIGHTING</NavLink></li>
+      <li><NavLink to="/sightings">SIGHTINGS</NavLink></li>
       <li><NavLink to="/auth/login">LOG IN</NavLink></li>
       <li><NavLink to="/auth/signup">SIGN UP</NavLink></li>
     </ul>
@@ -22,7 +22,7 @@ const NavBar = ({ user, handleLogout }) => {
     <ul>
       <li><NavLink to="/cryptids">CRYPTIDS</NavLink></li>
       <li><NavLink to="/sightings/new">NEW SIGHTING</NavLink></li>
-      <li><NavLink to="/sightings">SIGHTING</NavLink></li>
+      <li><NavLink to="/sightings">SIGHTINGS</NavLink></li>
       <li>
         <NavLink to="/auth/logout" onClick={handleLogout}>LOG OUT</NavLink>
       </li>

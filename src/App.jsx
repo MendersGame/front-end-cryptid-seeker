@@ -80,10 +80,10 @@ function App() {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-      { <Route path="/cryptids" element={
-          <ProtectedRoute user={user}>
+      <Route path="/" element={<Landing />} />
+      { <Route path="/cryptids"
+          element={
             <CryptidList cryptids={cryptids} />
-          </ProtectedRoute>
           }
         /> }
         <Route 
@@ -94,11 +94,9 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/" element={<Landing user={user} />} />
+        <Route path="/"/>
         <Route path="/sightings" element={
-          <ProtectedRoute user={user}>
             <SightingList sightings={sightings} />
-          </ProtectedRoute>
           }
         />
         <Route 
