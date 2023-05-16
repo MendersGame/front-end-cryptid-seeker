@@ -1,4 +1,4 @@
-import ReviewCard from "../ReviewCard/ReviewCard"
+import ReviewCard from '../ReviewCard/ReviewCard'
 
 //import styles from './Reviews.module.css'
 
@@ -7,7 +7,7 @@ const Reviews = (props) => {
   if(!props.reviews) return <h4>No Reviews</h4>
   return ( 
     <>
-    {props.reviews.map((review) => {
+    {props.reviews.map((review) => (
       <ReviewCard
         key={review._id}
         review={review}
@@ -15,7 +15,7 @@ const Reviews = (props) => {
         cryptidId={props.cryptidId}
         handleDeleteReview={props.handleDeleteReview}
       />
-    })}
+    ))}
     </>
   )
 }
