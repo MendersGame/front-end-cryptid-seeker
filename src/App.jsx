@@ -5,6 +5,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 // pages
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
+import Logout from './pages/Logout/Logout'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
@@ -52,7 +53,6 @@ function App() {
   const handleLogout = () => {
     authService.logout()
     setUser(null)
-    navigate('/')
   }
   const handleAuthEvt = () => {
     setUser(authService.getUser())
@@ -139,6 +139,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/auth/logout" element={<Logout />} />
         <Route
           path="/auth/signup"
           element={<Signup handleAuthEvt={handleAuthEvt} />}
