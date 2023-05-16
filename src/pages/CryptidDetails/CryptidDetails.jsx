@@ -8,8 +8,9 @@ import Loading from '../Loading/Loading'
 import NewReview from "../../components/NewReview/NewReview"
 //service
 import * as cryptidService from '../../services/cryptidService'
+import Reviews from "../../components/Reviews/Reviews"
 
-const CryptidDetails = () => {
+const CryptidDetails = (props) => {
   const {cryptidId} = useParams()
   const [cryptid, setCryptid] = useState(null)
 
@@ -25,6 +26,11 @@ const CryptidDetails = () => {
     setCryptid({...cryptid, reviews: [...cryptid.reviews, newReview],})
   }
 
+  const handleDeleteReview = async (cryptidId, reviewId) => {
+    await cryptidService.deleteReview(cryptidId, reviewId)
+    setCryptid({...cryptid, reviews: cryptid.reviews.filter((r) => r._id !== reviewId)})
+  }
+
   if(!cryptid) return <Loading />
   
   return (
@@ -38,7 +44,12 @@ const CryptidDetails = () => {
       <section>
         <h1>Reviews</h1>
           <NewReview handleAddReview={handleAddReview} />
-          
+          <Reviews 
+            reviews={cryptid.reviews}
+            user={props.user}
+            cryptidId={cryptidId}
+            handleDeleteReview={handleDeleteReview}
+          />
       </section>
     </main>
   )
