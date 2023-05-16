@@ -1,6 +1,10 @@
 import { useState } from "react"
 
+//css
+import styles from './NewReview.module.css'
 
+//components
+import Icon from "../Icon/Icon"
 const NewReview = (props) => {
   const [formData, setFormData] = useState({text: ''})
 
@@ -21,7 +25,7 @@ const NewReview = (props) => {
         name="text"
         id="text-input"
         value={formData.text}
-        placeholder="Add a Comment"
+        placeholder="Add a Review"
         onChange={handleChange}
       />
       <button type="submit"><Icon category="Create" /></button>

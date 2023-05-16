@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'
 import styles from './CryptidDetails.module.css'
 //pages
 import Loading from '../Loading/Loading'
+//components
+import NewReview from "../../components/NewReview/NewReview"
 //service
 import * as cryptidService from '../../services/cryptidService'
 
@@ -31,6 +33,7 @@ const CryptidDetails = () => {
       </article>
       <section>
         <h1>Reviews</h1>
+          <NewReview handleAddReview={handleAddReview} />
       </section>
     </main>
   )
