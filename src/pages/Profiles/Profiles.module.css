@@ -1,0 +1,9 @@
+.profilesContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profilesContainer > p {
+  margin: 8px;
+}

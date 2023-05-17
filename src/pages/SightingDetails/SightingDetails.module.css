@@ -1,0 +1,87 @@
+.sightingDetailsContainer {
+  margin: 6em;
+  height: 100%;
+  display: flex;
+  overflow: scroll;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--card-background);
+}
+
+.sightingDetailsContainer article, .sightingDetailsContainer > section {
+  width: 100%;
+  padding: 21px;
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+}
+
+.sightingDetailsContainer p {
+  text-indent: 21px;
+  text-align-last: left;
+	word-break: break-all;
+}
+
+.sightingDetailsContainer header {
+  display: flex;
+  margin-bottom: 21px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sightingDetailsContainer h1 {
+  margin: 0;
+  margin-bottom: 7px;
+}
+
+.sightingDetailsContainer h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.sightingDetailsContainer span {
+  width: 100%;
+  display: flex;
+	margin-top: 10px;
+  align-items: center;
+}
+
+.sightingDetailsContainer div {
+  width: 100%;
+}
+
+.sightingDetailsContainer span button, .sightingDetailsContainer span a {
+  margin: 0;
+  width: 20%;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  margin-left: 7px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.sightingDetailsContainer span button, .sightingDetailsContainer span a  {
+  cursor: pointer;
+}
+
+.sightingDetailsContainer > section article {
+  padding: 0;
+  width: 100%;
+  min-height: 140px;
+  border-radius: 5px;
+  margin: 4px 0px 14px;
+}
+
+.sightingDetailsContainer > section h1 {
+  font-size: 21px;
+}
+
+.sightingDetailsContainer > section article p {
+  text-indent: 0px;
+}

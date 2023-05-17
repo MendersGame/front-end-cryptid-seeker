@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 import AuthorInfo from "../AuthorInfo/AuthorInfo";
 
 //css 
-
+import styles from './SightingCard.module.css'
 
 const SightingCard = ({ sighting }) => {
 
   return (
     <Link to ={`/sightings/${sighting._id}`}>
-      <article className={styles.container}>
+      <article className={styles.sightingCardContainer}>
         <header>
           <span>
             <h1>{ sighting.title }</h1>

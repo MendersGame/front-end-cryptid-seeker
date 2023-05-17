@@ -1,0 +1,27 @@
+.authorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.authorContainer * {
+  margin: 0;
+}
+
+.authorContainer > img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  margin-right: 12px;
+  border-radius: 50%;
+  background-color: var(--background);
+}
+
+.authorContainer h4 {
+  opacity: 0.75;
+}
+
+.authorContainer section {
+  display: flex;
+  flex-direction: column;
+}

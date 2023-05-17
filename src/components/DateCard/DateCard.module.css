@@ -1,0 +1,13 @@
+.dateCardContainer {
+  opacity: 0.35;
+  display: flex;
+  align-items: center;
+  background-color: #1C141E;
+}
+
+.dateCardContainer img {
+  width: 17px;
+  height: 17px;
+  margin-right: 2px;
+  margin-left: -2px;
+}
