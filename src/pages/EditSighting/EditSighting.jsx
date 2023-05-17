@@ -52,7 +52,9 @@ const EditSighting = (props) => {
         >
           {/*  CHANGE TO MAKE DROPDOWN THAT POPULATES OUR CRYPTIDS  */}
 
-          <option value="News">.map Cryptid.name</option>
+          <option value="News">{props.cryptids.map((cryptid) => (
+            <option key={cryptid._id} value={cryptid.name}>{cryptid.name}</option>
+          ))}</option>
         </select>
         <button className={styles.editButton} type="submit">SUBMIT</button>
       </form>

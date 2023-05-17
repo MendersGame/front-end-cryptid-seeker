@@ -16,10 +16,20 @@
   border-radius: 50%;
   background-color: var(--background);
 }
+.authorProfileImg {
+  
+}
 
-.authorContainer h4 {
+.authorContainer  {
   opacity: 0.75;
 }
+.authorName {
+font-size: 20px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+}
+
 
 .authorContainer section {
   display: flex;
