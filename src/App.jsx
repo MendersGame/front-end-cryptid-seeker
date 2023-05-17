@@ -15,6 +15,7 @@ import NewSighting from './pages/NewSighting/NewSighting'
 import EditSighting from './pages/EditSighting/EditSighting'
 import CryptidList from './pages/CryptidList/CryptidList'
 import CryptidDetails from './pages/CryptidDetails/CryptidDetails'
+
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
@@ -81,11 +82,11 @@ function App() {
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
       <Route path="/" element={<Landing user={user} />} />
-      { <Route path="/cryptids"
+        <Route path="/cryptids"
           element={
             <CryptidList cryptids={cryptids} />
           }
-        /> }
+        /> 
         <Route 
           path="/cryptids/:cryptidId"
           element={
@@ -128,7 +129,8 @@ function App() {
             <ProtectedRoute user={user}>
               <EditComment />
             </ProtectedRoute>
-          } />
+          } 
+        />
         <Route
           path="/profiles"
           element={
