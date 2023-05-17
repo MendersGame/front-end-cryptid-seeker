@@ -10,7 +10,7 @@ const CryptidSearch = (props) => {
   }
   const handleSubmit = evt => {
     evt.preventDefault()
-    props.handleChange(formData)
+    props.handleCryptidSearch(formData)
     setFormData({query: ''})
   }
   return (
