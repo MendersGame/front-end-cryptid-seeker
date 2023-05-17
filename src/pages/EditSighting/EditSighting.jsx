@@ -6,7 +6,6 @@ import { useLocation } from 'react-router-dom'
 import styles from './EditSighting.module.css'
 
 const EditSighting = (props) => {
-  console.log("edit props: ", props);
   const location = useLocation()
 
   const [formData, setFormData,] = useState(location.state)
