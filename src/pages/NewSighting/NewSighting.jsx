@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from "react"
+import { useState } from 'react'
 
 // styles
 import styles from './NewSighting.module.css'

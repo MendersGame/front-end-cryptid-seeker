@@ -1,6 +1,6 @@
 // npm modules
-import { useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 // styles
 import styles from './EditSighting.module.css'

@@ -4,9 +4,11 @@ import { Link, useNavigate } from 'react-router-dom'
 
 // services
 import * as authService from '../../services/authService'
+
 // assets
 import signupIcon from '../../assets/branding/signup_cs.svg'
-// css
+
+// styles
 import styles from './Signup.module.css'
 
 const Signup = ({ handleAuthEvt }) => {

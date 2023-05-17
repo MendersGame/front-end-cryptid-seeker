@@ -1,18 +1,22 @@
-//npm modules
-import { useState, useEffect } from "react"
+// npm modules
+import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { Link } from "react-router-dom"
-//css
-import styles from './SightingDetails.module.css'
+import { Link } from 'react-router-dom'
+
 // pages
-import Loading from "../Loading/Loading"
+import Loading from '../Loading/Loading'
+
+// compontents
+import AuthorInfo from '../../components/AuthorInfo/AuthorInfo'
+import NewComment from '../../components/NewComment/NewComment'
+import Comments from '../../components/Comments/Comments'
+import Icon from '../../components/Icon/Icon'
+
 //service
 import * as sightingService from '../../services/sightingService'
-// compontents
-import AuthorInfo from "../../components/AuthorInfo/AuthorInfo"
-import NewComment from "../../components/NewComment/NewComment"
-import Comments from "../../components/Comments/Comments"
-import Icon from "../../components/Icon/Icon"
+
+// styles
+import styles from './SightingDetails.module.css'
 
 //todo create styles to import
 const SightingDetails = (props) => {

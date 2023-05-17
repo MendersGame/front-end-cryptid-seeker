@@ -1,10 +1,10 @@
 // npm modules
-import { useEffect, useState, } from "react"
+import { useEffect, useState, } from 'react'
 import { useParams } from 'react-router-dom'
 
 // components
-import NewReview from "../../components/NewReview/NewReview"
-import Reviews from "../../components/Reviews/Reviews"
+import NewReview from '../../components/NewReview/NewReview'
+import Reviews from '../../components/Reviews/Reviews'
 
 // pages
 import Loading from '../Loading/Loading'
