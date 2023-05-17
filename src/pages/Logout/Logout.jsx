@@ -1,6 +1,7 @@
 // assets
 import logout from '../../assets/branding/logout_cs.svg'
-// css
+
+// styles
 import styles from './Logout.module.css'
 
 const Logout = () => {

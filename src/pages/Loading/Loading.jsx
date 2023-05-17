@@ -1,8 +1,7 @@
 // assets
-
 import loadingIcon from '../../assets/branding/loading_cs.svg'
 
-// css
+// styles
 import styles from './Loading.module.css'
 
 const Loading = () => {
