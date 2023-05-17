@@ -26,7 +26,7 @@ import * as sightingService from './services/sightingService'
 import * as cryptidService from './services/cryptidService'
 
 // styles
-
+import './App.css'
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
