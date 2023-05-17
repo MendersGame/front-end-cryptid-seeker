@@ -18,14 +18,19 @@ const CryptidList = (props) => {
     ))
     setSearchResults(filteredCryptidResults)
   }
-  const cryptidsToDisplay = searchResults.length > 0 ? searchResults : props.cryptids;
 
   return (
     <main className={styles.cryptidlistcontainer}>
       <CryptidSearch handleCryptidSearch={handleCryptidSearch}/>
-    {cryptidsToDisplay.map(cryptid => (
-      <CryptidCard key={cryptid._id} cryptid={cryptid} />
-    ))}
+      {searchResults.length > 0 ? (
+        searchResults.map((cryptid) => (
+          <CryptidCard key={cryptid._id} cryptid={cryptid} />
+        ))
+      ) : (
+        props.cryptids.map((cryptid) => (
+          <CryptidCard key={cryptid._id} cryptid={cryptid} />
+        ))
+      )}
   </main>
   )
 }
