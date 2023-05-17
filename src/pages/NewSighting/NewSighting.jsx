@@ -26,7 +26,7 @@ const NewSighting = (props) => {
       <p className={styles.sightDiv}>New Sighting</p>
     <main className={styles.newsightingcontainer}>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title-input">Title</label>
+        <label className={styles.newSightingLabel} htmlFor="title-input">Title</label>
         <input
           required
           type="text"
@@ -36,7 +36,7 @@ const NewSighting = (props) => {
           placeholder="Title"
           onChange={handleChange}
         />
-        <label htmlFor="text-input">Details</label>
+        <label className={styles.newSightingLabel} htmlFor="text-input">Details</label>
         <textarea
           required
           type="text"
@@ -46,7 +46,7 @@ const NewSighting = (props) => {
           placeholder="Details"
           onChange={handleChange}
         />
-        <label htmlFor="cryptid-input">Cryptid</label>
+        <label className={styles.newSightingInput} htmlFor="cryptid-input">Cryptid</label>
         <select
           required
           name="cryptid"
