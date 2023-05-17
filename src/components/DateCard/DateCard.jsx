@@ -1,7 +1,7 @@
 // components
 import Icon from "../../components/Icon/Icon"
 
-// css
+// styles
 import styles from "./DateCard.module.css"
 
 const DateCard = ({ createdAt }) => {

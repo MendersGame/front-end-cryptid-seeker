@@ -1,6 +1,7 @@
 // npm modules
 import { useState } from "react"
-//css
+
+// styles
 
 const CryptidSearch = (props) => {
   const [formData, setFormData] = useState({ query: "" })

@@ -1,9 +1,9 @@
-//npm modules
-import { Link } from "react-router-dom"
+// npm modules
+import { Link } from 'react-router-dom'
 
 // components
-import AuthorInfo from "../AuthorInfo/AuthorInfo"
-import Icon from "../Icon/Icon"
+import AuthorInfo from '../AuthorInfo/AuthorInfo'
+import Icon from '../Icon/Icon'
 
 const CommentCard = ({ comment, sightingId, user, handleDeleteComment }) => {
   return (

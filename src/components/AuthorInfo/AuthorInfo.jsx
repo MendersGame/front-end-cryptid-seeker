@@ -1,9 +1,9 @@
-//components
-import DateCard from "../DateCard/DateCard"
-import Icon from "../Icon/Icon.jsx"
+// components
+import DateCard from '../DateCard/DateCard'
+import Icon from '../Icon/Icon.jsx'
 
 // styles
-import styles from "./AuthorInfo.module.css"
+import styles from './AuthorInfo.module.css'
 
 const AuthorInfo = (props) => {
   const { content } = props

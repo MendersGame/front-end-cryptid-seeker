@@ -1,11 +1,11 @@
 // npm modules
 import { NavLink } from 'react-router-dom'
 
-//assets
+// assets
 import logo from '../../assets/branding/logo_cs.svg'
 import typeLogo from '../../assets/branding/typelogo_cs.svg'
 
-//css
+// styles
 import styles from './NavBar.module.css';
 
 const NavBar = ({ user, handleLogout }) => {

@@ -1,5 +1,5 @@
-//css
-import styles from "./CryptidDescription.module.css"
+// styles
+import styles from './CryptidDescription.module.css'
 
 const CryptidDescription = (cryptid) => {
   return (

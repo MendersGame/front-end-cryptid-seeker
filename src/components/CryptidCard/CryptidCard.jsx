@@ -1,12 +1,12 @@
-//npm modules
-import { useState } from "react"
+// npm modules
+import { useState } from 'react'
 
 // components
-import CryptidDescription from "../CryptidDescription/CryptidDescription"
-import CryptidInfo from "../CryptidInfo/CryptidInfo"
+import CryptidDescription from '../CryptidDescription/CryptidDescription'
+import CryptidInfo from '../CryptidInfo/CryptidInfo'
 
-//styles
-import styles from "./CryptidCard.module.css"
+// styles
+import styles from './CryptidCard.module.css'
 
 const CryptidCard = ({ cryptid }) => {
   const [displayCryptidInfo, setDisplayCryptidInfo] = useState(true)

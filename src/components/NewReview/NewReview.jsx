@@ -1,10 +1,12 @@
-import { useState } from "react"
+// npm modules
+import { useState } from 'react'
 
-//css
+// components
+import Icon from '../Icon/Icon'
+
+// styles
 import styles from './NewReview.module.css'
 
-//components
-import Icon from "../Icon/Icon"
 const NewReview = (props) => {
   const [formData, setFormData] = useState({text: ''})
 

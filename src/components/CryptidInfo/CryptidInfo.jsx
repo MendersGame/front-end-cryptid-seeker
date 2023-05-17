@@ -1,6 +1,9 @@
-// css
-import styles from "./CryptidInfo.module.css"
-import { Link } from "react-router-dom"
+// npm modules
+import { Link } from 'react-router-dom'
+
+// styles
+import styles from './CryptidInfo.module.css'
+
 
 const CryptidInfo = (props) => {
   return (

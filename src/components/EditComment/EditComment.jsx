@@ -1,11 +1,11 @@
-//npm modules
+// npm modules
 import { useState } from "react"
 import { useLocation, useParams, useNavigate } from "react-router-dom"
 
 // Services
 import * as sightingService from "../../services/sightingService"
 
-//styles
+// styles
 
 const EditComment = () => {
   const navigate = useNavigate()

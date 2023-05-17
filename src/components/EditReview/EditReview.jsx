@@ -1,9 +1,11 @@
-import { useState } from "react"
-import { useLocation, useParams, useNavigate } from "react-router-dom"
-
+// npm modules
+import { useState } from 'react'
+import { useLocation, useParams, useNavigate } from 'react-router-dom'
 
 // Services
 import * as cryptidService from '../../services/cryptidService'
+
+// styles
 
 const EditCryptid = () => {
   const navigate = useNavigate()
