@@ -8,16 +8,10 @@
   margin: 0;
 }
 
-.authorContainer > img {
-  width: 32px;
-  height: 32px;
-  object-fit: cover;
-  margin-right: 12px;
-  border-radius: 50%;
-  background-color: var(--background);
-}
+
 .authorProfileImg {
-  
+  object-fit: cover;
+  margin-right: 12px
 }
 
 .authorContainer  {
@@ -31,7 +25,7 @@ flex-direction: column;
 }
 
 
-.authorContainer section {
+.authorInfoSection {
   display: flex;
   flex-direction: column;
 }
