@@ -40,10 +40,12 @@ const SightingDetails = (props) => {
   if (!sighting) return <Loading />
 
   return (
+    <>
+    <div className={styles.sightingDetailsTextDiv}>Details</div>
     <main className={styles.sightingDetailsContainer}>
-      <article >
+      <article  className={styles.sightingDetailsArticle}>
         <header>
-          <h1>{sighting.title}</h1>
+          <h1 className={styles.sightingDetailsH1}>{sighting.title}</h1>
         </header>
         <span>
           <AuthorInfo content={sighting} />
@@ -75,6 +77,7 @@ const SightingDetails = (props) => {
           />
       </section>
     </main>
+    </>
   )
 }
 

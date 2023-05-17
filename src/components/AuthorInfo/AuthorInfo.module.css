@@ -4,24 +4,29 @@
   justify-content: flex-start;
 }
 
+
 .authorContainer * {
   margin: 0;
 }
 
-.authorContainer > img {
-  width: 32px;
-  height: 32px;
+
+.authorProfileImg {
   object-fit: cover;
-  margin-right: 12px;
-  border-radius: 50%;
-  background-color: var(--background);
+  margin-right: 12px
 }
 
-.authorContainer h4 {
+.authorContainer  {
   opacity: 0.75;
 }
+.authorName {
+font-size: 20px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+}
 
-.authorContainer section {
+
+.authorInfoSection {
   display: flex;
   flex-direction: column;
 }

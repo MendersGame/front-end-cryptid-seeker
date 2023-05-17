@@ -1,3 +1,8 @@
+.sightingDetailsTextDiv {
+margin: 3em 0 0 0;
+font-size: 2em;
+}
+
 .sightingDetailsContainer {
   margin: 6em;
   height: 100%;
@@ -8,12 +13,23 @@
   background-color: var(--card-background);
 }
 
-.sightingDetailsContainer article, .sightingDetailsContainer > section {
+
+
+.sightingDetailsContainer .sightingDetailsContainer > section {
   width: 100%;
   padding: 21px;
   display: flex;
   max-width: 700px;
   flex-direction: column;
+}
+.sightingDetailsArticle {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* height: 20em; */
+  background-color: #1C141E;
+  box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
+  border-radius: 15px;
 }
 
 .sightingDetailsContainer p {
@@ -29,9 +45,14 @@
   align-items: flex-start;
 }
 
-.sightingDetailsContainer h1 {
+.sightingDetailsContainer  {
   margin: 0;
   margin-bottom: 7px;
+}
+.sightingDetailsH1 {
+  font-size: 30px;
+  margin: 20px;
+  margin-bottom: 3px;
 }
 
 .sightingDetailsContainer h3 {
