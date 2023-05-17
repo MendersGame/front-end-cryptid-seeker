@@ -6,7 +6,6 @@ import AuthorInfo from "../AuthorInfo/AuthorInfo"
 
 // styles
 import styles from "./SightingCard.module.css"
-import CryptidInfo from "../CryptidInfo/CryptidInfo"
 
 const SightingCard = ({ sighting }) => {
   return (
@@ -15,11 +14,6 @@ const SightingCard = ({ sighting }) => {
         <header>
           <span>
             <h1>{sighting.title}</h1>
-            <CryptidInfo
-              name={sighting.cryptid.name}
-              photo={sighting.cryptid.photo}
-              Id={sighting.cryptid._id}
-            />
           </span>
           <AuthorInfo content={sighting} />
         </header>
