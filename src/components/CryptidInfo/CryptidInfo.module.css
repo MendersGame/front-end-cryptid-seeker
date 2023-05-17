@@ -12,3 +12,9 @@ img {
   margin-bottom: 10px;
   position: relative;
 }
+button {
+  box-shadow: 2px 4px 7px  rgba(0, 0, 0, 0.70);
+  background-color: #6C5075;
+  color: white;
+  cursor: pointer;
+}

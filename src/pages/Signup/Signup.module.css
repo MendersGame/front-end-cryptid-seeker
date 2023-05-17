@@ -97,8 +97,6 @@
   cursor: not-allowed;
 }
 
-
-
 input:focus {
   border: 4px solid #694C70;
 }
