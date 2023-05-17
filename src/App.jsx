@@ -120,7 +120,7 @@ function App() {
           path="/sightings/:sightingId/edit" 
           element={
             <ProtectedRoute user={user}>
-              <EditSighting handleUpdateSighting={handleUpdateSighting} />
+              <EditSighting handleUpdateSighting={handleUpdateSighting} cryptids={cryptids} />
             </ProtectedRoute>
           } 
         />

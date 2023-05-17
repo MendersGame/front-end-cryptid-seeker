@@ -6,8 +6,11 @@ import { useLocation } from 'react-router-dom'
 import styles from './EditSighting.module.css'
 
 const EditSighting = (props) => {
+  console.log("edit props: ", props);
   const location = useLocation()
-  const [formData, setFormData] = useState(location.state)
+
+  const [formData, setFormData,] = useState(location.state)
+
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
@@ -38,8 +41,9 @@ const EditSighting = (props) => {
           value={formData.cryptid}
           onChange={handleChange}
         >
-          {/*  CHANGE TO MAKE DROPDOWN THAT POPULATES OUR CRYPTIDS  */}
-          <option value="News"> cryptid name here </option>
+          {props.cryptids?.map((cryptid) => (
+            <option key={cryptid._id} value={cryptid._id}>{cryptid.name}</option>
+          ))}
         </select>
         <label className={styles.editSightingLabel}  htmlFor="details-input">Details</label>
         <textarea className={styles.editCryptidDetails}
