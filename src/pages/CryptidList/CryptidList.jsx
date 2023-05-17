@@ -19,8 +19,9 @@ const CryptidList = (props) => {
   }
 
   return (
+    <>
     <main className={styles.cryptidlistcontainer}>
-      <CryptidSearch handleCryptidSearch={handleCryptidSearch}/>
+    <CryptidSearch handleCryptidSearch={handleCryptidSearch}/>
       {searchResults.length > 0 ? (
         searchResults.map((cryptid) => (
           <CryptidCard key={cryptid._id} cryptid={cryptid} />
@@ -31,6 +32,7 @@ const CryptidList = (props) => {
         ))
       )}
   </main>
+  </>
   )
 }
 

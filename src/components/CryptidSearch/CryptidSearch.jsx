@@ -6,7 +6,9 @@ const CryptidSearch = (props) => {
   const [formData, setFormData] = useState({query: ''})
 
   const handleChange = evt => {
+    const {name , value} = evt.target
     setFormData({...formData, [evt.target.name]: evt.target.value})
+    props.handleCryptidSearch({...formData, [name]: value})
   }
   const handleSubmit = evt => {
     evt.preventDefault()
