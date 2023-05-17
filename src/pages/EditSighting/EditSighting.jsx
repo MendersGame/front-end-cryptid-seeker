@@ -20,26 +20,16 @@ const EditSighting = (props) => {
 
   return (
     <main className={styles.editContainer}>
-      <form className={styles.editSightingForm} onSubmit={handleSubmit}>
         <h1 className={styles.editSightingText}>Edit Sighting</h1>
+      <form className={styles.editSightingForm} onSubmit={handleSubmit}>
         <label htmlFor="title-input">Title</label>
-        <input
+        <input className={styles.editSightingInput}
           required
           type="text"
           name="title"
           id="title-input"
           value={formData.title}
           placeholder="Title"
-          onChange={handleChange}
-        />
-        <label htmlFor="details-input">Details</label>
-        <textarea
-          required
-          type="text"
-          name="details"
-          id="details-input"
-          value={formData.details}
-          placeholder="Details"
           onChange={handleChange}
         />
         <label htmlFor="cryptid-input">Cryptid</label>
@@ -52,11 +42,20 @@ const EditSighting = (props) => {
         >
           {/*  CHANGE TO MAKE DROPDOWN THAT POPULATES OUR CRYPTIDS  */}
 
-          <option value="News">{props.cryptids.map((cryptid) => (
-            <option key={cryptid._id} value={cryptid.name}>{cryptid.name}</option>
-          ))}</option>
+          <option value="News"> cryptid name here </option>
         </select>
-        <button className={styles.editButton} type="submit">SUBMIT</button>
+        <label htmlFor="details-input">Details</label>
+        <textarea
+          required
+          type="text"
+          name="details"
+          id="details-input"
+          value={formData.details}
+          placeholder="Details"
+          onChange={handleChange}
+        />
+        
+        <button className={styles.editButton} type="submit">Save</button>
       </form>
     </main>
   )
