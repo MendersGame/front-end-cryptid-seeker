@@ -2,7 +2,7 @@
 import { useState } from "react"
 
 // css
-
+import styles from './NewSighting.module.css'
 
 const NewSighting = (props) => {
   console.log('props:', props)
@@ -23,8 +23,8 @@ const NewSighting = (props) => {
 
   return (
     <>
-      <p className="sightDiv">New Sighting</p>
-    <main className={styles.container}>
+      <p className={styles.sightDiv}>New Sighting</p>
+    <main className={styles.newsightingcontainer}>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title-input">Title</label>
         <input
