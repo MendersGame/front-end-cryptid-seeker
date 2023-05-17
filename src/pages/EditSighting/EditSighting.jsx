@@ -33,7 +33,7 @@ const EditSighting = (props) => {
           onChange={handleChange}
         />
         <label htmlFor="cryptid-input">Cryptid</label>
-        <select 
+        <select className={styles.editCryptidSelect} 
           required
           name="cryptid"
           id="cryptid-input"
@@ -45,7 +45,7 @@ const EditSighting = (props) => {
           <option value="News"> cryptid name here </option>
         </select>
         <label htmlFor="details-input">Details</label>
-        <textarea
+        <textarea className={styles.editCryptidDetails}
           required
           type="text"
           name="details"
