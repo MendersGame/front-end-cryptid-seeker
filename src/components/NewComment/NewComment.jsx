@@ -2,7 +2,7 @@
 import { useState } from "react"
 
 // css
-
+import styles from './NewComment.module.css'
 
 // components
 import Icon from "../Icon/Icon"
@@ -21,7 +21,7 @@ const NewComment = (props) => {
     setFormData({ text: ''})
   }
   return (
-    <form className={styles.container} onSubmit={handleSubmit}>
+    <form className={styles.newCommentContainer} onSubmit={handleSubmit}>
       <textarea
         required
         type="text"
@@ -31,7 +31,7 @@ const NewComment = (props) => {
         placeholder="Add a Comment"
         onChange={handleChange}
       />
-      <button className={styles.button} type="submit"><Icon category="Create" /></button>
+      <button className={styles.commentButton} type="submit"><Icon category="Create" /></button>
     </form>
   )
 }
