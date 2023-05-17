@@ -7,7 +7,6 @@ import CryptidSearch from '../../components/CryptidSearch/CryptidSearch'
 import styles from './CryptidList.module.css'
 
 const CryptidList = (props) => {
-  const [allCryptids, setAllCryptids] = useState([])
   const [searchResults, setSearchResults] = useState([])
 
 
