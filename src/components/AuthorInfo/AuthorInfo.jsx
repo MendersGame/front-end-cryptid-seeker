@@ -1,18 +1,20 @@
-// css
-import styles from './AuthorInfo.module.css'
-
-
+// components
 import DateCard from '../DateCard/DateCard'
 import Icon from '../Icon/Icon.jsx'
+
+// styles
+import styles from './AuthorInfo.module.css'
 
 const AuthorInfo = (props) => {
   const { content } = props
   return (
     <div className={styles.authorContainer}>
       <section className={styles.authorInfoSection}>
-      <div className={styles.authorProfileImg}><Icon category="Profile" /></div>
-        { <h4 className={styles.authorName}>{content.author.name}</h4> }
-        { <DateCard createdAt={content.createdAt} /> }
+        <div className={styles.authorProfileImg}>
+          <Icon category="Profile" />
+        </div>
+        {<h4 className={styles.authorName}>{content.author.name}</h4>}
+        {<DateCard createdAt={content.createdAt} />}
       </section>
     </div>
   )

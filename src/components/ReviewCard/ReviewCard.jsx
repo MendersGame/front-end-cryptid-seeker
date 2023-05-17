@@ -1,8 +1,11 @@
+// npm modules
+import { Link } from 'react-router-dom'
+
 // components
-import { Link } from "react-router-dom"
-import AuthorInfo from "../AuthorInfo/AuthorInfo"
-import Icon from "../Icon/Icon"
-//css
+import AuthorInfo from '../AuthorInfo/AuthorInfo'
+import Icon from '../Icon/Icon'
+
+// styles
 import styles from './ReviewCard.module.css'
 
 const ReviewCard = ({ review, cryptidId, user, handleDeleteReview }) => {

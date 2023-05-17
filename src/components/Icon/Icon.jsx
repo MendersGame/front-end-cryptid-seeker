@@ -16,7 +16,6 @@ const Icon = ({ category }) => {
     Comments: comments,
     Calendar: calendar,
     Profile: profile,
-
   }
 
   return (

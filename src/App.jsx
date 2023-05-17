@@ -82,11 +82,11 @@ function App() {
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
       <Route path="/" element={<Landing user={user} />} />
-      { <Route path="/cryptids"
+        <Route path="/cryptids"
           element={
             <CryptidList cryptids={cryptids} />
           }
-        /> }
+        /> 
         <Route 
           path="/cryptids/:cryptidId"
           element={
@@ -129,7 +129,8 @@ function App() {
             <ProtectedRoute user={user}>
               <EditComment />
             </ProtectedRoute>
-          } />
+          } 
+        />
         <Route
           path="/profiles"
           element={

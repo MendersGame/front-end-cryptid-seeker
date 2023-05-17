@@ -1,22 +1,23 @@
-import ReviewCard from '../ReviewCard/ReviewCard'
+// components
+import ReviewCard from "../ReviewCard/ReviewCard"
 
-
+//styles
 
 const Reviews = (props) => {
-  if(!props.reviews) return <h4>No Reviews</h4>
-  return ( 
+  if (!props.reviews) return <h4>No Reviews</h4>
+  return (
     <>
-    {props.reviews.map((review) => (
-      <ReviewCard
-        key={review._id}
-        review={review}
-        user={props.user}
-        cryptidId={props.cryptidId}
-        handleDeleteReview={props.handleDeleteReview}
-      />
-    ))}
+      {props.reviews.map((review) => (
+        <ReviewCard
+          key={review._id}
+          review={review}
+          user={props.user}
+          cryptidId={props.cryptidId}
+          handleDeleteReview={props.handleDeleteReview}
+        />
+      ))}
     </>
   )
 }
 
-export default Reviews;
+export default Reviews
