@@ -3,7 +3,6 @@ import ReviewCard from '../ReviewCard/ReviewCard'
 
 
 const Reviews = (props) => {
-  console.log(props.reviews);
   if(!props.reviews) return <h4>No Reviews</h4>
   return ( 
     <>
