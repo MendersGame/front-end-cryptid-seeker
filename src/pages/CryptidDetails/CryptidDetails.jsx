@@ -2,7 +2,7 @@
 import { useEffect, useState, } from "react"
 import { useParams } from 'react-router-dom'
 //css
-
+import styles from './CryptidDetails.module.css'
 //pages
 import Loading from '../Loading/Loading'
 //service
@@ -35,7 +35,7 @@ const CryptidDetails = (props) => {
   if(!cryptid) return <Loading />
   
   return (
-    <main className={styles.containter}>
+    <main className={styles.cryptiddetailscontainter}>
       <article>
         <header>
           <h1>{cryptid.name}</h1>

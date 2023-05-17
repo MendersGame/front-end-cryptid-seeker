@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 import { Link } from "react-router-dom"
 //css
-
+import styles from './SightingDetails.module.css'
 // pages
 import Loading from "../Loading/Loading"
 //service
@@ -40,7 +40,7 @@ const SightingDetails = (props) => {
   if (!sighting) return <Loading />
 
   return (
-    <main className={styles.container}>
+    <main className={styles.sightingDetailsContainer}>
       <article >
         <header>
           <h1>{sighting.title}</h1>
