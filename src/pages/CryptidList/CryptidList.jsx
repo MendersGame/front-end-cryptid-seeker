@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 // components
 import CryptidCard from '../../components/CryptidCard/CryptidCard'
+import CryptidSearch from '../../components/CryptidSearch/CryptidSearch'
 // css
 import styles from './CryptidList.module.css'
 //Service
@@ -29,6 +30,7 @@ const CryptidList = (props) => {
 
   return (
     <main className={styles.cryptidlistcontainer}>
+      <CryptidSearch handleCryptidSearch={handleCryptidSearch}/>
     {props.cryptids.map(cryptid => (
       <CryptidCard key={cryptid._id} cryptid={cryptid} />
     ))}
