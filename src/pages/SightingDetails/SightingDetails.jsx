@@ -51,9 +51,9 @@ const SightingDetails = (props) => {
           <AuthorInfo content={sighting} />
           {sighting.author._id === props.user.profile &&
           <>
-            <Link to={`/sightings/${sightingId}/edit`} state={sighting}>Edit</Link>
+            <Link to={`/sightings/${sightingId}/edit`} state={sighting}></Link>
             <button onClick={() => props.handleDeleteSighting(sightingId)}>
-            Delete
+            
             </button>
           </>
           }

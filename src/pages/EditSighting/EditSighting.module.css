@@ -4,7 +4,7 @@
   border-radius: 10px;
   background-color: #1C141E;
   box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
-  /* height: 100%; */
+
   display: flex;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -12,7 +12,7 @@
   flex-direction: column;
   width: 45%;
   position: absolute;
-  left: 23em;
+  left: 15em;
 }
 
 
@@ -34,7 +34,7 @@
 
 }
 
-label {
+.editSightingLabel {
   font-size: 20px;
   align-items: left;
   text-align: left;

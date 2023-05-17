@@ -4,6 +4,7 @@
   width: 100%;
   height: 80px;
   position: fixed; 
+  right: 3.5px;
   display: flex;
   padding: 14px 21px;
   align-items: center;
