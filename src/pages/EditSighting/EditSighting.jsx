@@ -22,7 +22,7 @@ const EditSighting = (props) => {
     <main className={styles.editContainer}>
         <h1 className={styles.editSightingText}>Edit Sighting</h1>
       <form className={styles.editSightingForm} onSubmit={handleSubmit}>
-        <label htmlFor="title-input">Title</label>
+        <label className={styles.editSightingLabel} htmlFor="title-input">Title</label>
         <input className={styles.editSightingInput}
           required
           type="text"
@@ -32,7 +32,7 @@ const EditSighting = (props) => {
           placeholder="Title"
           onChange={handleChange}
         />
-        <label htmlFor="cryptid-input">Cryptid</label>
+        <label className={styles.editSightingLabel}  htmlFor="cryptid-input">Cryptid</label>
         <select className={styles.editCryptidSelect} 
           required
           name="cryptid"
@@ -44,7 +44,7 @@ const EditSighting = (props) => {
 
           <option value="News"> cryptid name here </option>
         </select>
-        <label htmlFor="details-input">Details</label>
+        <label className={styles.editSightingLabel}  htmlFor="details-input">Details</label>
         <textarea className={styles.editCryptidDetails}
           required
           type="text"
