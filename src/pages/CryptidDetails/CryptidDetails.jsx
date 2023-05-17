@@ -1,15 +1,19 @@
-//npm modules
+// npm modules
 import { useEffect, useState, } from "react"
 import { useParams } from 'react-router-dom'
-//css
-import styles from './CryptidDetails.module.css'
-//pages
-import Loading from '../Loading/Loading'
-//service
-import * as cryptidService from '../../services/cryptidService'
-//components
+
+// components
 import NewReview from "../../components/NewReview/NewReview"
 import Reviews from "../../components/Reviews/Reviews"
+
+// pages
+import Loading from '../Loading/Loading'
+
+// services
+import * as cryptidService from '../../services/cryptidService'
+
+// styles
+import styles from './CryptidDetails.module.css'
 
 const CryptidDetails = (props) => {
   const {cryptidId} = useParams()

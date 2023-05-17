@@ -15,6 +15,7 @@ import NewSighting from './pages/NewSighting/NewSighting'
 import EditSighting from './pages/EditSighting/EditSighting'
 import CryptidList from './pages/CryptidList/CryptidList'
 import CryptidDetails from './pages/CryptidDetails/CryptidDetails'
+
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
