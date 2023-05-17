@@ -19,6 +19,14 @@ const CryptidList = (props) => {
     fetchCryptidList()
   }, [])
 
+  const handleCryptidSearch = formData => {
+    const filteredCryptidResults = allCryptids.filter(cryptid => (
+      cryptid.name.toLowerCase().includes(formData.query.toLowerCase())
+    ))
+    setSearchResults(filteredCryptidResults)
+  }
+
+
   return (
     <main className={styles.cryptidlistcontainer}>
     {props.cryptids.map(cryptid => (
