@@ -1,0 +1,32 @@
+.reviewcardscontainter p {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  line-height: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  text-align-last: left;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+
+.reviewcardscontainter div h4 {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.reviewcardscontainter div h5 {
+  font-size: 11px;
+}
+
+.reviewcardscontainter div > img {
+  width: 30px;
+	height: 30px;
+	object-fit: cover;
+}
+
+.reviewcardscontainter div section img {
+  width: 14px;
+	height: 14px;
+}
