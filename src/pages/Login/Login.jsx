@@ -8,7 +8,7 @@ import * as authService from '../../services/authService'
 // assets
 import loginIcon from '../../assets/branding/login_cs.svg'
 
-// css
+// styles
 import styles from './Login.module.css'
 
 const LoginPage = ({ handleAuthEvt }) => {

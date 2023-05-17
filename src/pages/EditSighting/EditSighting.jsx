@@ -1,18 +1,16 @@
 // npm modules
-import { useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
-// css
+// styles
 import styles from './EditSighting.module.css'
 
 const EditSighting = (props) => {
   const location = useLocation()
   const [formData, setFormData] = useState(location.state)
-
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
-
   const handleSubmit = (evt) => {
     evt.preventDefault()
     props.handleUpdateSighting(formData)
@@ -41,7 +39,6 @@ const EditSighting = (props) => {
           onChange={handleChange}
         >
           {/*  CHANGE TO MAKE DROPDOWN THAT POPULATES OUR CRYPTIDS  */}
-
           <option value="News"> cryptid name here </option>
         </select>
         <label className={styles.editSightingLabel}  htmlFor="details-input">Details</label>
@@ -54,10 +51,10 @@ const EditSighting = (props) => {
           placeholder="Details"
           onChange={handleChange}
         />
-        
         <button className={styles.editButton} type="submit">Save</button>
       </form>
     </main>
   )
 }
+
 export default EditSighting;

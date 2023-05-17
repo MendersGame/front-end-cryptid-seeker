@@ -1,11 +1,11 @@
 // npm modules
-import { useState } from "react"
+import { useState } from 'react'
 
-// css
+// styles
 import styles from './NewSighting.module.css'
 
 const NewSighting = (props) => {
-  console.log('props:', props)
+
   const [formData, setFormData ] = useState({
     title: '',
     details: '',
@@ -23,19 +23,19 @@ const NewSighting = (props) => {
 
   return (
     <>
-      <p className={styles.sightDiv}>New Sighting</p>
-    <main className={styles.newsightingcontainer}>
-      <form onSubmit={handleSubmit}>
-        <label className={styles.newSightingLabel} htmlFor="title-input">Title</label>
-        <input
-          required
-          type="text"
-          name="title"
-          id="title-input"
-          value={formData.title}
-          placeholder="Title"
-          onChange={handleChange}
-        />
+      <p className={styles.sightDiv}>Report a Sighting</p>
+      <main className={styles.newsightingcontainer}>
+        <form onSubmit={handleSubmit}>
+          <label className={styles.newSightingLabel} htmlFor="title-input">Title</label>
+          <input
+            required
+            type="text"
+            name="title"
+            id="title-input"
+            value={formData.title}
+            placeholder="Title"
+            onChange={handleChange}
+          />
         <label className={styles.newSightingLabel} htmlFor="text-input">Details</label>
         <textarea
           required
@@ -57,11 +57,10 @@ const NewSighting = (props) => {
           {props.cryptids.map((cryptid) => (
             <option key={cryptid._id} value={cryptid.name}>{cryptid.name}</option>
           ))}
-
         </select>
         <button type="submit">SUBMIT</button>
-      </form>
-    </main>
+        </form>
+      </main>
     </>
   )
 }

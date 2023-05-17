@@ -1,16 +1,15 @@
-//npm modules
+// npm modules
 import { useState } from 'react'
+
 // components
 import CryptidCard from '../../components/CryptidCard/CryptidCard'
 import CryptidSearch from '../../components/CryptidSearch/CryptidSearch'
-// css
+
+// styles
 import styles from './CryptidList.module.css'
 
 const CryptidList = (props) => {
   const [searchResults, setSearchResults] = useState([])
-
-
-
   const handleCryptidSearch = formData => {
     const filteredCryptidResults = props.cryptids.filter(cryptid => (
       cryptid.name.toLowerCase().includes(formData.query.toLowerCase())
