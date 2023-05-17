@@ -18,7 +18,18 @@ const CryptidSearch = (props) => {
     props.handleChange(formData)
     setFormData({query: ''})
   }
-  return (  );
+  return (
+    <form className="search-form" onSubmit={handleSubmit}>
+      <input 
+        type="text" 
+        name="query"
+        autoComplete="off"
+        value={formData.query}
+        onChange={handleChange}
+      />
+      <button type="submit">Search</button>
+      
+    </form>
+  )
 }
- 
 export default CryptidSearch;
