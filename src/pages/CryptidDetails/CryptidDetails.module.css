@@ -1,8 +1,8 @@
 .cryptiddetailscontainter {
-  margin: 6em;
-  height: 100%;
+  margin: 100px;
+  height: 100vh;
   display: flex;
-  overflow: scroll;
+  border-radius: 15px;
   align-items: center;
   flex-direction: column;
   background-color: #1C141E;
@@ -18,8 +18,7 @@
 
 .cryptiddetailscontainter p {
   text-indent: 21px;
-  text-align-last: left;
-	word-break: break-all;
+  text-align: center;
 }
 
 .cryptiddetailscontainter header {
@@ -63,7 +62,6 @@
   margin-left: 7px;
   border-radius: 5px;
   text-align: center;
-  border: 1px solid var(--border);
 }
 
 .cryptiddetailscontainter span button, .cryptiddetailscontainter span a  {

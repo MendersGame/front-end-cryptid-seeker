@@ -9,9 +9,9 @@ const AuthorInfo = (props) => {
   const { content } = props
   return (
     <div className={styles.authorContainer}>
-      <section>
-      <Icon category="Profile" />
-        { <h4>{content.author.name}</h4> }
+      <section className={styles.authorInfoSection}>
+      <div className={styles.authorProfileImg}><Icon category="Profile" /></div>
+        { <h4 className={styles.authorName}>{content.author.name}</h4> }
         { <DateCard createdAt={content.createdAt} /> }
       </section>
     </div>

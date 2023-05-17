@@ -1,0 +1,47 @@
+
+.editSightingForm {
+  margin: 100px 8em 0 8em;
+  border-radius: 10px;
+  background-color: #1C141E;
+  box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 28px 21px;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.editContainer input, textarea, select, editButton { 
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  resize: vertical;
+  border-radius: 5px;
+  margin: 7px 0px 14px 0px;
+  border: 1px solid var(--border);
+  font-family: canada-type-gibson, sans-serif;
+  border-style: solid;
+  border-color: #FDF1DE;
+  border-width: 1px;
+}
+
+.editSightingText {
+  
+}
+
+
+.editContainer button {
+  color: white;
+  font-weight: 600;
+  margin: 21px 0px 0px 0px;
+  background: var(--primary);
+}
+
+
+input:focus, select:focus {
+  outline: none;
+  border: 1px solid var(--primary);
+}
