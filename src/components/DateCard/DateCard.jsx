@@ -2,7 +2,7 @@
 import Icon from '../../components/Icon/Icon'
 
 // css
-import styles from './DateCard.module.css'
+
 
 const DateCard = ({ createdAt }) => {
   const date = new Date(createdAt).toLocaleDateString()

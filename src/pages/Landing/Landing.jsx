@@ -1,5 +1,5 @@
 // css
-import styles from './Landing.module.css'
+
 import logotype from '../../assets/branding/logotype_cs.svg'
 
 const Landing = ({ user }) => {

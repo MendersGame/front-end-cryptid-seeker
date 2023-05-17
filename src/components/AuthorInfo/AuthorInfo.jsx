@@ -1,5 +1,5 @@
 // css
-import styles from './AuthorInfo.module.css'
+
 import DateCard from '../DateCard/DateCard'
 import Icon from '../Icon/Icon.jsx'
 

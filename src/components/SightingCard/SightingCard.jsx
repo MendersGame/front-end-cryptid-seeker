@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import AuthorInfo from "../AuthorInfo/AuthorInfo";
 
 //css 
-import styles from './SightingCard.module.css'
+
 
 const SightingCard = ({ sighting }) => {
 

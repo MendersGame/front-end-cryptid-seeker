@@ -6,7 +6,7 @@ import { useState } from "react";
 // components
 
 //css 
-import styles from './CryptidCard.module.css'
+
 import CryptidDescription from "../CryptidDescription/CryptidDescription";
 import CryptidInfo from "../CryptidInfo/CryptidInfo";
 
