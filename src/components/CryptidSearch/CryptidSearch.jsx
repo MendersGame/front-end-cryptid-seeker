@@ -7,29 +7,18 @@ import { useState, useEffect } from "react";
 //services
 //Todo import {Get Cryptid Data from new Service function? --getCryptids}
 
-const CryptidSearch = () => {
-  const [allCryptids, setAllCryptids] = useState([])
-  const [searchResults, setSearchResults] = useState([])
+const CryptidSearch = (props) => {
+  const [formData, setFormData] = useState({query: ''})
 
-    useEffect(()  => {
-      const fetchCryptidList = async => {
-        const cryptidData = await getCryptids()
-        setAllCryptids(cryptidData)
-        setSearchResults(cryptidData)
-      }
-      fetchCryptidList()
-    }, [])
-
-    const handleCryptidSearch = formData => {
-      const filteredCryptidResults = allCryptids.filter(cryptid => (
-        cryptid.name.toLowerCase().includes(formData.query.toLowerCase())
-      ))
-      setSearchResults(filteredCryptidResults)
-    }
-  return ( 
-    <main>
-    </main>
-  )
+  const handleChange = evt => {
+    setFormData({...formData, [evt.target.name]: evt.target.value})
+  }
+  const handleSubmit = evt => {
+    evt.preventDefault()
+    props.handleChange(formData)
+    setFormData({query: ''})
+  }
+  return (  );
 }
-
+ 
 export default CryptidSearch;
