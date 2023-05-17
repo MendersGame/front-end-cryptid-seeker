@@ -13,7 +13,7 @@ const CryptidList = (props) => {
 
   useEffect(()  => {
     const fetchCryptidList = async => {
-      const cryptidData = await getCryptids()
+//Todo      const cryptidData = await getCryptids()
       setAllCryptids(cryptidData)
       setSearchResults(cryptidData)
     }

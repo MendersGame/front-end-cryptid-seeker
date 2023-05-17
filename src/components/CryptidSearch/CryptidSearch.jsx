@@ -1,11 +1,6 @@
 // npm modules
-
-import { useState, useEffect } from "react";
-
-//components
-
-//services
-//Todo import {Get Cryptid Data from new Service function? --getCryptids}
+import { useState } from "react";
+//css
 
 const CryptidSearch = (props) => {
   const [formData, setFormData] = useState({query: ''})
@@ -28,7 +23,7 @@ const CryptidSearch = (props) => {
         onChange={handleChange}
       />
       <button type="submit">Search</button>
-      
+
     </form>
   )
 }
