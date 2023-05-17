@@ -2,9 +2,12 @@
 import { Link } from "react-router-dom"
 import AuthorInfo from "../AuthorInfo/AuthorInfo"
 import Icon from "../Icon/Icon"
+//css
+import styles from './ReviewCard.module.css'
 
 const ReviewCard = ({ review, cryptidId, user, handleDeleteReview }) => {
   return (
+    <main className={styles.reviewcardscontainter}>
     <article>
       <header>
         <span>
@@ -23,6 +26,7 @@ const ReviewCard = ({ review, cryptidId, user, handleDeleteReview }) => {
       </header>
       <p>{review.text}</p>
     </article>
+    </main>
   )
 }
 
