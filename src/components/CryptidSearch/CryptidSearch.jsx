@@ -20,14 +20,15 @@ const CryptidSearch = () => {
       fetchCryptidList()
     }, [])
 
-    const handleCryptidSearch = formData => 
+    const handleCryptidSearch = formData => {
+      const filteredCryptidResults = allCryptids.filter(cryptid => (
+        cryptid.name.toLowerCase().includes(formData.query.toLowerCase())
+      ))
+      setSearchResults(filteredCryptidResults)
     }
   return ( 
-    
-
-
-
-
+    <main>
+    </main>
   )
 }
 
