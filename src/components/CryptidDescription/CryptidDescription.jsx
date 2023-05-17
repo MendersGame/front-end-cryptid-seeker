@@ -1,4 +1,4 @@
-import styles from './CryptidDescription.module.css'
+
 
 const CryptidDescription = (cryptid) => {
 

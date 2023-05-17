@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 import { Link } from "react-router-dom"
 //css
-import styles from './SightingDetails.module.css'
+
 // pages
 import Loading from "../Loading/Loading"
 //service

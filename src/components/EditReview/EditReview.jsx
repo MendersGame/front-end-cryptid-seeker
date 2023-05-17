@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useLocation, useParams, useNavigate } from "react-router-dom"
-import styles from './EditCryptid.module.css'
+
 
 // Services
 import * as cryptidService from '../../services/cryptidService'

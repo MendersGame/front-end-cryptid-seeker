@@ -1,7 +1,7 @@
 // components
 import CryptidCard from '../../components/CryptidCard/CryptidCard'
 // css
-import styles from './CryptidList.module.css'
+
 
 const CryptidList = (props) => {
   return (

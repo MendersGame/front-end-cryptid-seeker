@@ -1,6 +1,6 @@
 import ReviewCard from '../ReviewCard/ReviewCard'
 
-//import styles from './Reviews.module.css'
+
 
 const Reviews = (props) => {
   console.log(props.reviews);

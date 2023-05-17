@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useLocation } from "react-router-dom"
 
 // css
-import styles from './EditSighting.module.css'
+
 
 const EditSighting = (props) => {
   const location = useLocation()

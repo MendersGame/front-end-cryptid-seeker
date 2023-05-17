@@ -1,5 +1,5 @@
 // css
-import styles from './CryptidInfo.module.css'
+
 import { Link } from 'react-router-dom'
 
 const CryptidInfo = (props) => {

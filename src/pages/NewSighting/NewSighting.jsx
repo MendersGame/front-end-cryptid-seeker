@@ -2,7 +2,7 @@
 import { useState } from "react"
 
 // css
-import styles from './NewSighting.module.css'
+
 
 const NewSighting = (props) => {
   console.log('props:', props)

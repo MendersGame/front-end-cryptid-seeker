@@ -1,7 +1,7 @@
 // components
 import SightingCard from '../../components/SightingCard/SightingCard'
 // css
-import styles from './SightingList.module.css'
+
 
 const SightingList = (props) => {
   return (
