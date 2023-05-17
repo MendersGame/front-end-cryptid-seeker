@@ -9,7 +9,7 @@ import * as authService from '../../services/authService'
 import loginIcon from '../../assets/branding/login_cs.svg'
 
 // css
-
+import styles from './Login.module.css'
 
 const LoginPage = ({ handleAuthEvt }) => {
   const navigate = useNavigate()
@@ -47,7 +47,7 @@ const LoginPage = ({ handleAuthEvt }) => {
   }
 
   return (
-    <main className={styles.container}>
+    <main className={styles.logincontainer}>
     <section>
       <img src={loginIcon} alt="Cryptid Seeker Logo & Login message" />
     </section>
