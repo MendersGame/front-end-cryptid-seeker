@@ -1,0 +1,140 @@
+.signupcontainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #1C141E;
+}
+
+.signupcontainer p { 
+  margin: 0; 
+  padding: 0px 0 10px; 
+}
+
+.signupcontainer img {
+  width: 65%;
+  height: 500px;
+  max-width: 500px;
+  min-height: 100px;
+}
+
+.signupcontainer section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  padding: 28px 21px;
+  align-items: left;
+  flex-direction: column;
+  background-color: #2d1f32;
+  
+}
+.signupcontainer form {
+  text-align: left;
+  padding: 28px 21px;
+  border-radius: 15px;
+  background-color: #1C141E;
+}
+
+.signupcontainer section:first-child {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C141E;
+}
+
+.signupcontainer section:nth-child(2) {
+  /* overflow: scroll; */
+  justify-content: center;
+}
+
+.signupcontainer input {
+  color: #FDF1DE;
+  background-color: #1C141E;
+  margin: 7px 0px 14px 0px;
+}
+
+
+.signupcontainer input { 
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 2px solid #FDF1DE;
+}
+
+.signupcontainer div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #1C141E;
+}
+
+.signupcontainer label {
+  font-weight: 600;
+  margin: 7px 0px 14px 0px;
+  background-color: #1C141E;
+}
+
+.signupcontainer .signup {
+  color: #FDF1DE;
+  font-weight: 600;
+  background: #694C70;
+  box-shadow: none;
+  margin: 21px 0px 0px 0px;
+  cursor: pointer;
+}
+.signupcontainer .cancel {
+  color: #FDF1DE;
+  font-weight: 600;
+  background: #EC1A24;
+  box-shadow: none;
+  margin: 21px 0px 0px 0px;
+  cursor: pointer;
+}
+
+.signupcontainer button:disabled {
+  color: #FDF1DE;
+  background-color: #513c58;
+  cursor: not-allowed;
+}
+
+input:focus {
+  border: 4px solid #694C70;
+}
+
+input[type="file"] {
+  padding: 0;
+  border: none;
+}
+
+input::file-selector-button { 
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 14px 28px;
+  margin-right: 28px;
+  text-align: center;
+  color: #FDF1DE;
+  border-radius: 15px;
+  border: none;
+  font-family: Amarante;
+  background-color: #694C70;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 912px) {
+  .signupcontainer section {
+    width: 100%;
+  }
+  .signupcontainer section:first-child {
+    display: none;
+  }
+  .signupcontainer form {
+    min-width: 100%;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+  .signupcontainer section:nth-child(2) {
+    justify-content: flex-start;
+  }
+}

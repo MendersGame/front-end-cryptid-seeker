@@ -7,7 +7,7 @@ import * as authService from '../../services/authService'
 // assets
 import signupIcon from '../../assets/branding/signup_cs.svg'
 // css
-
+import styles from './Signup.module.css'
 
 const Signup = ({ handleAuthEvt }) => {
   const navigate = useNavigate()
@@ -79,7 +79,7 @@ const Signup = ({ handleAuthEvt }) => {
   }
 
   return (
-    <main className={styles.container}>
+    <main className={styles.signupcontainer}>
       <section>
         <img src={signupIcon} alt="Cryptid Seeker Logo & message about signing up" />
       </section>

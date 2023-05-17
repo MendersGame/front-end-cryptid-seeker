@@ -4,11 +4,11 @@ import { useState } from "react";
 
 
 // components
-
-//css 
-
 import CryptidDescription from "../CryptidDescription/CryptidDescription";
 import CryptidInfo from "../CryptidInfo/CryptidInfo";
+
+//css 
+import styles from './CryptidCard.module.css'
 
 
 const CryptidCard = ({ cryptid }) => {
@@ -22,7 +22,7 @@ const CryptidCard = ({ cryptid }) => {
   return (
     // <Link to ={`/cryptids/${cryptid._id}`}>
     <>
-      <article className={styles.container}>
+      <article className={styles.cryptidcardcontainer}>
         <header>
           <span>
             {/* TODO add Icon */}
