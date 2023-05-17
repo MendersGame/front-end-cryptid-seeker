@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 //css
-
+import styles from './NewReview.module.css'
 
 //components
 import Icon from "../Icon/Icon"
