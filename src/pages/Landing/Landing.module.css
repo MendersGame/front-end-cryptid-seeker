@@ -1,4 +1,4 @@
-::-webkit-scrollbar {
+.landingcontainer::-webkit-scrollbar {
   display: none;
 }
 .landingcontainer {
@@ -42,9 +42,6 @@
   box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.15);
   -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.15);
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.15);
-}
-main {
-  overflow: hidden;
 }
 
 .about header {
