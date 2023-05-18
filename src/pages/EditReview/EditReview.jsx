@@ -28,7 +28,7 @@ const EditReview = () => {
     <article className={styles.editReviewCard}>
       <form onSubmit={handleSubmit}>
         <h1>Edit Review</h1>
-        <label htmlFor="text-input">Edit Review</label>
+        <label className={styles.editReviewText} htmlFor="text-input">Edit Review</label>
         <textarea
           required
           type="text"
@@ -38,7 +38,7 @@ const EditReview = () => {
           placeholder="Text"
           onChange={handleChange}
         />
-        <button type="submit">SUBMIT</button>
+        <button className={styles.editReviewSubmitBtn} type="submit">SUBMIT</button>
       </form>
     </article>
   )
