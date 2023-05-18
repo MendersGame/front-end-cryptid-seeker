@@ -1,26 +1,26 @@
 .newCommentContainer {
   display: flex;
-  margin: 4em 0 0 0;
   width: 100%;
   height: 100%;
   padding: 14px 21px;
-  border-radius: 5px;
-  border: 1px solid var(--border);
+  border-radius: 15px;
   background-color: #1C141E;
   box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
   -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
   -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
 }
 
-.newCommentContainer .commentButton {
-  margin: 0;
-  width: 20%;
-  padding: 5px;
+.newCommentContainer {
+  width: 100%;
+  height: 100%;
   font-size: 14px;
   font-weight: 500;
-  /* background: none; */
   margin-left: 7px;
-  border-radius: 5px;
-  text-align: center;
-  border: 1px solid var(--border);
+  border-radius: 15px;
+}
+.commentButton{
+  background-color: transparent;
+  width: 5px;
+  padding: 5px;
+  width: 10%;
 }

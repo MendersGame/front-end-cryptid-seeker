@@ -39,24 +39,26 @@ const CryptidDetails = (props) => {
   if(!cryptid) return <Loading />
   
   return (
-    <main className={styles.cryptiddetailscontainter}>
-      <article>
+    <>
+    <h1 className={styles.cryptidDetailsTextDiv}>Reviews</h1>
+    <main className={styles.cryptidDetailsContainter}>
+      <article className={styles.cryptidDetailsArticle}>
         <header>
-          <h1>{cryptid.name}{<img src={cryptid.photo}></img>}</h1>
+          <h1 className={styles.cryptidNameH1}>{cryptid.name}{<img src={cryptid.photo}></img>}</h1>
         </header>
         <p>{cryptid.description}</p>
       </article>
       <section>
-        <h1>Reviews</h1>
           <NewReview handleAddReview={handleAddReview} />
           <Reviews 
             reviews={cryptid.reviews}
             user={props.user}
             cryptidId={cryptidId}
             handleDeleteReview={handleDeleteReview}
-          />
+            />
       </section>
     </main>
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 .newsightingcontainer {
-  margin: 5em;
+  /* margin: 5em; */
   display: flex;
   padding: 28px 21px;
   align-items: center;
@@ -12,14 +12,9 @@
   width: 60%;
 }
 
-
 .sightDiv {
   margin: 100px 0 0 0;
-  position: relative;
-  left: 4%;
-  font-size:xx-large;
-  justify-content: space-evenly;
-  text-align: center;
+  padding: 20px;
 }
 
 .newsightingcontainer input, textarea, select { 
@@ -34,6 +29,7 @@
   border-style: solid;
   border-color: #FDF1DE;
   border-width: 1px;
+  color: #FDF1DE;
 }
 
 .newSightingLabel, .newSightingInput {
@@ -47,7 +43,7 @@
 .newsightingcontainer textarea {
   min-height: 50px;
   border-style: solid;
-  border-color: white;
+  border-color: #FDF1DE;
   border-radius: 15px;
   border-width: 1px;
 }
@@ -56,7 +52,6 @@
   font-weight: 600;
   margin: 7px 0px 14px 0px;
 }
-
 
 .newsightingcontainer button {
   margin: 21px 0px 0px 0px;
@@ -69,10 +64,9 @@
   font-weight: 500;
   margin-top: 14px;
   text-align: center;
-  color: rgb(200, 200, 200);
+  color: #FDF1DE;
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border: 1px solid var(--primary);
 } 

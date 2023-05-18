@@ -9,8 +9,8 @@ const CryptidInfo = (props) => {
   return (
     <>
       <Link to={`/cryptids/${props.Id}`}>
-        <img className={styles.cryptidinfo} src={props.photo} />
-        <div>{props.name}</div>
+        <div className={styles.cryptiddiv}><img className={styles.cryptidinfo} src={props.photo} /></div>
+        <div className={styles.cryptidname}>{props.name}</div>
       </Link>
     </>
   )

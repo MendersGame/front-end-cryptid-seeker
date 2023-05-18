@@ -82,7 +82,7 @@ const Signup = ({ handleAuthEvt }) => {
 
   return (
     <main className={styles.signupcontainer}>
-      <section>
+      <section className={styles.signupimagecontainer} >
         <img src={signupIcon} alt="Cryptid Seeker Logo & message about signing up" />
       </section>
       <section>

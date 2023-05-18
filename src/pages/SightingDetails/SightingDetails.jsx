@@ -50,7 +50,7 @@ const SightingDetails = (props) => {
   
   return (
     <>
-      <div className={styles.sightingDetailsTextDiv}>Details</div>
+      <h1 className={styles.sightingDetailsTextDiv}>Details</h1>
       <main className={styles.sightingDetailsContainer}>
         <article className={styles.sightingDetailsArticle}>
           <header>

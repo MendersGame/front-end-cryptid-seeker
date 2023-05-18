@@ -47,7 +47,7 @@ const LoginPage = ({ handleAuthEvt }) => {
 
   return (
     <main className={styles.logincontainer}>
-    <section>
+    <section className={styles.loginimagecontainer}>
       <img src={loginIcon} alt="Cryptid Seeker Logo & Login message" />
     </section>
     <section>

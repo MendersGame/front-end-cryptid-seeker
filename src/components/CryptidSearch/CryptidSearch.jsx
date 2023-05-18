@@ -2,6 +2,7 @@
 import { useState } from 'react'
 
 // styles
+import styles from "./CryptidSearch.module.css"
 
 const CryptidSearch = (props) => {
   const [formData, setFormData] = useState({ query: "" })
@@ -17,16 +18,20 @@ const CryptidSearch = (props) => {
     setFormData({ query: "" })
   }
   return (
-    <form className="search-form" onSubmit={handleSubmit}>
+    <>
+    <h1>Cryptids</h1>
+    <form className={styles.searchform} onSubmit={handleSubmit}>
       <input
+        className={styles.searchinput}
         type="text"
         name="query"
         autoComplete="off"
         value={formData.query}
         onChange={handleChange}
-      />
+        />
       <button type="submit">Search</button>
     </form>
+    </>
   )
 }
 export default CryptidSearch
