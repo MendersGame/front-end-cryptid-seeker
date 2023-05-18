@@ -11,5 +11,8 @@
 .cryptidinfo {
   margin-top: 22px;
   margin-bottom: 10px;
-  position: relative;
+}
+
+.cryptiddiv {
+  text-align: center;
 }
