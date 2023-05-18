@@ -40,15 +40,16 @@ const CryptidDetails = (props) => {
   
   return (
     <>
-    <h1 className={styles.cryptidDetailsTextDiv}>Reviews</h1>
-    <main className={styles.cryptidDetailsContainter}>
+    <h1 className={styles.cryptidDetailsTextDiv}>Description</h1>
+    <main className={styles.cryptidDetailsMainContainer}>
       <article className={styles.cryptidDetailsArticle}>
         <header>
-          <h1 className={styles.cryptidNameH1}>{cryptid.name}{<img src={cryptid.photo}></img>}</h1>
+          <h1 className={styles.cryptidNameH1}>{cryptid.name}{<img className={styles.cryptidDetailsImg} src={cryptid.photo}></img>}</h1>
         </header>
         <p>{cryptid.description}</p>
       </article>
-      <section>
+      <section className={styles.cryptidReviewsContainer}>
+        <h1>Reviews</h1>
           <NewReview handleAddReview={handleAddReview} />
           <Reviews 
             reviews={cryptid.reviews}
