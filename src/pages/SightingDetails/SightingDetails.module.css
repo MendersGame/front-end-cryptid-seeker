@@ -111,3 +111,9 @@ padding: 20px;
   background-color: #1C141E;
   box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
 }
+
+.icons{
+  display: flex;
+  width: 200px;
+}
+
