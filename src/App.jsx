@@ -104,7 +104,7 @@ function App() {
           } 
         />
         <Route path="/sightings" element={
-            <SightingList sightings={sightings} cryptids={cryptids} />
+            <SightingList sightings={sightings} cryptids={cryptids} user={user} />
           }
         />
         <Route 

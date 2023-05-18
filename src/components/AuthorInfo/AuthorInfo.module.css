@@ -30,3 +30,8 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
 }
+
+.Icon {
+  border-radius: 50%;
+  height: 60px;
+}
