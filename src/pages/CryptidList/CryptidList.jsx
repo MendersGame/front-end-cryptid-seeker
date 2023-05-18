@@ -17,6 +17,17 @@ const CryptidList = (props) => {
     setSearchResults(filteredCryptidResults)
   }
 
+  const sortedCryptids = props.cryptids.sort((a, b) => {
+    const nameA = a.name
+    const nameB = b.name
+    if (nameA < nameB) {
+      return -1
+    } if (nameA > nameB) {
+      return 1
+    } else {
+      return 0
+    }})
+  
   return (
     <>
       <section className={styles.cryptidsearchcontainer}>
@@ -27,9 +38,10 @@ const CryptidList = (props) => {
           ? searchResults.map((cryptid) => (
               <CryptidCard key={cryptid._id} cryptid={cryptid} />
             ))
-          : props.cryptids.map((cryptid) => (
+          : sortedCryptids.map((cryptid) => (
               <CryptidCard key={cryptid._id} cryptid={cryptid} />
-            ))}
+            ))
+        }
       </main>
     </>
   )
