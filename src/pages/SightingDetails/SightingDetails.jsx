@@ -72,14 +72,14 @@ const SightingDetails = (props) => {
           </span>
           <span>
             {sighting.author._id === props.user.profile && (
-              <>
-                <Link to={`/sightings/${sightingId}/edit`} state={sighting}>
-                  <Icon category="Edit" />
+              <div className={styles.icons}>
+                <Link to={`/sightings/${sightingId}/edit`} state={sighting} className={styles.editIcon}>
+                  <Icon category="Edit"/>
                 </Link>
                 <button onClick={() => props.handleDeleteSighting(sightingId)}>
                   <Icon category="Trash" />
                 </button>
-              </>
+              </div>
             )}
           </span>
           <p>{sighting.details}</p>
