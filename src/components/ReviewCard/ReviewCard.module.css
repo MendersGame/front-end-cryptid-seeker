@@ -1,4 +1,33 @@
-.reviewcardscontainter{
+.reviewDetailsArticle {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: #1C141E;
+  border-radius: 15px;
+  padding: 30px;
+}
+.reviewDetailsContainer  {
+  width: 100%;
+  padding: 21px;
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+}
+
+.icons {
+  display: flex;
+  width: 200px;
+}
+
+
+
+
+
+
+
+
+
+/* .reviewcardscontainter{
   display: flex;
   margin: 4em 0 0 0;
   width: 100%;
@@ -36,3 +65,4 @@
 	height: 14px;
 }
 
+ */
