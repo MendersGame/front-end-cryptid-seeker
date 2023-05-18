@@ -25,15 +25,15 @@
 
 
   .cryptidReviewsContainer {
-    font-size: large;
-    width: 100%;
+    width: 80%;
     margin: 5em;
     padding: 21px 21px 0 21px;
     display: flex;
-    max-width: 700px;
+    /* max-width: 700px; */
     flex-direction: column;
     background-color: #1C141E;
     box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
+    border-radius: 15px;
   }
 
 
