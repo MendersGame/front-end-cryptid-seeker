@@ -3,9 +3,6 @@ import * as tokenService from './tokenService'
 
 const BASE_URL = `${import.meta.env.VITE_BACK_END_SERVER_URL}/api/sightings`
 
-// ALL REQUESTS IN THIS FILE WILL BEGIN WITH:
-// http://localhost:3001/api/sightings
-
 async function index() {
   try {
     const res = await fetch(BASE_URL, {
@@ -30,7 +27,6 @@ async function show(sightingId) {
 
 async function create(sightingFormData) {
   try {
-    // BASE_URL IS POST http://localhost:3001/api/sightings
     const res = await fetch(BASE_URL, {
       method: 'POST',
       headers: { 
@@ -75,7 +71,6 @@ async function deleteSighting(sightingId) {
 
 async function createComment(sightingId, commentFormData) {
   try {
-    // POST http://localhost:3001/api/sightings/:sightingId/comments
     const res = await fetch(`${BASE_URL}/${sightingId}/comments`, {
       method: 'POST',
       headers: { 

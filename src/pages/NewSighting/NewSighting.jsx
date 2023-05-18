@@ -5,11 +5,10 @@ import { useState } from 'react'
 import styles from './NewSighting.module.css'
 
 const NewSighting = (props) => {
-
-  const [formData, setFormData ] = useState({
+  const [formData, setFormData] = useState({
     title: '',
     details: '',
-    cryptid: ''
+    cryptid: '',
   })
 
   const handleChange = (evt) => {
@@ -18,7 +17,7 @@ const NewSighting = (props) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
-		props.handleAddSighting(formData)
+    props.handleAddSighting(formData)
   }
 
   return (
@@ -26,7 +25,9 @@ const NewSighting = (props) => {
       <p className={styles.sightDiv}>Report a Sighting</p>
       <main className={styles.newsightingcontainer}>
         <form onSubmit={handleSubmit}>
-          <label className={styles.newSightingLabel} htmlFor="title-input">Title</label>
+          <label className={styles.newSightingLabel} htmlFor="title-input">
+            Title
+          </label>
           <input
             required
             type="text"
@@ -36,29 +37,35 @@ const NewSighting = (props) => {
             placeholder="Title"
             onChange={handleChange}
           />
-        <label className={styles.newSightingLabel} htmlFor="text-input">Details</label>
-        <textarea
-          required
-          type="text"
-          name="details"
-          id="details-input"
-          value={formData.details}
-          placeholder="Details"
-          onChange={handleChange}
-        />
-        <label className={styles.newSightingInput} htmlFor="cryptid-input">Cryptid</label>
-        <select
-          required
-          name="cryptid"
-          id="cryptid-input"
-          value={formData.cryptid}
-          onChange={handleChange}
-        >
-          {props.cryptids.map((cryptid) => (
-            <option key={cryptid._id} value={cryptid.name}>{cryptid.name}</option>
-          ))}
-        </select>
-        <button type="submit">SUBMIT</button>
+          <label className={styles.newSightingLabel} htmlFor="text-input">
+            Details
+          </label>
+          <textarea
+            required
+            type="text"
+            name="details"
+            id="details-input"
+            value={formData.details}
+            placeholder="Details"
+            onChange={handleChange}
+          />
+          <label className={styles.newSightingInput} htmlFor="cryptid-input">
+            Cryptid
+          </label>
+          <select
+            required
+            name="cryptid"
+            id="cryptid-input"
+            value={formData.cryptid}
+            onChange={handleChange}
+          >
+            {props.cryptids.map((cryptid) => (
+              <option key={cryptid._id} value={cryptid.name}>
+                {cryptid.name}
+              </option>
+            ))}
+          </select>
+          <button type="submit">SUBMIT</button>
         </form>
       </main>
     </>

@@ -6,7 +6,7 @@ import logo from '../../assets/branding/logo_cs.svg'
 import typeLogo from '../../assets/branding/typelogo_cs.svg'
 
 // styles
-import styles from './NavBar.module.css';
+import styles from './NavBar.module.css'
 
 const NavBar = ({ user, handleLogout }) => {
 
