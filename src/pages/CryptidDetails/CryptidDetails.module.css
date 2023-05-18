@@ -25,6 +25,7 @@
 
 
   .cryptidReviewsContainer {
+    font-size: large;
     width: 100%;
     margin: 5em;
     padding: 21px 21px 0 21px;
@@ -50,6 +51,7 @@
     box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
     border-radius: 15px;
     padding: 30px;
+
   }
   
   .cryptidDetailsContainer p {

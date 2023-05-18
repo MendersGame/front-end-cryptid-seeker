@@ -84,7 +84,7 @@ const SightingDetails = (props) => {
           </span>
           <p>{sighting.details}</p>
         </article>
-        <section>
+        <section className={styles.sightingCommentsContainer} >
           <h1>Comments</h1>
           <NewComment handleAddComment={handleAddComment} />
           <Comments

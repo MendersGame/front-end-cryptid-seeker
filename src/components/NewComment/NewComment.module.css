@@ -1,26 +1,17 @@
 .newCommentContainer {
   display: flex;
+  height: 140px;
   width: 100%;
-  height: 100%;
   padding: 14px 21px;
   border-radius: 15px;
   background-color: #1C141E;
-  box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-  -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-  -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
 }
 
-.newCommentContainer {
-  width: 100%;
-  height: 100%;
-  font-size: 14px;
-  font-weight: 500;
-  margin-left: 7px;
-  border-radius: 15px;
-}
+
 .commentButton{
   background-color: transparent;
-  width: 5px;
-  padding: 5px;
+  width: 15px;
+  padding: 43px 5px 5px 15px;
   width: 10%;
+  float: right;
 }
