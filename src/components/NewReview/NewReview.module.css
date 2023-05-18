@@ -20,8 +20,12 @@
 }
 .reviewButton{
   background-color: transparent;
-  width: 5px;
-  padding: 5px;
-  width: 10%;
+  padding: 24px 0 0 0;
+  margin: 0 1em 0 0;
+  width: 6%;
   float: right;
+}
+
+.reviewInputTextArea {
+  width: 85%;
 }
