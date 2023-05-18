@@ -3,16 +3,28 @@
   font-size: 2em;
   padding: 20px;
   }
+
+  .cryptidDetailsImg {
+    height: 80px;
+    float: left;
+    margin: 20px 0 20px 0;
+  }
   
-  .cryptidDetailsContainer {
-    margin: 6em;
+  .cryptidDetailsMainContainer {
+    margin: 4em 6em 6em 6em;
     height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  
-  .cryptidDetailsContainer > section {
+  .cryptidDetailsH1 {
+    font-size: 30px;
+  margin: 20px;
+  margin-bottom: 3px;
+  }
+
+
+  .cryptidReviewsContainer {
     width: 100%;
     padding: 21px;
     display: flex;
@@ -21,6 +33,7 @@
   }
   .cryptidDetailsArticle {
     display: flex;
+    flex-direction: column;
     width: 100%;
     background-color: #1C141E;
     box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
@@ -47,8 +60,10 @@
   }
   .cryptidNameH1 {
     font-size: 30px;
-    margin: 20px;
+    margin: 15px 0 0 0;
     margin-bottom: 3px;
+    height: 50px;
+    width: 50px;
   }
   
   .cryptidDetailsContainer h3 {
