@@ -104,14 +104,18 @@ function App() {
           } 
         />
         <Route path="/sightings" element={
-            <SightingList sightings={sightings} />
+            <SightingList sightings={sightings} cryptids={cryptids} />
           }
         />
         <Route 
           path="/sightings/:sightingId"
           element={
             <ProtectedRoute user={user}>
-              <SightingDetails user={user} handleDeleteSighting={handleDeleteSighting}/>
+              <SightingDetails 
+                user={user} 
+                handleDeleteSighting={handleDeleteSighting}
+                cryptids={cryptids}
+              />
             </ProtectedRoute>
           }
         />
