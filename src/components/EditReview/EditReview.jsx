@@ -7,7 +7,7 @@ import * as cryptidService from '../../services/cryptidService'
 
 // styles
 
-const EditCryptid = () => {
+const EditReview = () => {
   const navigate = useNavigate()
   const { state } = useLocation()
   const { cryptidId, reviewId } = useParams()
@@ -24,7 +24,7 @@ const EditCryptid = () => {
   }
 
   return (
-    <main className={styles.container}>
+    <main>
       <form onSubmit={handleSubmit}>
         <h1>Edit Review</h1>
         <label htmlFor="text-input">Text</label>
@@ -43,4 +43,4 @@ const EditCryptid = () => {
   )
 }
 
-export default EditCryptid
+export default EditReview
