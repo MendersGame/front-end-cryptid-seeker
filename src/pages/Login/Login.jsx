@@ -13,7 +13,6 @@ import styles from './Login.module.css'
 
 const LoginPage = ({ handleAuthEvt }) => {
   const navigate = useNavigate()
-
   const [message, setMessage] = useState('')
   const [formData, setFormData] = useState({
     email: '',

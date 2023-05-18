@@ -8,7 +8,7 @@ import styles from './EditSighting.module.css'
 const EditSighting = (props) => {
   const location = useLocation()
 
-  const [formData, setFormData,] = useState(location.state)
+  const [formData, setFormData] = useState(location.state)
 
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
@@ -20,10 +20,13 @@ const EditSighting = (props) => {
 
   return (
     <main className={styles.editContainer}>
-        <h1 className={styles.editSightingText}>Edit Sighting</h1>
+      <h1 className={styles.editSightingText}>Edit Sighting</h1>
       <form className={styles.editSightingForm} onSubmit={handleSubmit}>
-        <label className={styles.editSightingLabel} htmlFor="title-input">Title</label>
-        <input className={styles.editSightingInput}
+        <label className={styles.editSightingLabel} htmlFor="title-input">
+          Title
+        </label>
+        <input
+          className={styles.editSightingInput}
           required
           type="text"
           name="title"
@@ -32,8 +35,11 @@ const EditSighting = (props) => {
           placeholder="Title"
           onChange={handleChange}
         />
-        <label className={styles.editSightingLabel}  htmlFor="cryptid-input">Cryptid</label>
-        <select className={styles.editCryptidSelect} 
+        <label className={styles.editSightingLabel} htmlFor="cryptid-input">
+          Cryptid
+        </label>
+        <select
+          className={styles.editCryptidSelect}
           required
           name="cryptid"
           id="cryptid-input"
@@ -41,11 +47,16 @@ const EditSighting = (props) => {
           onChange={handleChange}
         >
           {props.cryptids?.map((cryptid) => (
-            <option key={cryptid._id} value={cryptid._id}>{cryptid.name}</option>
+            <option key={cryptid._id} value={cryptid._id}>
+              {cryptid.name}
+            </option>
           ))}
         </select>
-        <label className={styles.editSightingLabel}  htmlFor="details-input">Details</label>
-        <textarea className={styles.editCryptidDetails}
+        <label className={styles.editSightingLabel} htmlFor="details-input">
+          Details
+        </label>
+        <textarea
+          className={styles.editCryptidDetails}
           required
           type="text"
           name="details"
@@ -54,10 +65,12 @@ const EditSighting = (props) => {
           placeholder="Details"
           onChange={handleChange}
         />
-        <button className={styles.editButton} type="submit">Save</button>
+        <button className={styles.editButton} type="submit">
+          Save
+        </button>
       </form>
     </main>
   )
 }
 
-export default EditSighting;
+export default EditSighting

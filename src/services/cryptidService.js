@@ -3,9 +3,6 @@ import * as tokenService from './tokenService'
 
 const BASE_URL = `${import.meta.env.VITE_BACK_END_SERVER_URL}/api/cryptids`
 
-// ALL REQUESTS IN THIS FILE WILL BEGIN WITH:
-// http://localhost:3001/api/cryptids
-
 async function index() {
   try {
     const res = await fetch(BASE_URL, {
@@ -30,7 +27,6 @@ async function show(cryptidId) {
 
 async function create(cryptidFormData) {
   try {
-    // BASE_URL IS POST http://localhost:3001/api/cryptids
     const res = await fetch(BASE_URL, {
       method: 'POST',
       headers: { 
@@ -75,7 +71,6 @@ async function deleteCryptid(cryptidId) {
 
 async function createReview(cryptidId, reviewFormData) {
   try {
-    // POST http://localhost:3001/api/cryptids/:cryptidId/reviews
     const res = await fetch(`${BASE_URL}/${cryptidId}/reviews`, {
       method: 'POST',
       headers: { 

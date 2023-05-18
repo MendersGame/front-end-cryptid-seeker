@@ -35,4 +35,4 @@ const NewReview = (props) => {
   )
 }
 
-export default NewReview;
+export default NewReview

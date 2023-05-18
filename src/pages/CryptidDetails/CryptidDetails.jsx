@@ -1,5 +1,5 @@
 // npm modules
-import { useEffect, useState, } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 // components
@@ -59,8 +59,5 @@ const CryptidDetails = (props) => {
     </main>
   )
 }
-
-
-
 
 export default CryptidDetails

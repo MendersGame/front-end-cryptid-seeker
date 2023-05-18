@@ -12,15 +12,14 @@ import NewComment from '../../components/NewComment/NewComment'
 import Comments from '../../components/Comments/Comments'
 import Icon from '../../components/Icon/Icon'
 
-//service
+// services
 import * as sightingService from '../../services/sightingService'
 
 // styles
 import styles from './SightingDetails.module.css'
 
-//todo create styles to import
 const SightingDetails = (props) => {
-  const {sightingId} = useParams()
+  const { sightingId } = useParams()
   const [sighting, setSighting] = useState(null)
 
   useEffect(() => {
@@ -32,55 +31,70 @@ const SightingDetails = (props) => {
   }, [sightingId])
 
   const handleAddComment = async (commentFormData) => {
-    const newComment = await sightingService.createComment(sightingId, commentFormData)
-    setSighting({ ...sighting, comments: [...sighting.comments, newComment],})
+    const newComment = await sightingService.createComment(
+      sightingId,
+      commentFormData
+    )
+    setSighting({ ...sighting, comments: [...sighting.comments, newComment] })
   }
 
   const handleDeleteComment = async (sightingId, commentId) => {
     await sightingService.deleteComment(sightingId, commentId)
-    setSighting({ ...sighting, comments: sighting.comments.filter((c) => c._id !== commentId) })
+    setSighting({
+      ...sighting,
+      comments: sighting.comments.filter((c) => c._id !== commentId),
+    })
   }
 
   if (!sighting) return <Loading />
 
   return (
     <>
-    <div className={styles.sightingDetailsTextDiv}>Details</div>
-    <main className={styles.sightingDetailsContainer}>
-      <article  className={styles.sightingDetailsArticle}>
-        <header>
-          <h1 className={styles.sightingDetailsH1}>{sighting.title}</h1>
-        </header>
-        <span>
-          <AuthorInfo content={sighting} />
-          {sighting.author._id === props.user.profile &&
-          <>
-            <Link to={`/sightings/${sightingId}/edit`} state={sighting}></Link>
-            <button onClick={() => props.handleDeleteSighting(sightingId)}>
-            
-            </button>
-          </>
-          }
-        </span>
-        <span>
-          {sighting.author._id === props.user.profile && <>
-          <Link to={`/sightings/${sightingId}/edit`} state={sighting}><Icon category="Edit" /></Link>
-          <button onClick={() => props.handleDeleteSighting(sightingId)}><Icon category="Trash" /></button>
-          </>}
-        </span>
-        <p>{sighting.details}</p>
-      </article>
-      <section>
-        <h1>Comments</h1>
-          <NewComment handleAddComment={handleAddComment}/>
-          <Comments 
-            comments={sighting.comments} 
-            user={props.user} 
-            sightingId={sightingId} 
+      <div className={styles.sightingDetailsTextDiv}>Details</div>
+      <main className={styles.sightingDetailsContainer}>
+        <article className={styles.sightingDetailsArticle}>
+          <header>
+            <h1 className={styles.sightingDetailsH1}>{sighting.title}</h1>
+          </header>
+          <span>
+            <AuthorInfo content={sighting} />
+            {sighting.author._id === props.user.profile && (
+              <>
+                <Link
+                  to={`/sightings/${sightingId}/edit`}
+                  state={sighting}
+                ></Link>
+                <button
+                  onClick={() => props.handleDeleteSighting(sightingId)}
+                ></button>
+              </>
+            )}
+          </span>
+          <span>
+            {sighting.author._id === props.user.profile && (
+              <>
+                <Link to={`/sightings/${sightingId}/edit`} state={sighting}>
+                  <Icon category="Edit" />
+                </Link>
+                <button onClick={() => props.handleDeleteSighting(sightingId)}>
+                  <Icon category="Trash" />
+                </button>
+              </>
+            )}
+          </span>
+          <p>{sighting.details}</p>
+        </article>
+        <section>
+          <h1>Comments</h1>
+          <NewComment handleAddComment={handleAddComment} />
+          <Comments
+            comments={sighting.comments}
+            user={props.user}
+            sightingId={sightingId}
             handleDeleteComment={handleDeleteComment}
           />
-      </section>
-    </main>
+        </section>
+      </main>
     </>
   )
 }

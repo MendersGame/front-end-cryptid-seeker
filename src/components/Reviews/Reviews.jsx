@@ -1,7 +1,7 @@
 // components
-import ReviewCard from "../ReviewCard/ReviewCard"
+import ReviewCard from '../ReviewCard/ReviewCard'
 
-//styles
+// styles
 
 const Reviews = (props) => {
   if (!props.reviews) return <h4>No Reviews</h4>

@@ -1,11 +1,11 @@
 // npm modules
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 // components
-import AuthorInfo from "../AuthorInfo/AuthorInfo"
+import AuthorInfo from '../AuthorInfo/AuthorInfo'
 
 // styles
-import styles from "./SightingCard.module.css"
+import styles from './SightingCard.module.css'
 
 const SightingCard = ({ sighting }) => {
   return (

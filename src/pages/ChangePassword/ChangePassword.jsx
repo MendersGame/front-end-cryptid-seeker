@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 // services
 import * as authService from '../../services/authService'
 
-// css
+// styles
 import styles from './ChangePassword.module.css'
 
 const ChangePassword = ({ handleAuthEvt }) => {
@@ -17,12 +17,12 @@ const ChangePassword = ({ handleAuthEvt }) => {
     newPasswordConf: '',
   })
 
-  const handleChange = evt => {
+  const handleChange = (evt) => {
     setMessage('')
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
 
-  const handleSubmit = async evt => {
+  const handleSubmit = async (evt) => {
     evt.preventDefault()
     try {
       await authService.changePassword(formData)
