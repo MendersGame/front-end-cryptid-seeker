@@ -5,11 +5,13 @@
   display: grid;
   padding: 21px;
   grid-template-columns: repeat(1, 1fr);
+  border-radius: 10px;
+  background-color: #2D1F32;
+  /* box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994); */
 }
 
 .sightingDetailsTextDiv {
   margin: 4em 0 0 0;
-  /* margin: 6em 0 0 0; */
   font-size: 2em;
   }
 
