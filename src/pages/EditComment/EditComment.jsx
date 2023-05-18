@@ -6,6 +6,7 @@ import { useLocation, useParams, useNavigate } from 'react-router-dom'
 import * as sightingService from '../../services/sightingService'
 
 // styles
+import styles from './EditComment.module.css'
 
 const EditComment = () => {
   const navigate = useNavigate()
@@ -24,10 +25,9 @@ const EditComment = () => {
   }
 
   return (
-    <main>
+    <article className={styles.editCommentCard}>
+      <h1>Edit Comment</h1>
       <form onSubmit={handleSubmit}>
-        <h1>Edit Comment</h1>
-        <label htmlFor="text-input">Edit Comment</label>
         <textarea
           required
           type="text"
@@ -39,7 +39,7 @@ const EditComment = () => {
         />
         <button type="submit">SUBMIT</button>
       </form>
-    </main>
+    </article>
   )
 }
 

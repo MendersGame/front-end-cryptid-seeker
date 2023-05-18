@@ -6,6 +6,7 @@ import { useLocation, useParams, useNavigate } from 'react-router-dom'
 import * as cryptidService from '../../services/cryptidService'
 
 // styles
+import styles from './EditReview.module.css'
 
 const EditReview = () => {
   const navigate = useNavigate()
@@ -24,7 +25,7 @@ const EditReview = () => {
   }
   
   return (
-    <main>
+    <article className={styles.editReviewCard}>
       <form onSubmit={handleSubmit}>
         <h1>Edit Review</h1>
         <label htmlFor="text-input">Edit Review</label>
@@ -39,7 +40,7 @@ const EditReview = () => {
         />
         <button type="submit">SUBMIT</button>
       </form>
-    </main>
+    </article>
   )
 }
 
