@@ -24,7 +24,7 @@ const EditComment = () => {
   }
 
   return (
-    <main className={styles.container}>
+    <main>
       <form onSubmit={handleSubmit}>
         <h1>Edit Comment</h1>
         <label htmlFor="text-input">Text</label>
