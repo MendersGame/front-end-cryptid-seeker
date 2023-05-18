@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import AuthorInfo from '../AuthorInfo/AuthorInfo'
 import Icon from '../Icon/Icon'
 
+import styles from './CommentCard.module.css'
+
 const CommentCard = ({ comment, sightingId, user, handleDeleteComment }) => {
   return (
     <article>
@@ -12,7 +14,7 @@ const CommentCard = ({ comment, sightingId, user, handleDeleteComment }) => {
         <span>
           <AuthorInfo content={comment} />
           {comment.author._id === user.profile && (
-            <>
+          <div className={styles.icons}>
               <Link
                 to={`/sightings/${sightingId}/comments/${comment._id}`}
                 state={comment}
@@ -24,7 +26,7 @@ const CommentCard = ({ comment, sightingId, user, handleDeleteComment }) => {
               >
                 <Icon category="Trash" />
               </button>
-            </>
+            </div>
           )}
         </span>
       </header>
