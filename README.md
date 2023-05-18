@@ -1,74 +1,48 @@
-# Decoupled MERN Stack with JWT Auth Template - Front End
+#
+![readme-logo](https://github.com/MendersGame/front-end-cryptid-seeker/assets/127788664/dddb1ef5-ca00-4664-9f66-7a6cbc0ba1ed)
 
-This is the front end of a decoupled MERN Stack app that includes JWT Authentication.
+An app for people who hunt mythological creatures and want to share stories of their encounters with others & learn more about cryptids in the process.
+### Check out the [planning materials](https://trello.com/b/Hk74n53J/cryptid-seeker)
 
-When combined with the back end found [here](https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-back-end), you'll have all you need to build a full stack MERN app!
+### Check out the [app](https://cryptid-seeker.netlify.app/)
 
-Use this to go build things! 🚀
-
-## To Use This Template
-
-**Replace `<name-of-your-app-here>` (including the `<` and `>`) in the commands below with the name of your app!**
-
-```bash
-git clone https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end <name-of-your-app-here>-front-end
-cd <name-of-your-app-here>-front-end
-code .
-```
-
-With the project open in VS Code, open a terminal and run:
-
-```bash
-rm -rf .git
-```
-
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
-
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
-
-Re-initialize a git repository:
-
-```bash
-git init
-```
-
-Create a repo for this project on GitHub and add that remote to your project with:
-
-```bash
-git remote add origin your-repo-URL-here
-```
-
-Run `npm i` to fetch the template's dependencies:
-
-```bash
-npm i
-```
-
-touch a `.env` file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-VITE_BACK_END_SERVER_URL=http://localhost:3001
-```
-
-> 🚨 DO NOT place secrets in this `.env` file. The contents of this file WILL be exposed to site visitors. We are only using the front-end .env to create variables specific to the environment the application is running in.
-
-Delete this README.md, then make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push origin main
-```
-
-Finally, start up the app with:
-```bash
-npm run dev
-```
-
-You're done!
+### Check out the [back-end repo](https://github.com/MendersGame/back-end-cryptid-seeker)
+#
+![Screen Shot of the app](https://github.com/MendersGame/front-end-cryptid-seeker/assets/127788664/19b6cb39-df40-4a0f-b519-76610172ba23)
+#
+# The Team
+## Created by: The Phantom Props
+### [Nicholas Lohman](https://github.com/nicklohmann)
+### [Mike Enders](https://github.com/MendersGame)
+### [Brendan Ballard](https://github.com/Bballard96)
+### [Kelsea Henson](https://github.com/kmhdesign123)
+#
+# Technology Used:
+- React
+- JavaScript
+- HTML
+- CSS
+- JSX
+- Git
+- MongoDB
+- Mongoose
+- Express
+- Node.js
+- AJAX
+- JWT
+- Postman
+### Design/Planning
+- Adobe Illustrator
+#
+# Ice Box
+- AAU I want to add a pin to a map to indicate where I saw a cryptid
+- AAU I'd like to add a cryptid not currently on the list.
+- AAU I want to like a comment or post
+- AAU I should be able to toggle between dark and light mode.
+- AAU I should be able to see my own and others' profile pages.
+- AAU I should be able to see different categories for confirmed sightings or potential sightings in the newsfeed.
+- AAU I would like to see an "about us" page that allows me to see the developers who created the app, details their contributions, and lists their favorite cryptid.
+#
+# Attributions:
+- [Google Fonts](https://fonts.google.com/specimen/Amarante)
+- [Cryptid Photo list](https://docs.google.com/document/d/1t8rRR1VXv5O_cCjLO2uOmfiyP2XNAJp6a93wa4hGsJg/edit?usp=sharing)
