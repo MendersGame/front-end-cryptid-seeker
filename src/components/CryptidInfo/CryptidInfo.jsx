@@ -10,7 +10,7 @@ const CryptidInfo = (props) => {
     <>
       <Link to={`/cryptids/${props.Id}`}>
         <div className={styles.cryptiddiv}><img className={styles.cryptidinfo} src={props.photo} /></div>
-        <div className={styles.cryptidname}>{props.name}</div>
+        <h3 className={styles.cryptidname}>{props.name}</h3>
       </Link>
     </>
   )

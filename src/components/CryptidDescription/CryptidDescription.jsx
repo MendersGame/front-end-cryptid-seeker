@@ -6,10 +6,10 @@ const CryptidDescription = (cryptid) => {
     <>
       <div className={styles.cryptidescription}>
         <img className={styles.cryptidescriptionphoto} src={cryptid.photo} />
-        <div>{cryptid.name}</div>
-        <div>Region: {cryptid.region}</div>
+        <h2>{cryptid.name}</h2>
+        <p>Region: {cryptid.region}</p>
+      <p>{cryptid.description}</p>
       </div>
-      <div>{cryptid.description}</div>
     </>
   )
 }
