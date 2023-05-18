@@ -27,7 +27,7 @@ const EditComment = () => {
     <main>
       <form onSubmit={handleSubmit}>
         <h1>Edit Comment</h1>
-        <label htmlFor="text-input">Text</label>
+        <label htmlFor="text-input">Edit Comment</label>
         <textarea
           required
           type="text"

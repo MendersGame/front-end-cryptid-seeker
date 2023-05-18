@@ -27,7 +27,7 @@ const EditReview = () => {
     <main>
       <form onSubmit={handleSubmit}>
         <h1>Edit Review</h1>
-        <label htmlFor="text-input">Text</label>
+        <label htmlFor="text-input">Edit Review</label>
         <textarea
           required
           type="text"
