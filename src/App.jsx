@@ -20,6 +20,7 @@ import CryptidDetails from './pages/CryptidDetails/CryptidDetails'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import EditComment from './components/EditComment/EditComment'
+import EditReview from './components/EditReview/EditReview'
 
 // services
 import * as authService from './services/authService'
@@ -95,7 +96,13 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/"/>
+        <Route 
+          path="/cryptids/:cryptidId/reviews/:reviewId" element={
+            <ProtectedRoute user={user}>
+              <EditReview />
+            </ProtectedRoute>
+          } 
+        />
         <Route path="/sightings" element={
             <SightingList sightings={sightings} />
           }
