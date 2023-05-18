@@ -6,7 +6,6 @@ import Icon from '../Icon/Icon.jsx'
 import styles from './AuthorInfo.module.css'
 
 const AuthorInfo = (props) => {
-  console.log('LIST-PAGE:' , props);
   const { content } = props
   const photo = content.author.photo ? (
     <img className={styles.Icon} src={content.author.photo} alt="" />
