@@ -70,3 +70,7 @@
 input:focus, select:focus, textarea:focus {
   outline: none;
 } 
+
+.newSightingSubmit:hover {
+  background-color: #523b59;;
+}

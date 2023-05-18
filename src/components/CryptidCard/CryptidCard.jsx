@@ -31,7 +31,7 @@ const CryptidCard = ({ cryptid }) => {
             description={cryptid.description}
           />
         )}
-        <button className="cryptidBtn" onClick={handleCryptidClick}>
+        <button className={styles.cryptidBtn} onClick={handleCryptidClick}>
           {displayCryptidInfo ? "Show Details" : "Hide Details"}
         </button>
       </article>

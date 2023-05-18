@@ -66,7 +66,7 @@ const NewSighting = (props) => {
               </option>
             ))}
           </select>
-          <button type="submit">SUBMIT</button>
+          <button className={styles.newSightingSubmit} type="submit">SUBMIT</button>
         </form>
       </main>
     </>

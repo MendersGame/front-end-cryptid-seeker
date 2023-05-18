@@ -13,3 +13,7 @@
   border-radius: 5px;
   border: 2px solid #FDF1DE;
 }
+
+.searchBtn:hover {
+background-color: #533e5c ;
+}

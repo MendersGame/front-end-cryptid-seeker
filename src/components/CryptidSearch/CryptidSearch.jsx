@@ -29,7 +29,7 @@ const CryptidSearch = (props) => {
         value={formData.query}
         onChange={handleChange}
         />
-      <button type="submit">Search</button>
+      <button className={styles.searchBtn} type="submit">Search</button>
     </form>
     </>
   )
