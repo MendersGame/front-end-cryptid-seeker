@@ -1,9 +1,9 @@
 // npm modules
-import { useState } from "react"
+import { useState } from 'react'
 
 // components
-import CryptidCard from "../../components/CryptidCard/CryptidCard"
-import CryptidSearch from "../../components/CryptidSearch/CryptidSearch"
+import CryptidCard from '../../components/CryptidCard/CryptidCard'
+import CryptidSearch from '../../components/CryptidSearch/CryptidSearch'
 
 // styles
 import styles from './CryptidList.module.css'
