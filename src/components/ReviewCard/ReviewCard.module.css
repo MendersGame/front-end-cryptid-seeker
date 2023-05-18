@@ -10,7 +10,7 @@
 .reviewcardscontainter p {
   font-family: Amarante, sans-serif;
   width: 100%;
-  font-size: 15px;
+  font-size: 22px;
   line-height: 1.5rem;
   text-align-last: left;
 }
@@ -18,7 +18,7 @@
 .reviewcardscontainter div h4 {
   padding-top: 15px;
   text-align: left;
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 2px;
 }
 
