@@ -30,7 +30,7 @@ const NewReview = (props) => {
         placeholder="Add a Review"
         onChange={handleChange}
       />
-      <button type="submit"><Icon category="Create" /></button>
+      <button className={styles.reviewButton} type="submit"><Icon category="Create" /></button>
     </form>
   )
 }

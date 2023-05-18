@@ -1,17 +1,12 @@
 
 .editSightingForm {
-  margin: 50px 8em 0 8em;
-  border-radius: 10px;
-  background-color: #1C141E;
-  box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
   display: flex;
-  overflow-x: hidden;
-  overflow-y: scroll;
   padding: 28px 21px;
   flex-direction: column;
-  width: 45%;
-  position: absolute;
-  left: 15em;
+  margin: 100px;
+  border-radius: 15px;
+  background-color: #1C141E;
+  box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
 }
 
 
@@ -92,11 +87,6 @@
 justify-content: center;
 
 }
-
-
-
-
-
 
 input:focus, select:focus, textarea:focus {
   outline: none;

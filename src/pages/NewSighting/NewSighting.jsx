@@ -55,6 +55,7 @@ const NewSighting = (props) => {
           <select
             required
             name="cryptid"
+            className={styles.newSightingInput}
             id="cryptid-input"
             value={formData.cryptid}
             onChange={handleChange}
