@@ -98,3 +98,8 @@ padding: 20px;
 .sightingDetailsContainer > section article p {
   text-indent: 0px;
 }
+
+.icons{
+  display: flex;
+  width: 200px;
+}
