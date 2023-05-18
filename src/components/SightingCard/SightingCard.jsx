@@ -14,10 +14,10 @@ const SightingCard = ({ sighting, cryptids, user }) => {
       <article className={styles.sightingCardContainer}>
         <header>
           <span>
-            <h1>{sighting.title} </h1>
-            {cryptid.name}
+           <div className={styles.cryptidNameInCard}>{cryptid.name}</div> 
             <img src={cryptid.photo}/>
           </span>
+            <h1>{sighting.title} </h1>
           <AuthorInfo content={sighting} user={user} />
         </header>
         <p>{sighting.details}</p>
