@@ -4,7 +4,6 @@
   border-radius: 10px;
   background-color: #1C141E;
   box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
-
   display: flex;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -99,7 +98,7 @@ justify-content: center;
 
 
 
-input:focus, select:focus {
+input:focus, select:focus, textarea:focus {
   outline: none;
-  border: 1px solid var(--primary);
+  border: 1px solid #FDF1DE;
 }
