@@ -11,7 +11,6 @@ import AuthorInfo from '../../components/AuthorInfo/AuthorInfo'
 import NewComment from '../../components/NewComment/NewComment'
 import Comments from '../../components/Comments/Comments'
 import Icon from '../../components/Icon/Icon'
-import CryptidInfo from '../../components/CryptidInfo/CryptidInfo'
 
 // services
 import * as sightingService from '../../services/sightingService'
@@ -20,7 +19,6 @@ import * as sightingService from '../../services/sightingService'
 import styles from './SightingDetails.module.css'
 
 const SightingDetails = (props) => {
-  
   const { sightingId } = useParams()
   const [sighting, setSighting] = useState(null)
 
@@ -47,10 +45,9 @@ const SightingDetails = (props) => {
       comments: sighting.comments.filter((c) => c._id !== commentId),
     })
   }
-  
+
   if (!sighting) return <Loading />
-  console.log(sighting);
-  console.log('Cryptid: ', sighting.cryptid);
+console.log(sighting);
   return (
     <>
       <div className={styles.sightingDetailsTextDiv}>Details</div>
@@ -86,7 +83,6 @@ const SightingDetails = (props) => {
             )}
           </span>
           <p>{sighting.details}</p>
-          <CryptidInfo Id={sighting.cryptid} photo={sighting.cryptidPhoto} name={sighting.cryptidName} />
         </article>
         <section>
           <h1>Comments</h1>

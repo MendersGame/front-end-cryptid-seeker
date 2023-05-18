@@ -8,7 +8,6 @@ import AuthorInfo from '../AuthorInfo/AuthorInfo'
 import styles from './SightingCard.module.css'
 
 const SightingCard = ({ sighting, cryptids }) => {
-  //console.log(sighting)
   const cryptid = cryptids.find(c => c._id === sighting.cryptid)
   return (
     <Link to={`/sightings/${sighting._id}`}>
