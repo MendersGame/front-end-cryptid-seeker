@@ -1,8 +1,7 @@
 .cryptidcardcontainer {
   position: relative;
   margin: 3em 0 0;
-  width: 95%;
-  height: 100%;
+  width: 100%;
   padding: 14px 41px;
   border-radius: 18px;
   border: 1px solid var(--border);
