@@ -20,8 +20,8 @@ const NewReview = (props) => {
     setFormData({text: ''})
   }
   return (
-    <form className={styles.newreviewcontainer} onSubmit={handleSubmit}>
-      <textarea
+    <form  onSubmit={handleSubmit}>
+      <textarea className={styles.reviewInputTextArea}
         required
         type="text"
         name="text"

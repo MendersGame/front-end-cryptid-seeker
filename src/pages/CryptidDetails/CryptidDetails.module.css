@@ -26,11 +26,24 @@
 
   .cryptidReviewsContainer {
     width: 100%;
-    padding: 21px;
+    margin: 5em;
+    padding: 21px 21px 0 21px;
     display: flex;
     max-width: 700px;
     flex-direction: column;
+    background-color: #1C141E;
+    box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
   }
+
+  /* textarea {
+    width: 85%;
+  } */
+
+.reviewCardsContainer{
+  margin: 2em;
+  padding: 5em;
+}
+
   .cryptidDetailsArticle {
     display: flex;
     flex-direction: column;
@@ -112,3 +125,4 @@
   .cryptidDetailsContainer > section article p {
     text-indent: 0px;
   }
+
