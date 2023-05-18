@@ -7,11 +7,16 @@ import styles from './AuthorInfo.module.css'
 
 const AuthorInfo = (props) => {
   const { content } = props
+  const photo = content.author.photo ? (
+    <img className={styles.Icon} src={content.author.photo} alt="" />
+  ) : (
+    <Icon category="Profile" />
+  )
   return (
     <div className={styles.authorContainer}>
       <section className={styles.authorInfoSection}>
         <div className={styles.authorProfileImg}>
-          <Icon category="Profile" />
+          {photo}
         </div>
         {<h4 className={styles.authorName}>{content.author.name}</h4>}
         {<DateCard createdAt={content.createdAt} />}

@@ -7,10 +7,10 @@ import AuthorInfo from '../AuthorInfo/AuthorInfo'
 // styles
 import styles from './SightingCard.module.css'
 
-const SightingCard = ({ sighting, cryptids }) => {
+const SightingCard = ({ sighting, cryptids, user }) => {
   const cryptid = cryptids.find(c => c._id === sighting.cryptid)
   return (
-    <Link to={`/sightings/${sighting._id}`}>
+    <Link to={`/sightings/${sighting._id}`} state={sighting}>
       <article className={styles.sightingCardContainer}>
         <header>
           <span>
@@ -18,7 +18,7 @@ const SightingCard = ({ sighting, cryptids }) => {
             {cryptid.name}
             <img src={cryptid.photo}/>
           </span>
-          <AuthorInfo content={sighting} />
+          <AuthorInfo content={sighting} user={user} />
         </header>
         <p>{sighting.details}</p>
       </article>
