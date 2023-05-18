@@ -52,7 +52,7 @@ const CryptidDetails = (props) => {
           <Reviews 
             reviews={cryptid.reviews}
             user={props.user}
-            cryptid={cryptid}
+            cryptidId={cryptidId}
             handleDeleteReview={handleDeleteReview}
           />
       </section>
