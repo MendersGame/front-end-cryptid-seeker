@@ -9,11 +9,14 @@ import styles from './CommentCard.module.css'
 
 const CommentCard = ({ comment, sightingId, user, handleDeleteComment }) => {
   return (
-    <article>
-      <header>
+  <main className={styles.commentDetailsContainer}>
+    <article className={styles.commentDetailsArticle}>
         <span>
           <AuthorInfo content={comment} />
-          {comment.author._id === user.profile && (
+          
+        </span>
+        <span>
+        {comment.author._id === user.profile && (
           <div className={styles.icons}>
               <Link
                 to={`/sightings/${sightingId}/comments/${comment._id}`}
@@ -28,10 +31,10 @@ const CommentCard = ({ comment, sightingId, user, handleDeleteComment }) => {
               </button>
             </div>
           )}
-        </span>
-      </header>
+          </span>
       <p>{comment.text}</p>
     </article>
+  </main>
   )
 }
 

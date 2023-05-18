@@ -1,3 +1,19 @@
+.commentDetailsArticle {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: #1C141E;
+  border-radius: 15px;
+  padding: 30px;
+}
+.commentDetailsContainer  {
+  width: 100%;
+  padding: 21px;
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+}
+
 .icons {
   display: flex;
   width: 200px;
