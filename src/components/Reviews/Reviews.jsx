@@ -5,6 +5,7 @@ import ReviewCard from '../ReviewCard/ReviewCard'
 
 const Reviews = (props) => {
   if (!props.reviews) return <h4>No Reviews</h4>
+  console.log(props);
   return (
     <>
       {props.reviews.map((review) => (

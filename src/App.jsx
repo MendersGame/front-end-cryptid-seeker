@@ -92,7 +92,7 @@ function App() {
           path="/cryptids/:cryptidId"
           element={
             <ProtectedRoute user={user}>
-              <CryptidDetails user={user} />
+              <CryptidDetails user={user} cryptids={cryptids}/>
             </ProtectedRoute>
           }
         />
@@ -114,7 +114,6 @@ function App() {
               <SightingDetails 
                 user={user} 
                 handleDeleteSighting={handleDeleteSighting}
-                cryptids={cryptids}
               />
             </ProtectedRoute>
           }

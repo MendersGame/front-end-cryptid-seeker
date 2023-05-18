@@ -42,7 +42,7 @@ const CryptidDetails = (props) => {
     <main className={styles.cryptiddetailscontainter}>
       <article>
         <header>
-          <h1>{cryptid.name}</h1>
+          <h1>{cryptid.name}{<img src={cryptid.photo}></img>}</h1>
         </header>
         <p>{cryptid.description}</p>
       </article>
@@ -52,7 +52,7 @@ const CryptidDetails = (props) => {
           <Reviews 
             reviews={cryptid.reviews}
             user={props.user}
-            cryptidId={cryptidId}
+            cryptid={cryptid}
             handleDeleteReview={handleDeleteReview}
           />
       </section>
