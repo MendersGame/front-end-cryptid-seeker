@@ -10,7 +10,7 @@ const SightingList = (props) => {
       <div className={styles.sightingDetailsTextDiv}>Sightings</div>
       <main className={`${styles.listContainer} ${styles.main}`}>
         {props.sightings.map((sighting) => (
-          <SightingCard key={sighting._id} sighting={sighting} />
+          <SightingCard key={sighting._id} sighting={sighting} cryptids={props.cryptids}/>
         ))}
       </main>
     </div>

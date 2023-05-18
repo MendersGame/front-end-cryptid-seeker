@@ -3,14 +3,14 @@ import { useState } from 'react'
 import { useLocation, useParams, useNavigate } from 'react-router-dom'
 
 // Services
-import * as cryptidService from '../../services/cryptidService'
+import * as sightingService from '../../services/sightingService'
 
 // styles
 
-const EditReview = () => {
+const EditComment = () => {
   const navigate = useNavigate()
   const { state } = useLocation()
-  const { cryptidId, reviewId } = useParams()
+  const { sightingId, commentId } = useParams()
   const [formData, setFormData] = useState(state)
 
   const handleChange = ({ target }) => {
@@ -19,15 +19,15 @@ const EditReview = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await cryptidService.updateReview(cryptidId, reviewId, formData)
-    navigate(`/cryptids/${cryptidId}`)
+    await sightingService.updateComment(sightingId, commentId, formData)
+    navigate(`/sightings/${sightingId}`)
   }
 
   return (
     <main>
       <form onSubmit={handleSubmit}>
-        <h1>Edit Review</h1>
-        <label htmlFor="text-input">Edit Review</label>
+        <h1>Edit Comment</h1>
+        <label htmlFor="text-input">Edit Comment</label>
         <textarea
           required
           type="text"
@@ -43,4 +43,4 @@ const EditReview = () => {
   )
 }
 
-export default EditReview
+export default EditComment
