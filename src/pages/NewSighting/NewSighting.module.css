@@ -1,5 +1,5 @@
 .newsightingcontainer {
-  margin: 5em;
+  /* margin: 5em; */
   display: flex;
   padding: 28px 21px;
   align-items: center;
@@ -15,7 +15,7 @@
 
 .sightDiv {
   margin: 100px 0 0 0;
-  position: relative;
+  /* position: relative; */
   left: 4%;
   font-size:xx-large;
   justify-content: space-evenly;
