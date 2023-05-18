@@ -10,6 +10,8 @@ padding: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  border-radius: 15px;
+
 }
 
 .sightingDetailsContainer > section {
@@ -110,6 +112,7 @@ padding: 20px;
   flex-direction: column;
   background-color: #1C141E;
   box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);
+  border-radius: 15px;
 }
 
 .icons{
