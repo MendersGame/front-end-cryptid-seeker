@@ -1,8 +1,8 @@
 .signupcontainer {
   height: 100%;
+  margin-top: 80px;
   display: flex;
   align-items: center;
-  background-color: #1C141E;
 }
 
 .signupcontainer p { 
@@ -19,13 +19,15 @@
 
 .signupcontainer section {
   width: 50%;
-  height: 100%;
   display: flex;
   padding: 28px 21px;
   align-items: left;
   flex-direction: column;
   background-color: #2d1f32;
-  
+}
+.signupimagecontainer {
+  background-color: #1C141E;
+  padding-bottom: 100px;
 }
 .signupcontainer form {
   text-align: left;
