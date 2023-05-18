@@ -19,8 +19,8 @@ import CryptidDetails from './pages/CryptidDetails/CryptidDetails'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
-import EditComment from './components/EditComment/EditComment'
-import EditReview from './components/EditReview/EditReview'
+import EditComment from './pages/EditComment/EditComment'
+import EditReview from './pages/EditReview/EditReview'
 
 // services
 import * as authService from './services/authService'
@@ -92,7 +92,7 @@ function App() {
           path="/cryptids/:cryptidId"
           element={
             <ProtectedRoute user={user}>
-              <CryptidDetails user={user} />
+              <CryptidDetails user={user} cryptids={cryptids}/>
             </ProtectedRoute>
           }
         />
@@ -104,14 +104,17 @@ function App() {
           } 
         />
         <Route path="/sightings" element={
-            <SightingList sightings={sightings} />
+            <SightingList sightings={sightings} cryptids={cryptids} />
           }
         />
         <Route 
           path="/sightings/:sightingId"
           element={
             <ProtectedRoute user={user}>
-              <SightingDetails user={user} handleDeleteSighting={handleDeleteSighting}/>
+              <SightingDetails 
+                user={user} 
+                handleDeleteSighting={handleDeleteSighting}
+              />
             </ProtectedRoute>
           }
         />
