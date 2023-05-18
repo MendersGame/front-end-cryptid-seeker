@@ -1,16 +1,16 @@
 // npm modules
-import { useState } from "react"
-import { useLocation, useParams, useNavigate } from "react-router-dom"
+import { useState } from 'react'
+import { useLocation, useParams, useNavigate } from 'react-router-dom'
 
 // Services
-import * as sightingService from "../../services/sightingService"
+import * as cryptidService from '../../services/cryptidService'
 
 // styles
 
-const EditComment = () => {
+const EditReview = () => {
   const navigate = useNavigate()
   const { state } = useLocation()
-  const { sightingId, commentId } = useParams()
+  const { cryptidId, reviewId } = useParams()
   const [formData, setFormData] = useState(state)
 
   const handleChange = ({ target }) => {
@@ -19,15 +19,15 @@ const EditComment = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await sightingService.updateComment(sightingId, commentId, formData)
-    navigate(`/sightings/${sightingId}`)
+    await cryptidService.updateReview(cryptidId, reviewId, formData)
+    navigate(`/cryptids/${cryptidId}`)
   }
-
+console.log(cryptidId)
   return (
     <main>
       <form onSubmit={handleSubmit}>
-        <h1>Edit Comment</h1>
-        <label htmlFor="text-input">Edit Comment</label>
+        <h1>Edit Review</h1>
+        <label htmlFor="text-input">Edit Review</label>
         <textarea
           required
           type="text"
@@ -43,4 +43,4 @@ const EditComment = () => {
   )
 }
 
-export default EditComment
+export default EditReview
