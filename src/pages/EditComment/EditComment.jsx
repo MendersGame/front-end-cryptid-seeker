@@ -25,7 +25,6 @@ const EditComment = () => {
   }
 
   return (
-    <div className={styles.commentDiv}>
     <article className={styles.editCommentCard}>
       <h1>Edit Comment</h1>
       <form onSubmit={handleSubmit}>
@@ -41,7 +40,6 @@ const EditComment = () => {
         <button type="submit">SUBMIT</button>
       </form>
     </article>
-    </div>
   )
 }
 
