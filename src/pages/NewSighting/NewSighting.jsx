@@ -22,7 +22,7 @@ const NewSighting = (props) => {
 
   return (
     <>
-      <p className={styles.sightDiv}>Report a Sighting</p>
+      <h1 className={styles.sightDiv}>Report a Sighting</h1>
       <main className={styles.newsightingcontainer}>
         <form onSubmit={handleSubmit}>
           <label className={styles.newSightingLabel} htmlFor="title-input">

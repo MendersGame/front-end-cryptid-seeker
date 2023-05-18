@@ -12,14 +12,9 @@
   width: 60%;
 }
 
-
 .sightDiv {
   margin: 100px 0 0 0;
-  /* position: relative; */
-  left: 4%;
-  font-size:xx-large;
-  justify-content: space-evenly;
-  text-align: center;
+  padding: 20px;
 }
 
 .newsightingcontainer input, textarea, select { 
