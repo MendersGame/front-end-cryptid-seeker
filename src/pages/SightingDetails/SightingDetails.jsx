@@ -47,7 +47,7 @@ const SightingDetails = (props) => {
   }
 
   if (!sighting) return <Loading />
-console.log(sighting);
+  
   return (
     <>
       <div className={styles.sightingDetailsTextDiv}>Details</div>

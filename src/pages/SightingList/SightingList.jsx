@@ -5,7 +5,6 @@ import SightingCard from '../../components/SightingCard/SightingCard'
 import styles from './SightingList.module.css'
 
 const SightingList = (props) => {
-  console.log('LIST: ',props)
   return (
     <div>
       <div className={styles.sightingDetailsTextDiv}>Sightings</div>

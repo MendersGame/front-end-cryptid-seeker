@@ -22,7 +22,7 @@ const EditReview = () => {
     await cryptidService.updateReview(cryptidId, reviewId, formData)
     navigate(`/cryptids/${cryptidId}`)
   }
-console.log(cryptidId)
+  
   return (
     <main>
       <form onSubmit={handleSubmit}>
