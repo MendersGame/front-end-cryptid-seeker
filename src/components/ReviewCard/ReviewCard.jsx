@@ -36,4 +36,4 @@ const ReviewCard = ({ review, cryptidId, user, handleDeleteReview }) => {
   )
 }
 
-export default ReviewCard;
+export default ReviewCard

@@ -47,7 +47,7 @@ const CryptidDetails = (props) => {
           <h1 className={styles.cryptidNameH1}>{cryptid.name}</h1>
         </header>
         <span>
-        {<img className={styles.cryptidDetailsImg} src={cryptid.photo}></img>}
+          {<img className={styles.cryptidDetailsImg} src={cryptid.photo}></img>}
         </span>
         <p>{cryptid.description}</p>
       </article>

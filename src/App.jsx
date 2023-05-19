@@ -82,15 +82,14 @@ function App() {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-      <Route path="/" element={<Landing user={user} />} />
-        <Route path="/cryptids"
-          element={
+        <Route path="/" element={<Landing user={user} />} />
+        <Route 
+          path="/cryptids" element={
             <CryptidList cryptids={cryptids} />
           }
         /> 
         <Route 
-          path="/cryptids/:cryptidId"
-          element={
+          path="/cryptids/:cryptidId" element={
             <ProtectedRoute user={user}>
               <CryptidDetails user={user} cryptids={cryptids}/>
             </ProtectedRoute>
@@ -103,13 +102,13 @@ function App() {
             </ProtectedRoute>
           } 
         />
-        <Route path="/sightings" element={
+        <Route 
+          path="/sightings" element={
             <SightingList sightings={sightings} cryptids={cryptids} user={user} />
           }
         />
         <Route 
-          path="/sightings/:sightingId"
-          element={
+          path="/sightings/:sightingId" element={
             <ProtectedRoute user={user}>
               <SightingDetails 
                 user={user} 
@@ -119,16 +118,14 @@ function App() {
           }
         />
         <Route
-          path="/sightings/new" 
-          element={
+          path="/sightings/new" element={
             <ProtectedRoute user={user}>
               <NewSighting handleAddSighting={handleAddSighting} cryptids={cryptids} />
             </ProtectedRoute>
           }
         />
         <Route 
-          path="/sightings/:sightingId/edit" 
-          element={
+          path="/sightings/:sightingId/edit" element={
             <ProtectedRoute user={user}>
               <EditSighting handleUpdateSighting={handleUpdateSighting} cryptids={cryptids} />
             </ProtectedRoute>
@@ -142,25 +139,29 @@ function App() {
           } 
         />
         <Route
-          path="/profiles"
-          element={
+          path="/profiles" element={
             <ProtectedRoute user={user}>
               <Profiles />
             </ProtectedRoute>
           }
         />
-        <Route path="/auth/logout" element={<Logout />} />
-        <Route
-          path="/auth/signup"
-          element={<Signup handleAuthEvt={handleAuthEvt} />}
+        <Route 
+          path="/auth/logout" element={
+            <Logout />
+          } 
         />
         <Route
-          path="/auth/login"
-          element={<Login handleAuthEvt={handleAuthEvt} />}
+          path="/auth/signup" element={
+            <Signup handleAuthEvt={handleAuthEvt} />
+          }
         />
         <Route
-          path="/auth/change-password"
-          element={
+          path="/auth/login" element={
+            <Login handleAuthEvt={handleAuthEvt} />
+          }
+        />
+        <Route
+          path="/auth/change-password" element={
             <ProtectedRoute user={user}>
               <ChangePassword handleAuthEvt={handleAuthEvt} />
             </ProtectedRoute>
