@@ -24,7 +24,7 @@ textarea {
 }
 
 .editReviewSubmitBtn:hover {
-background-color: #4e3954 ;
+  background-color: #4e3954 ;
 }
 
 @media only screen and (max-width: 100px) {
