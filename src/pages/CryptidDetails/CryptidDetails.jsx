@@ -41,11 +41,14 @@ const CryptidDetails = (props) => {
   return (
     <>
     <h1 className={styles.cryptidDetailsTextDiv}>Description</h1>
-    <main className={styles.cryptidDetailsMainContainer}>
+    <main className={styles.cryptidDetailsContainer}>
       <article className={styles.cryptidDetailsArticle}>
         <header>
-          <h1 className={styles.cryptidNameH1}>{cryptid.name}{<img className={styles.cryptidDetailsImg} src={cryptid.photo}></img>}</h1>
+          <h1 className={styles.cryptidNameH1}>{cryptid.name}</h1>
         </header>
+        <span>
+        {<img className={styles.cryptidDetailsImg} src={cryptid.photo}></img>}
+        </span>
         <p>{cryptid.description}</p>
       </article>
       <section className={styles.cryptidReviewsContainer}>
