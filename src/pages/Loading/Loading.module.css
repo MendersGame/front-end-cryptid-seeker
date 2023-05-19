@@ -1,0 +1,49 @@
+.loadingcontainer::-webkit-scrollbar {
+  display: none;
+}
+
+.loadingcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.loadingcontainer section {
+  padding: 0px 22px;
+}
+
+.loadingcontainer > section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loadingcontainer section > img {
+  width: 25%;
+  min-width: 460px;
+}
+
+.splash {
+  height: 80vh;
+  justify-content: center;
+}
+
+.splash img {
+  height: 200vh;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 414px) {
+  .loadingcontainer section > img {
+    min-width: 340px;
+  }
+} 
+
+@media only screen and (max-width: 300px) {
+  .loadingcontainer section > img {
+    min-width: 340px;
+  }
+} 
