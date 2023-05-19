@@ -6,7 +6,7 @@ const CryptidDescription = (cryptid) => {
     <>
       <div className={styles.cryptidescription}>
         <img className={styles.cryptidescriptionphoto} src={cryptid.photo} />
-        <h2>{cryptid.name}</h2>
+        <h2 className={styles.cryptidCardNameH2}>{cryptid.name}</h2>
         <p>Region: {cryptid.region}</p>
       <p>{cryptid.description}</p>
       </div>
