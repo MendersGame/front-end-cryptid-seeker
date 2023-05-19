@@ -9,7 +9,7 @@ import Icon from '../Icon/Icon'
 
 const NewComment = (props) => {
   const [formData, setFormData] = useState({ text: '' })
-  
+
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
@@ -19,6 +19,7 @@ const NewComment = (props) => {
     props.handleAddComment(formData)
     setFormData({ text: ''})
   }
+
   return (
     <form className={styles.newCommentContainer} onSubmit={handleSubmit}>
       <textarea

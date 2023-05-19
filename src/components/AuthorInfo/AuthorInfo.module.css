@@ -4,11 +4,9 @@
   justify-content: flex-start;
 }
 
-
 .authorContainer * {
   margin: 0;
 }
-
 
 .authorProfileImg {
   object-fit: cover;
@@ -24,7 +22,6 @@ display: flex;
 flex-wrap: wrap;
 flex-direction: column;
 }
-
 
 .authorInfoSection {
   display: flex;

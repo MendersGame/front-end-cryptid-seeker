@@ -10,6 +10,7 @@ import styles from './CryptidCard.module.css'
 
 const CryptidCard = ({ cryptid }) => {
   const [displayCryptidInfo, setDisplayCryptidInfo] = useState(true)
+
   function handleCryptidClick() {
     setDisplayCryptidInfo(!displayCryptidInfo)
   }
@@ -38,4 +39,5 @@ const CryptidCard = ({ cryptid }) => {
     </>
   )
 }
+
 export default CryptidCard

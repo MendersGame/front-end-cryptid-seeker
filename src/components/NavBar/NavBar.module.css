@@ -39,8 +39,6 @@
   text-align: right;
 }
 
-
-
 @media only screen and (max-width: 414px) {
   .navcontainer ul {
     padding-left: 0px;
