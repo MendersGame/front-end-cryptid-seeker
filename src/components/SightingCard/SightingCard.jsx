@@ -14,7 +14,7 @@ const SightingCard = ({ sighting, cryptids, user }) => {
       <article className={styles.sightingCardContainer}>
         <header>
           <span>
-           <div className={styles.cryptidNameInCard}>{cryptid.name}</div> 
+            <div className={styles.cryptidNameInCard}>{cryptid.name}</div> 
             <img src={cryptid.photo}/>
           </span>
             <h1>{sighting.title} </h1>
@@ -25,4 +25,5 @@ const SightingCard = ({ sighting, cryptids, user }) => {
     </Link>
   )
 }
+
 export default SightingCard

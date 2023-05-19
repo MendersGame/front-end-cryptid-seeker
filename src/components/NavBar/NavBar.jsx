@@ -29,6 +29,7 @@ const NavBar = ({ user, handleLogout }) => {
       </li>
     </ul>
   )
+
   return (
     
     <nav className={styles.navcontainer}>

@@ -1,6 +1,8 @@
+// assets
+import logotype from '../../assets/branding/logotype_cs.svg'
+
 // styles
 import styles from './Landing.module.css'
-import logotype from '../../assets/branding/logotype_cs.svg'
 
 const Landing = () => {
   return (

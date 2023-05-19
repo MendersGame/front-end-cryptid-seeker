@@ -12,11 +12,13 @@ const CryptidSearch = (props) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
     props.handleCryptidSearch({ ...formData, [name]: value })
   }
+
   const handleSubmit = (evt) => {
     evt.preventDefault()
     props.handleCryptidSearch(formData)
     setFormData({ query: "" })
   }
+
   return (
     <>
     <h1>Cryptids</h1>
@@ -34,4 +36,5 @@ const CryptidSearch = (props) => {
     </>
   )
 }
+
 export default CryptidSearch

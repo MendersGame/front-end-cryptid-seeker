@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import AuthorInfo from '../AuthorInfo/AuthorInfo'
 import Icon from '../Icon/Icon'
 
+// styles
 import styles from './CommentCard.module.css'
 
 const CommentCard = ({ comment, sightingId, user, handleDeleteComment }) => {
@@ -37,4 +38,4 @@ const CommentCard = ({ comment, sightingId, user, handleDeleteComment }) => {
   )
 }
 
-export default CommentCard;
+export default CommentCard

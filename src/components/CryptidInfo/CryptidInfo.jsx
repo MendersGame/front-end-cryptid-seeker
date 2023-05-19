@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 // styles
 import styles from './CryptidInfo.module.css'
 
-
 const CryptidInfo = (props) => {
   return (
     <>

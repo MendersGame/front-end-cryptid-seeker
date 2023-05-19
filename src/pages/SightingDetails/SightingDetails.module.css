@@ -1,7 +1,7 @@
 .sightingDetailsTextDiv {
-margin: 3em 0 0 0;
-font-size: 2em;
-padding: 20px;
+  margin: 3em 0 0 0;
+  font-size: 2em;
+  padding: 20px;
 }
 
 .sightingDetailsContainer {
@@ -21,6 +21,7 @@ padding: 20px;
   max-width: 700px;
   flex-direction: column;
 }
+
 .sightingDetailsArticle {
   display: flex;
   flex-direction: column;
@@ -48,6 +49,7 @@ padding: 20px;
   margin: 0;
   margin-bottom: 7px;
 }
+
 .sightingDetailsH1 {
   font-size: 30px;
   margin: 20px;
@@ -69,7 +71,6 @@ padding: 20px;
 	margin-top: 10px;
   align-items: center;
 }
-
 
 .sightingDetailsContainer span button, .sightingDetailsContainer span a {
   margin: 0;
@@ -108,7 +109,6 @@ padding: 20px;
   margin: 5em;
   padding: 21px 21px 0 21px;
   display: flex;
-  /* max-width: 700px; */
   flex-direction: column;
   background-color: #1C141E;
   box-shadow: 5px 4px 25px rgba(0, 0, 0, 0.994);

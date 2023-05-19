@@ -27,9 +27,11 @@
   background-color: #2d1f32;
   
 }
+
 .loginimagecontainer {
   background-color: #1C141E;
 }
+
 .logincontainer form {
   text-align: left;
   padding: 28px 21px;
@@ -45,7 +47,6 @@
 }
 
 .logincontainer section:nth-child(2) {
-  /* overflow: scroll; */
   justify-content: center;
 }
 
@@ -54,7 +55,6 @@
   background-color: #1C141E;
   margin: 7px 0px 14px 0px;
 }
-
 
 .logincontainer input { 
   width: 100%;
@@ -85,6 +85,7 @@
   margin: 21px 0px 0px 0px;
   cursor: pointer;
 }
+
 .logincontainer .cancel {
   color: #FDF1DE;
   font-weight: 600;
