@@ -6,7 +6,7 @@ import styles from './Loading.module.css'
 
 const Loading = () => {
   return (
-    <main className={styles.container>
+    <main className={styles.container}>
       <img src={loadingIcon} alt="Cryptid Seeker Logo & Loading  message" />
     </main>
   )
