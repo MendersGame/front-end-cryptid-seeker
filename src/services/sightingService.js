@@ -85,7 +85,7 @@ async function createComment(sightingId, commentFormData) {
   }
 }
 
-const updateComment = async (sightingId, commentId, commentFormData) => {
+async function updateComment(sightingId, commentId, commentFormData) {
   try {
     const res = await fetch(`${BASE_URL}/${sightingId}/comments/${commentId}`, {
       method: 'PUT',
@@ -101,7 +101,7 @@ const updateComment = async (sightingId, commentId, commentFormData) => {
   }
 }
 
-const deleteComment = async (sightingId, commentId) => {
+async function deleteComment(sightingId, commentId)  {
   try {
     const res = await fetch(`${BASE_URL}/${sightingId}/comments/${commentId}`, {
       method: 'DELETE',

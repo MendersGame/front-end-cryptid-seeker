@@ -85,7 +85,7 @@ async function createReview(cryptidId, reviewFormData) {
   }
 }
 
-const updateReview = async (cryptidId, reviewId, reviewFormData) => {
+async function updateReview(cryptidId, reviewId, reviewFormData) {
   try {
     const res = await fetch(`${BASE_URL}/${cryptidId}/reviews/${reviewId}`, {
       method: 'PUT',
@@ -101,7 +101,7 @@ const updateReview = async (cryptidId, reviewId, reviewFormData) => {
   }
 }
 
-const deleteReview = async (cryptidId, reviewId) => {
+async function deleteReview(cryptidId, reviewId) {
   try {
     const res = await fetch(`${BASE_URL}/${cryptidId}/reviews/${reviewId}`, {
       method: 'DELETE',
